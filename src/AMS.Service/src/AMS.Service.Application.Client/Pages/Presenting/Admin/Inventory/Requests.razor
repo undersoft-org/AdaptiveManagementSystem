@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.Admin.Inventory
+
+@inherits RequestsBase
+
+@attribute [Authorize]
+
+@page "/presenting/admin/inventory/requests"
+
+@{
+    base.BuildRenderTree(__builder);
+}

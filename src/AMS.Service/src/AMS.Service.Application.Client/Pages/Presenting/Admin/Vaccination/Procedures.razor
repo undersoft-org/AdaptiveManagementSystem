@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.Admin.Vaccination
+
+@inherits ProceduresBase
+
+@attribute [Authorize]
+
+@page "/presenting/admin/vaccination/procedures"
+
+@{
+    base.BuildRenderTree(__builder);
+}

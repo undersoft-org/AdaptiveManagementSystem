@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.User.Catalogs
+
+@inherits CampaignsBase
+
+@attribute [Authorize]
+
+@page "/presenting/user/catalogs/campaigns"
+
+@{
+    base.BuildRenderTree(__builder);
+}

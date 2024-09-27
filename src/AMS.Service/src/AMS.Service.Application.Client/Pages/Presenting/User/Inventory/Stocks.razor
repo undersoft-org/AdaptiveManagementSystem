@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.User.Inventory
+
+@inherits StocksBase
+
+@attribute [Authorize]
+
+@page "/presenting/user/inventory/stocks"
+
+@{
+    base.BuildRenderTree(__builder);
+}

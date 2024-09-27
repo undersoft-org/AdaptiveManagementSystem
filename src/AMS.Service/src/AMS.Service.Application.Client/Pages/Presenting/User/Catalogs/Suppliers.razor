@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.User.Catalogs
+
+@inherits SuppliersBase
+
+@attribute [Authorize]
+
+@page "/presenting/user/catalogs/suppliers"
+
+@{
+    base.BuildRenderTree(__builder);
+}

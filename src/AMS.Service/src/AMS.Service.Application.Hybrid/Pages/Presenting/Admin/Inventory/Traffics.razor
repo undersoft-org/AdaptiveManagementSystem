@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.Admin.Inventory
+
+@inherits TrafficsBase
+
+@attribute [Authorize]
+
+@page "/presenting/admin/inventory/traffics"
+
+@{
+    base.BuildRenderTree(__builder);
+}

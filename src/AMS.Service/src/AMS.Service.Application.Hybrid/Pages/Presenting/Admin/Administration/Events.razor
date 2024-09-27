@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.Admin.Administration
+
+@inherits EventsBase
+
+@attribute [Authorize]
+
+@page "/presenting/admin/administration/events"
+
+@{
+    base.BuildRenderTree(__builder);
+}
