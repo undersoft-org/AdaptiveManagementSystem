@@ -28,6 +28,6 @@ namespace Undersoft.AMS.Domain.Entities.Enums
         ShipmentDocument,
         DeliveryDocument,
         SubjectImage,              
-        Report     
+        Report             
     }
 }

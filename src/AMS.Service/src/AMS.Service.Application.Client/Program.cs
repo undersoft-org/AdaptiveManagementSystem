@@ -30,6 +30,7 @@ using Undersoft.AMS.Service.Application.ViewModels.Inventory;
 using Undersoft.AMS.Service.Application.ViewModels.Vaccination;
 using Undersoft.AMS.Service.Clients;
 using Undersoft.AMS.Service.Contracts;
+using Undersoft.AMS.Service.Contracts.Activities;
 
 /// <summary>
 /// The program.

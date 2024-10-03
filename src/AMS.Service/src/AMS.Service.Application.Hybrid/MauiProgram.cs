@@ -31,6 +31,7 @@ using Undersoft.AMS.Service.Contracts;
 using Undersoft.AMS.Service.Contracts.Catalogs;
 using Undersoft.AMS.Service.Contracts.Inventory;
 using Undersoft.AMS.Service.Contracts.Vaccination;
+using Undersoft.AMS.Service.Contracts.Activities;
 
 /// <summary>
 /// The maui program.
