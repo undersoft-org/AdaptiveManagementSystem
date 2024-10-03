@@ -37,11 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Document\Transportal\" />
-    <Folder Include="Contracts\Document\Legal\" />
-    <Folder Include="Contracts\Document\Productional\" />
-    <Folder Include="Contracts\Document\Financial\" />
-    <Folder Include="Contracts\Document\Commercial\" />
+    <Folder Include="Contracts\Catalog\" />
   </ItemGroup>
 
 </Project>

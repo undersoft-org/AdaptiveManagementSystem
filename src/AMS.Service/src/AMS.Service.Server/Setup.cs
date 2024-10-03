@@ -14,7 +14,6 @@ namespace Undersoft.AMS.Service.Server;
 
 using Undersoft.AMS.Service.Clients;
 using Undersoft.AMS.Service.Contracts;
-using Undersoft.AMS.Service.Contracts.Accounts;
 using Undersoft.AMS.Service.Infrastructure.Stores;
 
 public class Setup
