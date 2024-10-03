@@ -27,7 +27,7 @@ public class Organization : DataObject, IViewModel
     [VisibleRubric]
     [RubricSize(8)]
     [DisplayRubric("Identifier type")]
-    public IdentifierType OrganizatioIdentifierType { get; set; }
+    public Domain.Entities.Enums.IdentifierType OrganizatioIdentifierType { get; set; }
 
     [VisibleRubric]
     [RubricSize(32)]

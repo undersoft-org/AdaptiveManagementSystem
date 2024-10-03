@@ -18,7 +18,7 @@ using Undersoft.AMS.Service.Contracts.Inventory;
 /// The contact controller.
 /// </summary>
 public class StockController
-    : OpenDataRemoteController<long, IInventoryStore, Stock, Stock, ServiceManager>
+    : OpenDataRemoteController<long, ILogisticStore, Stock, Stock, ServiceManager>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PatientNodeController"/> class.

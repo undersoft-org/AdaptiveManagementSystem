@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Server\Undersoft.SDK.Service.Server.csproj" />
-    <ProjectReference Include="..\AMS.Market.Service.Infrastructure\Undersoft.AMS.Market.Service.Infrastructure.csproj" />
   </ItemGroup>
   
   <ItemGroup>
@@ -44,6 +43,11 @@
     <Using Include="Undersoft.SDK.Proxies" />
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
 
 </Project>

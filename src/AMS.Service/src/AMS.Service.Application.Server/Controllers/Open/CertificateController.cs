@@ -18,7 +18,7 @@ using Undersoft.AMS.Service.Contracts.Vaccination;
 /// The contact controller.
 /// </summary>
 public class CertificateController
-    : OpenDataRemoteController<long, IVaccinationStore, Certificate, Certificate, ServiceManager>
+    : OpenDataRemoteController<long, IMarketStore, Certificate, Certificate, ServiceManager>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PatientNodeController"/> class.

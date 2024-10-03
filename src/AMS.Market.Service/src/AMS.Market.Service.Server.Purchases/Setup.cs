@@ -12,10 +12,11 @@ using Undersoft.SDK.Service.Server.Hosting;
 
 namespace Undersoft.AMS.Market.Service.Server.Inventory;
 
-using Undersoft.AMS.Market.Service.Clients;
 using Undersoft.AMS.Market.Service.Contracts;
 using Undersoft.AMS.Market.Service.Contracts.Inventory;
 using Undersoft.AMS.Market.Service.Infrastructure.Stores;
+using Undersoft.AMS.Service.Clients;
+using Undersoft.AMS.Service.Contracts.Market;
 
 /// <summary>
 /// The setup.
@@ -34,7 +35,7 @@ public class Setup
                 new[] { typeof(EventStore), typeof(EntryStore), typeof(ReportStore) },
                 new[]
                 {
-                    typeof(ApplicationClient),
+                    typeof(MarketClient),
                     typeof(AccessClient)
                 }
             )
@@ -43,7 +44,7 @@ public class Setup
                 builder =>
                     builder
                         .AddInvocations<Request>()
-                        .AddInvocations<Stock>()
+                        .AddInvocations<Item>()
                         .AddInvocations<Traffic>()
             )
             .AddDataServer<IEventStore>(

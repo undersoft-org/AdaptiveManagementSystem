@@ -6,10 +6,12 @@
 //   library: Undersoft.SCC.Service
 // *************************************************
 
+using Undersoft.SDK.Service.Data.Contract;
+
 namespace Undersoft.AMS.Service.Contracts
 {
-    public class Address : SDK.Service.Access.Identity.Address
+    public class Address : SDK.Service.Access.Identity.Address, IContract
     {
-        public long? SupplierId { get; set; }
+        public virtual long? ParticipantId { get; set; }      
     }
 }

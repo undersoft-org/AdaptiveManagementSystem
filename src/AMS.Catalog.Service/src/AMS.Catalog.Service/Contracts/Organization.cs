@@ -8,7 +8,7 @@ namespace Undersoft.AMS.Catalog.Service.Contracts
 {
     public class Organization : DataObject, IContract
     {
-        public IdentifierType? OrganizatioIdentifierType { get; set; }
+        public Domain.Entities.Enums.IdentifierType? OrganizatioIdentifierType { get; set; }
 
         public string? OrganizatioIdentifier { get; set; }
 

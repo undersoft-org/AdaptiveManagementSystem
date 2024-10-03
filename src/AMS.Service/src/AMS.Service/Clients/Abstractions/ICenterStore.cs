@@ -9,7 +9,7 @@
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
 
-    public interface ICenterStore : IVaccinationStore, ICatalogsStore, IInventoryStore
+    public interface ICenterStore : IMarketStore, ICatalogStore, ILogisticStore, IDocumentStore
     {
     }
 }

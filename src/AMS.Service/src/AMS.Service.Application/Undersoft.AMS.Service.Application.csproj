@@ -37,4 +37,8 @@
     <Using Include="Undersoft.SDK.Uniques" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

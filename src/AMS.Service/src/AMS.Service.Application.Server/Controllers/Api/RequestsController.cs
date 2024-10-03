@@ -22,7 +22,7 @@ using Undersoft.AMS.Service.Contracts.Inventory;
 /// </summary>
 [Route($"{StoreRoutes.ApiDataRoute}/Request")]
 public class RequestsController
-    : ApiDataRemoteController<long, IInventoryStore, Request, Request, ServiceManager>
+    : ApiDataRemoteController<long, ILogisticStore, Request, Request, ServiceManager>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PatientNodeController"/> class.

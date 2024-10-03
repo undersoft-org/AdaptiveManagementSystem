@@ -6,13 +6,11 @@
 //   library: Undersoft.SCC.Service
 // *************************************************
 
-using Undersoft.AMS.Domain.Entities.Catalogs;
-
 namespace Undersoft.AMS.Domain.Entities
 {
     public class Address : SDK.Service.Access.Identity.Address, IEntity
     {
-        public long? SupplierId { get; set; }
-        public virtual Supplier? Supplier { get; set; }
+        public virtual long? ParticipantId { get; set; }
+        public virtual Participant? Participant { get; set; }
     }
 }

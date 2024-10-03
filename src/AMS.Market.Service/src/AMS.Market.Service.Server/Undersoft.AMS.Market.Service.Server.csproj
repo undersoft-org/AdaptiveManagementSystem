@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Server\Undersoft.SDK.Service.Server.csproj" />
-    <ProjectReference Include="..\AMS.Market.Service.Infrastructure\Undersoft.AMS.Market.Service.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\AMS.Service\src\AMS.Service.Infrastructure\Undersoft.AMS.Service.Infrastructure.csproj" />
   </ItemGroup>
   
   <ItemGroup>

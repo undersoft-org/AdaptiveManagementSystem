@@ -39,7 +39,7 @@ public class Setup
                 },
                   new[]
                 {
-                    typeof(ApplicationClient),
+                    typeof(MarketApplicationClient),
                     typeof(AccessClient)
                 }
             )

@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Undersoft.AMS.Domain.Entities;
+using Undersoft.AMS.Service.Infrastructure.Stores.Mappings;
 
 // ********************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
@@ -9,74 +11,38 @@
 // ********************************************************
 
 using Undersoft.SDK.Service.Data.Store;
-using Undersoft.AMS.Domain.Entities;
-using Undersoft.AMS.Domain.Entities.Catalogs;
-using Undersoft.AMS.Domain.Entities.Inventory;
-using Undersoft.AMS.Domain.Entities.Vaccination;
-using Undersoft.AMS.Service.Infrastructure.Stores.Mappings;
 
 namespace Undersoft.AMS.Service.Infrastructure.Stores
 {
-    /// <summary>
-    /// The store base.
-    /// </summary>
-    /// <typeparam name="TStore"/>
-    /// <typeparam name="TContext"/>
     public class StoreBase<TStore, TContext> : DbStore<TStore, TContext>
         where TStore : IDataServerStore
         where TContext : DbContext
     {
         public StoreBase(DbContextOptions<TContext> options) : base(options) { }
 
-        public virtual DbSet<Appointment>? Appointments { get; set; }
-        public virtual DbSet<Campaign>? Campaigns { get; set; }
-        public virtual DbSet<Certificate>? Certificates { get; set; }
-        public virtual DbSet<Cost>? Costs { get; set; }
-        public virtual DbSet<Manufacturer>? Manufacturers { get; set; }
-        public virtual DbSet<Office>? Offices { get; set; }
-        public virtual DbSet<Payment>? Payments { get; set; }
-        public virtual DbSet<Personal>? Personals { get; set; }
-        public virtual DbSet<PostSymptom>? PostSymptoms { get; set; }
-        public virtual DbSet<Price>? Prices { get; set; }
-        public virtual DbSet<Procedure>? Procedures { get; set; }
-        public virtual DbSet<Request>? Requests { get; set; }
-        public virtual DbSet<Safety>? Safety { get; set; }
-        public virtual DbSet<Schedule>? Schedules { get; set; }
-        public virtual DbSet<Specification>? Specifications { get; set; }
-        public virtual DbSet<Stock>? Stocks { get; set; }
-        public virtual DbSet<Term>? Terms { get; set; }
-        public virtual DbSet<Traffic>? Traffics { get; set; }
-        public virtual DbSet<Supplier>? Suppliers { get; set; }
-        public virtual DbSet<Organization>? Organizations { get; set; }
+        public virtual DbSet<Activity>? Activities { get; set; }
         public virtual DbSet<Address>? Addresses { get; set; }
-        public virtual DbSet<Professional>? Professionals { get; set; }
-        public virtual DbSet<Vaccine>? Vaccines { get; set; }
+        public virtual DbSet<Amount>? Amounts { get; set; }
+        public virtual DbSet<Date>? Dates { get; set; }
+        public virtual DbSet<Email>? Emails { get; set; }
+        public virtual DbSet<Item>? Items { get; set; }
+        public virtual DbSet<Participant>? Participants { get; set; }
+        public virtual DbSet<Phone>? Phones { get; set; }
+        public virtual DbSet<Resource>? Resources { get; set; }
+        public virtual DbSet<Subject>? Subjects { get; set; }       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyMapping(new AppointmentMappings());
-            modelBuilder.ApplyMapping(new CampaignMappings());
-            modelBuilder.ApplyMapping(new CertificateMappings());
-            modelBuilder.ApplyMapping(new CostMappings());
-            modelBuilder.ApplyMapping(new ManufacturerMappings());
-            modelBuilder.ApplyMapping(new OfficeMappings());
-            modelBuilder.ApplyMapping(new PaymentMappings());
-            modelBuilder.ApplyMapping(new PersonalMappings());
-            modelBuilder.ApplyMapping(new PostSymptomMappings());
-            modelBuilder.ApplyMapping(new PriceMappings());
-            modelBuilder.ApplyMapping(new ProcedureMappings());
-            modelBuilder.ApplyMapping(new RequestMappings());
-            modelBuilder.ApplyMapping(new SafetyMappings());
-            modelBuilder.ApplyMapping(new ScheduleMappings());
-            modelBuilder.ApplyMapping(new SpecificationMappings());
-            modelBuilder.ApplyMapping(new StockMappings());
-            modelBuilder.ApplyMapping(new TermMappings());
-            modelBuilder.ApplyMapping(new TrafficMappings());
-            modelBuilder.ApplyMapping(new SupplierMappings());
+            modelBuilder.ApplyMapping(new SubjectMappings());
+            modelBuilder.ApplyMapping(new ResourceMappings());
+            modelBuilder.ApplyMapping(new AmountMappings());
+            modelBuilder.ApplyMapping(new DateMappings());
+            modelBuilder.ApplyMapping(new EmailMappings());
+            modelBuilder.ApplyMapping(new ItemMappings());
+            modelBuilder.ApplyMapping(new ParticipantMappings());
+            modelBuilder.ApplyMapping(new PhoneMappings());
             modelBuilder.ApplyMapping(new AddressMappings());
-            modelBuilder.ApplyMapping(new OrganizationMappings());
-            modelBuilder.ApplyMapping(new ProfessionalMappings());
-            modelBuilder.ApplyMapping(new VaccineMappings());
+            modelBuilder.ApplyMapping(new ActivityMappings());
 
             base.OnModelCreating(modelBuilder);
         }

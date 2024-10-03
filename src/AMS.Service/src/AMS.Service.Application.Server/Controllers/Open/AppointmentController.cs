@@ -8,21 +8,15 @@
 
 using Undersoft.SDK.Service.Server.Controller.Open;
 
-namespace Undersoft.AMS.Service.Application.Server.Controllers.Open;
-
-using Undersoft.SDK.Service;
-using Undersoft.AMS.Service.Clients.Abstractions;
-using Undersoft.AMS.Service.Contracts.Vaccination;
-
-/// <summary>
-/// The contact controller.
-/// </summary>
-public class AppointmentController
-    : OpenDataRemoteController<long, IVaccinationStore, Appointment, Appointment, ServiceManager>
+namespace Undersoft.AMS.Service.Application.Server.Controllers.Open
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="AppointmentController"/> class.
-    /// </summary>
-    /// <param name="servicer">The servicer.</param>
-    public AppointmentController(IServicer servicer) : base(servicer) { }
+    using Undersoft.SDK.Service;
+    using Undersoft.AMS.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Vaccination;
+
+    public class AppointmentController
+        : OpenDataRemoteController<long, IMarketStore, Appointment, Appointment, ServiceManager>
+    {
+        public AppointmentController(IServicer servicer) : base(servicer) { }
+    }
 }

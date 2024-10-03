@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Stores\Migrations\**" />
+    <EmbeddedResource Remove="Stores\Migrations\**" />
+    <None Remove="Stores\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="appsettings.Development.json" />
     <None Remove="appsettings.json" />
   </ItemGroup>
@@ -55,10 +61,6 @@
     <Using Include="Undersoft.SDK.Proxies" />
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Stores\Migrations\" />
   </ItemGroup>
 
 </Project>

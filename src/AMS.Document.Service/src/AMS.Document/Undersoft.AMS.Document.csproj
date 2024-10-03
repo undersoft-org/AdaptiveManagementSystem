@@ -33,4 +33,8 @@
     <Using Include="Undersoft.SDK.Uniques" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Domain\Entities\" />
+  </ItemGroup>
+
 </Project>

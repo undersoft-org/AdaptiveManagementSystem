@@ -12,15 +12,8 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Service.Infrastructure.Stores
 {
-    /// <summary>
-    /// The report store.
-    /// </summary>
     public class ReportStore : StoreBase<IReportStore, ReportStore>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ReportStore"/> class.
-        /// </summary>
-        /// <param name="options">The options.</param>
         public ReportStore(DbContextOptions<ReportStore> options) : base(options) { }
     }
 }

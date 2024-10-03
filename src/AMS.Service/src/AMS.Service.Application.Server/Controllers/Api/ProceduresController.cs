@@ -21,7 +21,7 @@ using Undersoft.AMS.Service.Contracts.Vaccination;
 /// </summary>
 [Route($"{StoreRoutes.ApiDataRoute}/Procedure")]
 public class ProceduresController
-    : ApiDataRemoteController<long, IVaccinationStore, Procedure, Procedure, ServiceManager>
+    : ApiDataRemoteController<long, IMarketStore, Procedure, Procedure, ServiceManager>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PatientNodeController"/> class.

@@ -21,7 +21,7 @@ using Undersoft.AMS.Service.Contracts.Vaccination;
 /// </summary>
 [Route($"{StoreRoutes.ApiDataRoute}/Certificate")]
 public class CertificatesController
-    : ApiDataRemoteController<long, IVaccinationStore, Certificate, Certificate, ServiceManager>
+    : ApiDataRemoteController<long, IMarketStore, Certificate, Certificate, ServiceManager>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PatientNodeController"/> class.

@@ -18,9 +18,6 @@ using Undersoft.AMS.Service.Clients;
 using Undersoft.AMS.Service.Clients.Abstractions;
 using Undersoft.AMS.Service.Contracts;
 using Undersoft.AMS.Service.Contracts.Accounts;
-using Undersoft.AMS.Service.Contracts.Catalogs;
-using Undersoft.AMS.Service.Contracts.Inventory;
-using Undersoft.AMS.Service.Contracts.Vaccination;
 using Undersoft.AMS.Service.Infrastructure.Stores;
 
 /// <summary>
@@ -41,28 +38,17 @@ public class Setup
                 new[]
                 {
                     typeof(AccessClient),
-                    typeof(CatalogsClient),
-                    typeof(InventoryClient),
-                    typeof(VaccinationClient)
+                    typeof(DocumentClient),
+                    typeof(CatalogClient),
+                    typeof(LogisticClient),
+                    typeof(MarketClient)
                 }
             )
             .AddDataServer<ICenterStore>(
                 DataServerTypes.All,
                 builder =>
                     builder
-                        .AddInvocations<Appointment>()
-                        .AddInvocations<Campaign>()
-                        .AddInvocations<Certificate>()
-                        .AddInvocations<Manufacturer>()
-                        .AddInvocations<Office>()
-                        .AddInvocations<PostSymptom>()
-                        .AddInvocations<Procedure>()
-                        .AddInvocations<Request>()
-                        .AddInvocations<Stock>()
-                        .AddInvocations<Traffic>()
-                        .AddInvocations<Vaccine>()
-                        .AddInvocations<Supplier>()
-                        .AddInvocations<Price>()
+                        .AddInvocations<Activity>()             
             )
             .AddDataServer<IEventStore>(
                 DataServerTypes.All,
@@ -91,6 +77,7 @@ public class Setup
     {
         app.UseApplicationServerSetup(env)
             .UseServiceApplication()
+            .UseMultitenancy()
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

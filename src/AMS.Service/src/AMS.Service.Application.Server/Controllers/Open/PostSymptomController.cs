@@ -14,7 +14,7 @@ using Undersoft.AMS.Service.Clients.Abstractions;
 using Undersoft.AMS.Service.Contracts.Vaccination;
 
 public class PostSymptomController
-    : OpenDataRemoteController<long, IVaccinationStore, PostSymptom, PostSymptom, ServiceManager>
+    : OpenDataRemoteController<long, IMarketStore, PostSymptom, PostSymptom, ServiceManager>
 {
     public PostSymptomController(IServicer servicer) : base(servicer) { }
 }

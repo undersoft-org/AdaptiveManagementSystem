@@ -8,18 +8,13 @@
 
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server;
-using Undersoft.SDK.Service.Server.Accounts;
 using Undersoft.SDK.Service.Server.Hosting;
 
 namespace Undersoft.AMS.Market.Service.Server;
 
-using Undersoft.AMS.Market.Service.Clients;
-using Undersoft.AMS.Market.Service.Contracts;
-using Undersoft.AMS.Market.Service.Contracts.Accounts;
-using Undersoft.AMS.Market.Service.Contracts.Catalogs;
-using Undersoft.AMS.Market.Service.Contracts.Inventory;
-using Undersoft.AMS.Market.Service.Contracts.Vaccination;
-using Undersoft.AMS.Market.Service.Infrastructure.Stores;
+using Undersoft.AMS.Service.Clients;
+using Undersoft.AMS.Service.Clients.Abstractions;
+using Undersoft.AMS.Service.Infrastructure.Stores;
 
 /// <summary>
 /// The setup.
@@ -35,44 +30,22 @@ public class Setup
         srvc.AddServerSetup()
             .ConfigureServer(
                 true,
-                [typeof(AccountStore), typeof(EventStore), typeof(EntryStore), typeof(ReportStore)],
-                [typeof(ApplicationClient)]
+                [typeof(EventStore), typeof(EntryStore), typeof(ReportStore)],
+                [
+                    typeof(AccessClient),
+                    typeof(MarketPurchasesClient),
+                    typeof(MarketSalesClient),
+                    typeof(MarketStocksClient),
+                ]
             )
-            .AddAccessServer<AccountStore, Account>()
-            .AddDataServer<IEntityStore>(
-                DataServerTypes.Rest | DataServerTypes.OData,
-                builder =>
-                    builder
-                        .AddInvocations<Appointment>()
-                        .AddInvocations<Campaign>()
-                        .AddInvocations<Certificate>()
-                        .AddInvocations<Manufacturer>()
-                        .AddInvocations<Office>()
-                        .AddInvocations<PostSymptom>()
-                        .AddInvocations<Procedure>()
-                        .AddInvocations<Request>()
-                        .AddInvocations<Stock>()
-                        .AddInvocations<Traffic>()
-                        .AddInvocations<Vaccine>()
-                        .AddInvocations<Supplier>()
+            .AddDataServer<IMarketCenterStore>(
+                DataServerTypes.Rest | DataServerTypes.OData
             )
             .AddDataServer<IEventStore>(
-                DataServerTypes.All,
-                builder => builder.AddInvocations<EventInfo>()
+                DataServerTypes.All
             )
             .AddDataServer<IAccountStore>(
-                DataServerTypes.All,
-                builder =>
-                    builder
-                        .AddInvocations<Account>()
-                        .AddInvocations<AccountAddress>()
-                        .AddInvocations<AccountPersonal>()
-                        .AddInvocations<AccountProfessional>()
-                        .AddInvocations<AccountOrganization>()
-                        .AddInvocations<AccountSubscription>()
-                        .AddInvocations<AccountConsent>()
-                        .AddInvocations<AccountTenant>()
-                        .AddInvocations<AccountPayment>()
+                DataServerTypes.All
             );
     }
 
@@ -84,7 +57,7 @@ public class Setup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer(["v1"])
+            .UseServiceServer(["v1"], true)
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

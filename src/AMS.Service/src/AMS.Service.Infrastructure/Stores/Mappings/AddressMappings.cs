@@ -15,17 +15,10 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
     using Undersoft.SDK.Service.Infrastructure.Database;
     using Undersoft.AMS.Domain.Entities;
 
-    /// <summary>
-    /// The contact mappings.
-    /// </summary>
     public class AddressMappings : EntityTypeMapping<Address>
     {
         const string TABLE_NAME = "Addresses";
 
-        /// <summary>
-        /// TODO: Add Summary.
-        /// </summary>
-        /// <param name="typeBuilder">The type builder.</param>
         public override void Configure(EntityTypeBuilder<Address> typeBuilder)
         {
             typeBuilder.ToTable(TABLE_NAME, DataStoreSchema.DomainSchema);

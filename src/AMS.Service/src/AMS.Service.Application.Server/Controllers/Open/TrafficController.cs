@@ -17,7 +17,7 @@ using Undersoft.AMS.Service.Contracts.Inventory;
 public class TrafficController
     : OpenDataRemoteController<
         long,
-        IInventoryStore,
+        ILogisticStore,
         Traffic,
         Traffic,
         ServiceManager

@@ -18,7 +18,7 @@ using Undersoft.AMS.Service.Contracts.Vaccination;
 /// The contact controller.
 /// </summary>
 public class ProcedureController
-    : OpenDataRemoteController<long, IVaccinationStore, Procedure, Procedure, ServiceManager>
+    : OpenDataRemoteController<long, IMarketStore, Procedure, Procedure, ServiceManager>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="PatientNodeController"/> class.

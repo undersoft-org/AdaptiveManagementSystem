@@ -15,7 +15,7 @@ using Undersoft.AMS.Service.Clients.Abstractions;
 using Undersoft.AMS.Service.Contracts.Inventory;
 
 public class RequestController
-    : OpenDataRemoteController<long, IInventoryStore, Request, Request, ServiceManager>
+    : OpenDataRemoteController<long, ILogisticStore, Request, Request, ServiceManager>
 {
     public RequestController(IServicer servicer) : base(servicer) { }
 }

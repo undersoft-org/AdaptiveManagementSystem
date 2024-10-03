@@ -13,15 +13,8 @@ using Undersoft.SDK.Service.Server.Accounts;
 
 namespace Undersoft.AMS.Service.Infrastructure.Stores
 {
-    /// <summary>
-    /// The account store.
-    /// </summary>
     public class AccountStore : AccountStore<IAccountStore, AccountStore>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AccountStore"/> class.
-        /// </summary>
-        /// <param name="options">The options.</param>
         public AccountStore(DbContextOptions<AccountStore> options) : base(options) { }
     }
 }
