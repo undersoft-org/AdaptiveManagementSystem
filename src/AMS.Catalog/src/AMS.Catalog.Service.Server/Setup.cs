@@ -12,15 +12,6 @@ using Undersoft.SDK.Service.Server.Accounts;
 using Undersoft.SDK.Service.Server.Hosting;
 
 namespace Undersoft.AMS.Catalog.Service.Server;
-
-using Undersoft.AMS.Catalog.Service.Clients;
-using Undersoft.AMS.Catalog.Service.Contracts;
-using Undersoft.AMS.Catalog.Service.Contracts.Accounts;
-using Undersoft.AMS.Catalog.Service.Contracts.Catalogs;
-using Undersoft.AMS.Catalog.Service.Contracts.Inventory;
-using Undersoft.AMS.Catalog.Service.Contracts.Vaccination;
-using Undersoft.AMS.Catalog.Service.Infrastructure.Stores;
-
 /// <summary>
 /// The setup.
 /// </summary>

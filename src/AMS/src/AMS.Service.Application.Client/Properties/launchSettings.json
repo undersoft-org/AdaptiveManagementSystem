@@ -8,7 +8,7 @@
       },
       "dotnetRunMessages": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
-      "applicationUrl": "https://127.0.0.1:15015;http://127.0.0.1:16016"
+      "applicationUrl": "https://127.0.0.1:15015;http://127.0.0.1:10006"
     },
     "IIS Express": {
       "commandName": "IISExpress",

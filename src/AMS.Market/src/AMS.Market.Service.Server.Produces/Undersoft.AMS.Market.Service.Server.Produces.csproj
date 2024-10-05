@@ -21,11 +21,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.0-Preview.1" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Server\Undersoft.SDK.Service.Server.csproj" />
-    <ProjectReference Include="..\AMS.Market.Service.Infrastructure\Undersoft.AMS.Market.Service.Infrastructure.csproj" />
-  </ItemGroup>
   
   <ItemGroup>
     <Using Include="Undersoft.SDK.Service.Data.Identifier" />
@@ -49,6 +44,10 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Validators\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AMS\src\AMS.Service.Infrastructure\Undersoft.AMS.Service.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

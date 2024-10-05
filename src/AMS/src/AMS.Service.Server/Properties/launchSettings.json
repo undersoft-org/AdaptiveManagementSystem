@@ -6,12 +6,12 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://127.0.0.1:25025;http://127.0.0.1:26026"
+      "applicationUrl": "https://127.0.0.1:20005;http://127.0.0.1:20006"
     },
     "Undersoft.AMS.Service.Server": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "applicationUrl": "https://127.0.0.1:25025;http://127.0.0.1:26026"
+      "applicationUrl": "https://127.0.0.1:20005;http://127.0.0.1:20006"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -22,8 +22,8 @@
     },
     "Docker": {
       "commandName": "Docker",
-      "applicationUrl": "https://127.0.0.1:25025;http://127.0.0.1:26026",
-      "DockerfileRunArguments": "-p 127.0.0.1:25025:25025 -p 127.0.0.1:26026:26026",
+      "applicationUrl": "https://127.0.0.1:20005;http://127.0.0.1:20006",
+      "DockerfileRunArguments": "-p 127.0.0.1:20005:20005 -p 127.0.0.1:20006:20006",
       "publishAllPorts": true,
       "useSSL": true
     },
@@ -31,7 +31,7 @@
       "commandName": "WSL2",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://127.0.0.1:25025;http://127.0.0.1:26026"
+        "ASPNETCORE_URLS": "https://127.0.0.1:20005;http://127.0.0.1:20006"
       },
       "distributionName": ""
     }

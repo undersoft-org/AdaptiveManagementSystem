@@ -31,4 +31,8 @@
     <ProjectReference Include="..\AMS.Service.Infrastructure\Undersoft.AMS.Service.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
 </Project>

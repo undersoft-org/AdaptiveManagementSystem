@@ -105,8 +105,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undersoft.AMS.Service", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undersoft.AMS.Market.Service", "src\AMS.Market\src\AMS.Market.Service\Undersoft.AMS.Market.Service.csproj", "{B0AA7DA4-018B-456D-9B72-A9AED12687D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undersoft.AMS.Market.Service.Infrastructure", "src\AMS.Market\src\AMS.Market.Service.Infrastructure\Undersoft.AMS.Market.Service.Infrastructure.csproj", "{5C5066EA-69BF-4915-9119-73A74983789A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,10 +289,6 @@ Global
 		{B0AA7DA4-018B-456D-9B72-A9AED12687D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0AA7DA4-018B-456D-9B72-A9AED12687D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0AA7DA4-018B-456D-9B72-A9AED12687D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C5066EA-69BF-4915-9119-73A74983789A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C5066EA-69BF-4915-9119-73A74983789A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C5066EA-69BF-4915-9119-73A74983789A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C5066EA-69BF-4915-9119-73A74983789A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -349,7 +343,6 @@ Global
 		{8F4C6E5E-9B52-48AA-891A-6AE8E8F3D80D} = {FB3EBF40-09BF-47DE-8978-3B832EA730A5}
 		{2177273E-EAED-4FF6-A8F2-9B16FC7BA8B9} = {EDF173F7-6291-4051-8824-773792A97927}
 		{B0AA7DA4-018B-456D-9B72-A9AED12687D0} = {A5B3CA2D-657B-4E78-8323-85CA9B937325}
-		{5C5066EA-69BF-4915-9119-73A74983789A} = {A5B3CA2D-657B-4E78-8323-85CA9B937325}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E090E10-82B1-4D2B-A41C-50A34A8B1FB7}
