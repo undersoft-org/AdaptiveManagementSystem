@@ -3,7 +3,7 @@
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Logistic.Service
+//   library: Undersoft.AMS.Market.Service
 // *************************************************
 
 
@@ -12,14 +12,17 @@
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Logistic.Service
+//   library: Undersoft.AMS.Market.Service
 // *************************************************
 
 using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Logistic.Service.Clients.Abstractions
 {
-    public interface ICatalogsStore : IDataStore
+    /// <summary>
+    /// The service client.
+    /// </summary>
+    public interface ILogisticDeliveriesStore : IDataStore
     {
     }
 }

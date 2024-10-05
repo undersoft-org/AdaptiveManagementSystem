@@ -3,14 +3,13 @@
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Logistic.Service
+//   library: Undersoft.AMS.Market.Service
 // *************************************************
 
-using Undersoft.SDK.Service.Data.Contract;
-
-namespace Undersoft.AMS.Logistic.Service.Contracts.Accounts
+namespace Undersoft.AMS.Logistic.Service.Clients.Abstractions
 {
-    public class AccountProfessional : SDK.Service.Access.Identity.Professional, IContract
+
+    public interface ILogisticCenterStore : ILogisticInventoryStore, ILogisticDeliveriesStore, ILogisticShipmentsStore
     {
     }
 }

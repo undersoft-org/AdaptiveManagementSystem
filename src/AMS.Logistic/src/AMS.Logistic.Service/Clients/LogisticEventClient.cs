@@ -1,27 +1,28 @@
 ﻿using Microsoft.OData.Edm;
-using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
+
 
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Logistic.Service
+//   library: Undersoft.AMS.Market.Service
 // *************************************************
 
+using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Logistic.Service.Clients
 {
     /// <summary>
-    /// The service client.
+    /// The event client.
     /// </summary>
-    public class VaccinationClient : OpenDataClient<IVaccinationStore>
+    public class LogisticEventClient : DataClient<IEventStore>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="LogisticEventClient"/> class.
         /// </summary>
         /// <param name="serviceUri">The service uri.</param>
-        public VaccinationClient(Uri serviceUri) : base(serviceUri) { }
+        public LogisticEventClient(Uri serviceUri) : base(serviceUri) { }
 
         /// <summary>
         /// On model creating.
@@ -30,7 +31,6 @@ namespace Undersoft.AMS.Logistic.Service.Clients
         /// <returns>An <see cref="IEdmModel"/></returns>
         protected override IEdmModel OnModelCreating(IEdmModel builder)
         {
-
             return base.OnModelCreating(builder);
         }
     }

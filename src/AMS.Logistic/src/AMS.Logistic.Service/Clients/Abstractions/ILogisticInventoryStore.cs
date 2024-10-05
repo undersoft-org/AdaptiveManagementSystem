@@ -1,31 +1,28 @@
+﻿// *************************************************
+//   Copyright (c) Undersoft. All Rights Reserved.
+//   Licensed under the MIT License. 
+//   author: Dariusz Hanc
+//   email: dh@undersoft.pl
+//   library: Undersoft.AMS.Market.Service
+// *************************************************
+
+
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Logistic.Service.Application
+//   library: Undersoft.AMS.Market.Service
 // *************************************************
 
+using Undersoft.SDK.Service.Data.Store;
 
-// *************************************************
-//   Copyright (c) Undersoft. All Rights Reserved.
-//   Licensed under the MIT License. 
-//   author: Dariusz Hanc
-//   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Logistic.Service.Application
-// *************************************************
-
-using Undersoft.SDK.Service.Data.Contract;
-
-namespace Undersoft.AMS.Logistic.Service.Contracts.Catalogs
+namespace Undersoft.AMS.Logistic.Service.Clients.Abstractions
 {
     /// <summary>
-    /// The contact address.
+    /// The service client.
     /// </summary>
-    public class Office : DataObject, IContract
+    public interface ILogisticInventoryStore : IDataStore
     {
-        public string? Number { get; set; }
-
-        public string? Name { get; set; }
     }
 }
