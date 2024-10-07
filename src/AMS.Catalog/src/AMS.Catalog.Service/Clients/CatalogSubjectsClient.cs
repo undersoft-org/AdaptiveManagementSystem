@@ -1,4 +1,6 @@
 ﻿using Microsoft.OData.Edm;
+using Undersoft.AMS.Ctalog.Service.Clients.Abstractions;
+
 
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
@@ -8,16 +10,16 @@
 //   library: Undersoft.AMS.Market.Service
 // *************************************************
 
-using Undersoft.SDK.Service.Data.Store;
 
-namespace Undersoft.AMS.Logistic.Service.Clients
+namespace Undersoft.AMS.Ctalog.Service.Clients
 {
-    public class LogisticEventClient : DataClient<IEventStore>
+    public class CatalogSubjectsClient : DataClient<ICatalogSubjectsStore>
     {
-        public LogisticEventClient(Uri serviceUri) : base(serviceUri) { }
+        public CatalogSubjectsClient(Uri serviceUri) : base(serviceUri) { }
 
         protected override IEdmModel OnModelCreating(IEdmModel builder)
         {
+
             return base.OnModelCreating(builder);
         }
     }

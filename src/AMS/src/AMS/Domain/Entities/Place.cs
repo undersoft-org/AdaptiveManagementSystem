@@ -14,6 +14,6 @@ namespace Undersoft.AMS.Domain.Entities
         public virtual Location? Location { get; set; }
 
         public virtual long? AddressId { get; set; }
-        public virtual Location? Address { get; set; }
+        public virtual Address? Address { get; set; }
     }
 }

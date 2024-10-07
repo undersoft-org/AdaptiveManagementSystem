@@ -7,7 +7,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:25225;http://localhost:26226"
+      "applicationUrl": "https://localhost:20435;http://localhost:20436"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -18,18 +18,18 @@
     },
     "Docker": {
       "commandName": "Docker",
-      "applicationUrl": "https://127.0.0.1:25225;http://127.0.0.1:26226",
+      "applicationUrl": "https://127.0.0.1:20435;http://127.0.0.1:20436",
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
-      "DockerfileRunArguments": "-p 127.0.0.1:25225:25225 -p 127.0.0.1:26226:26226",
+      "DockerfileRunArguments": "-p 127.0.0.1:20435:20435 -p 127.0.0.1:20436:20436",
       "publishAllPorts": true,
       "useSSL": true
     },
     "WSL": {
       "commandName": "WSL2",
-      "launchUrl": "https://localhost:25225/swagger",
+      "launchUrl": "https://localhost:20435/swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:25225;http://localhost:26226"
+        "ASPNETCORE_URLS": "https://localhost:20435;http://localhost:20436"
       },
       "distributionName": ""
     }

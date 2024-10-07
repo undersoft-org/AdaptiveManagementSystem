@@ -1,5 +1,6 @@
 ﻿using Microsoft.OData.Edm;
 
+
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License. 
@@ -10,11 +11,11 @@
 
 using Undersoft.SDK.Service.Data.Store;
 
-namespace Undersoft.AMS.Logistic.Service.Clients
+namespace Undersoft.AMS.Document.Service.Clients
 {
-    public class LogisticEventClient : DataClient<IEventStore>
+    public class DocumentLegalClient : DataClient<IEventStore>
     {
-        public LogisticEventClient(Uri serviceUri) : base(serviceUri) { }
+        public DocumentLegalClient(Uri serviceUri) : base(serviceUri) { }
 
         protected override IEdmModel OnModelCreating(IEdmModel builder)
         {

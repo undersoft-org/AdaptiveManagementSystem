@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AMS.Document\Undersoft.AMS.Document.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service\Undersoft.SDK.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
