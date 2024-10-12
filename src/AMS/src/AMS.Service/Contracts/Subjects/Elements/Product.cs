@@ -6,9 +6,9 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-namespace Undersoft.AMS.Service.Contracts.Subjects
+namespace Undersoft.AMS.Service.Contracts.Subjects.Elements
 {
-    public class Argument : Subject
+    public class Product : Element
     {
 
     }

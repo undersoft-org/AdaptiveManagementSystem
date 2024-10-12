@@ -24,7 +24,6 @@
   
   <ItemGroup>
     <Using Include="Undersoft.SDK.Service.Data.Identifier" />
-    <Using Include="Undersoft.SDK.Service.Server.Controller" />
     <Using Include="Undersoft.SDK.Service.Data.Event" />
     <Using Include="Undersoft.SDK.Service.Infrastructure.Database" />
     <Using Include="Undersoft.SDK.Service.Infrastructure.Database.Relation" />
@@ -42,7 +41,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Validators\" />
   </ItemGroup>
   
