@@ -6,7 +6,7 @@
 //   library: Undersoft.SCC.Service
 // *************************************************
 
-using Undersoft.AMS.Service.Contracts.Enums;
+using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Access.Identity;
 using Undersoft.SDK.Service.Data.Contract;
 using Undersoft.SDK.Service.Data.Identifier;
@@ -15,7 +15,7 @@ namespace Undersoft.AMS.Service.Contracts
 {
     public class Participant : DataObject, IContract
     {
-        public virtual ParticipantType ParticipantType { get; set; }
+        public virtual ParticipantType Type { get; set; }
 
         public virtual IdentifierSet<Participant>? Identifiers { get; set; }
 

@@ -6,10 +6,10 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-namespace Undersoft.AMS.Service.Contracts.Participants
+namespace Undersoft.AMS.Service.Contracts.Resources
 {
-    public class Person : Participant
+    public class Report : Resource
     {
-        public Person() { Type |= Enums.ParticipantType.Person; }
+
     }
 }

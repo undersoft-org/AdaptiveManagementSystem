@@ -44,6 +44,8 @@ namespace Undersoft.AMS.Domain.Entities.Enums
         Query = 536870912,
         Invocation = 1073741824,
         Validation = 2147483648,
-        Notification = 4294967296
+        Notification = 4294967296,
+        Element = 8589934592,
+        Policy = 17179869184
     }
 }

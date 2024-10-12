@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Domain.Entities
 {
     public class Participant : Entity
     {
-        public virtual ParticipantType ParticipantType { get; set; }
+        public virtual ParticipantType Type { get; set; }
 
         public virtual IdentifierSet<Participant>? Identifiers { get; set; }
 

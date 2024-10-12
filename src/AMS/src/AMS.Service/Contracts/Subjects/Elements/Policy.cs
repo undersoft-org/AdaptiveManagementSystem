@@ -3,17 +3,13 @@
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS
+//   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-namespace Undersoft.AMS.Service.Contracts.Enums
+namespace Undersoft.AMS.Service.Contracts.Subjects.Elements
 {
-    [Flags]
-    public enum ItemType : long
+    public class Policy : Element
     {
-        None = 0b_0000_0000,
-        Activity = 0b_0000_0001,
-        Stock = 0b_0000_0010,
-        Inventory = 0b_0000_0100
+
     }
 }

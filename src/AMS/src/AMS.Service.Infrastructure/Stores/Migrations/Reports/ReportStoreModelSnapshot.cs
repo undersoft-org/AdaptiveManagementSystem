@@ -80,7 +80,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                         .HasColumnType("bigint")
                         .HasColumnOrder(3);
 
-                    b.Property<long>("Type")
+                    b.Property<long>("Kind")
                         .HasColumnType("bigint");
 
                     b.Property<long>("TypeId")
@@ -175,7 +175,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     b.Property<string>("Street")
                         .HasColumnType("text");
 
-                    b.Property<int>("Type")
+                    b.Property<int>("Kind")
                         .HasColumnType("integer");
 
                     b.Property<long>("TypeId")
@@ -263,7 +263,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     b.Property<long?>("SubjectId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Type")
+                    b.Property<int>("Kind")
                         .HasColumnType("integer");
 
                     b.Property<long>("TypeId")
@@ -357,7 +357,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     b.Property<long?>("ParticipantId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Type")
+                    b.Property<int>("Kind")
                         .HasColumnType("integer");
 
                     b.Property<long>("TypeId")
@@ -436,7 +436,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     b.Property<long?>("ParticipantId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Type")
+                    b.Property<int>("Kind")
                         .HasColumnType("integer");
 
                     b.Property<long>("TypeId")
@@ -627,7 +627,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     b.Property<long?>("SubjectId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("Type")
+                    b.Property<long>("Kind")
                         .HasColumnType("bigint");
 
                     b.Property<long>("TypeId")
@@ -820,7 +820,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                         .HasColumnType("bigint")
                         .HasColumnOrder(3);
 
-                    b.Property<long>("ParticipantType")
+                    b.Property<long>("Kind")
                         .HasColumnType("bigint");
 
                     b.Property<string>("SocialMedia")
@@ -1106,7 +1106,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                         .HasColumnType("bigint")
                         .HasColumnOrder(3);
 
-                    b.Property<long>("Type")
+                    b.Property<long>("Kind")
                         .HasColumnType("bigint");
 
                     b.Property<long>("TypeId")
@@ -1186,7 +1186,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                         .HasColumnType("bigint")
                         .HasColumnOrder(3);
 
-                    b.Property<long>("Type")
+                    b.Property<long>("Kind")
                         .HasColumnType("bigint");
 
                     b.Property<long>("TypeId")

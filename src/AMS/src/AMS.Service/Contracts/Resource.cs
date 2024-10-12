@@ -7,7 +7,7 @@
 // *************************************************
 
 
-using Undersoft.AMS.Service.Contracts.Enums;
+using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Data.Contract;
 
 namespace Undersoft.AMS.Service.Contracts

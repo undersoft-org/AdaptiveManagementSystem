@@ -33,34 +33,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Api
                 new QueryParameters<Domain.Entities.Participant>()
                 {
                     Filter = p =>
-                        p.ParticipantType == Domain.Entities.Enums.ParticipantType.Environment,
-                }
-            ) { }
-    }
-}
-
-namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Open
-{
-    using Undersoft.SDK.Service.Server.Controller.Open;
-
-    public class EnvironmentController
-        : OpenCqrsController<
-            long,
-            IEntryStore,
-            IReportStore,
-            Domain.Entities.Participant,
-            Environment,
-            ServiceManager
-        >
-    {
-        public EnvironmentController(IServicer servicer)
-            : base(
-                servicer,
-                EventPublishMode.PropagateCommand,
-                new QueryParameters<Domain.Entities.Participant>()
-                {
-                    Filter = p =>
-                        p.ParticipantType == Domain.Entities.Enums.ParticipantType.Environment,
+                        (p.Type & Domain.Entities.Enums.ParticipantType.Environment) > 0,
                 }
             ) { }
     }

@@ -33,33 +33,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Api
                 EventPublishMode.PropagateCommand,
                 new QueryParameters<Participant>()
                 {
-                    Filter = p => (p.ParticipantType & ParticipantType.Member) > 0,
-                }
-            ) { }
-    }
-}
-
-namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Open
-{
-    using Undersoft.SDK.Service.Server.Controller.Open;
-
-    public class MemberController
-        : OpenCqrsController<
-            long,
-            IEntryStore,
-            IReportStore,
-            Participant,
-            AMS.Service.Contracts.Participants.Member,
-            ServiceManager
-        >
-    {
-        public MemberController(IServicer servicer)
-            : base(
-                servicer,
-                EventPublishMode.PropagateCommand,
-                new QueryParameters<Participant>()
-                {
-                    Filter = p => (p.ParticipantType & ParticipantType.Member) > 0,
+                    Filter = p => (p.Type & ParticipantType.Member) > 0,
                 }
             ) { }
     }
