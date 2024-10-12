@@ -11,7 +11,7 @@
 
 using Undersoft.SDK.Service.Data.Store;
 
-namespace Undersoft.AMS.Ctalog.Service.Clients
+namespace Undersoft.AMS.Catalog.Service.Clients
 {
     /// <summary>
     /// The event client.

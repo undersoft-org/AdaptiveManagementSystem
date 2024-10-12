@@ -1,5 +1,5 @@
 ﻿using Microsoft.OData.Edm;
-using Undersoft.AMS.Ctalog.Service.Clients.Abstractions;
+using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
 
 
 // *************************************************
@@ -11,7 +11,7 @@ using Undersoft.AMS.Ctalog.Service.Clients.Abstractions;
 // *************************************************
 
 
-namespace Undersoft.AMS.Ctalog.Service.Clients
+namespace Undersoft.AMS.Catalog.Service.Clients
 {
     public class CatalogSubjectsClient : DataClient<ICatalogSubjectsStore>
     {

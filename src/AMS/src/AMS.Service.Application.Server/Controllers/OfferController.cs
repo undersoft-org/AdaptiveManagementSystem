@@ -7,7 +7,7 @@
 // ********************************************************
 
 using Microsoft.AspNetCore.Mvc;
-using Undersoft.AMS.Service.Clients.Abstractions;
+using Undersoft.AMS.Market.Service.Clients.Abstractions;
 using Undersoft.AMS.Service.Contracts.Activities;
 using Undersoft.SDK.Service;
 using Undersoft.SDK.Service.Server.Controller.Api;

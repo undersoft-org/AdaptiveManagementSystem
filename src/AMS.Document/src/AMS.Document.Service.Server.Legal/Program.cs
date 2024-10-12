@@ -8,7 +8,7 @@
 
 using Undersoft.SDK.Service.Server.Hosting;
 
-namespace Undersoft.AMS.Document.Service.Server.Catalogs;
+namespace Undersoft.AMS.Document.Service.Server.Legal;
 
 /// <summary>
 /// The program.
@@ -33,17 +33,17 @@ public class Program
     {
         try
         {
-            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Document.Service.Server.Catalogs ....");
+            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Document.Service.Server.Legal ....");
 
             StartServer();
         }
         catch (Exception exception)
         {
-            Log.Error<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Catalogs terminated unexpectedly ....", exception);
+            Log.Error<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Legal terminated unexpectedly ....", exception);
         }
         finally
         {
-            Log.Info<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Catalogs shutted down ....");
+            Log.Info<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Legal shutted down ....");
         }
     }
     /// <summary>
@@ -51,7 +51,7 @@ public class Program
     /// </summary>
     public static void Restart()
     {
-        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Document.Service.Server.Catalogs ....");
+        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Document.Service.Server.Legal ....");
 
         Shutdown();
         Launch();
@@ -62,7 +62,7 @@ public class Program
     /// </summary>
     public static void Shutdown()
     {
-        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Document.Service.Server.Catalogs ....");
+        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Document.Service.Server.Legal ....");
 
         server?.Host.StopAsync(TimeSpan.FromSeconds(5)).Wait();
     }

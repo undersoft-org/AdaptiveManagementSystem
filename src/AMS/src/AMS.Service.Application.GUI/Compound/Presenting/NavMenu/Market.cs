@@ -7,6 +7,7 @@
 // ********************************************************
 
 using Microsoft.FluentUI.AspNetCore.Components;
+using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Markets;
 using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
@@ -15,36 +16,29 @@ namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu;
 
 public class Market : DataObject
 {
-    [Link]
-    [MenuItem]
+    [MenuGroup]
     [Extended]
-    [IconRubric("AppointmentsIcon")]
-    [DisplayRubric("Appointments")]
-    public string Appointments { get; set; } = "/presenting/user/vaccination/appointments";
-    public Icon AppointmentsIcon = new Icons.Regular.Size20.CalendarClock();
+    public MarketStocks Stocks { get; set; } = new();
+    public Icon StocksIcon = new Icons.Regular.Size20.ReceiptCube();
 
-    [Link]
-    [MenuItem]
+    [MenuGroup]
     [Extended]
-    [IconRubric("ProceduresIcon")]
-    [DisplayRubric("Procedures")]
-    public string Procedures { get; set; } = "/presenting/user/vaccination/procedures";
-    public Icon ProceduresIcon = new Icons.Regular.Size20.Stethoscope();
+    public MarketSales Sales { get; set; } = new();
+    public Icon SalesIcon = new Icons.Regular.Size20.ReceiptMoney();
 
-    [Link]
-    [MenuItem]
+    [MenuGroup]
     [Extended]
-    [IconRubric("CertificatesIcon")]
-    [DisplayRubric("Certificates")]
-    public string Certificates { get; set; } = "/presenting/user/vaccination/Certificates";
-    public Icon CertificatesIcon = new Icons.Regular.Size20.Certificate();
+    public MarketPurchases Purchases { get; set; } = new();
+    public Icon PurchasesIcon = new Icons.Regular.Size20.ReceiptBag();
 
-    [Link]
-    [MenuItem]
+    [MenuGroup]
     [Extended]
-    [IconRubric("PostSymptomsIcon")]
-    [DisplayRubric("Post symptoms")]
-    public string PostSymptoms { get; set; } = "/presenting/user/vaccination/post_symptoms";
-    public Icon PostSymptomsIcon = new Icons.Regular.Size20.HeartPulseWarning();
+    public MarketProduces Produces { get; set; } = new();
+    public Icon ProducesIcon = new Icons.Regular.Size20.ReceiptSparkles();
+
+    [MenuGroup]
+    [Extended]
+    public MarketConsumes Consumes { get; set; } = new();
+    public Icon ConsumesIcon = new Icons.Regular.Size20.ReceiptPlay();
 }
 

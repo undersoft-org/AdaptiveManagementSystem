@@ -24,13 +24,10 @@ namespace Undersoft.AMS.Service.Application.Client;
 
 using Undersoft.AMS.Service.Application.GUI.Compound.Access;
 using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
-using Undersoft.AMS.Service.Clients;
 using Undersoft.AMS.Service.Contracts;
 using Undersoft.AMS.Service.Contracts.Accounts;
 using Undersoft.SDK.Service.Application.GUI;
-using Undersoft.SDK.Service.Application.GUI.View.Account;
 using Undersoft.SDK.Service.Data.Event;
-using Undersoft.SVC.Service.Application.GUI.Compound.Access;
 
 /// <summary>
 /// The program.

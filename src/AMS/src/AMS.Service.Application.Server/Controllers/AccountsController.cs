@@ -16,7 +16,7 @@ using Undersoft.SDK.Service.Server.Controller.Open;
 
 namespace Undersoft.AMS.Service.Application.Server.Controllers.Api
 {
-    [Route($"{StoreRoutes.ApiAuthRoute}/Account")]
+    [Route($"api/auth/Account")]
     public class AccountsController
         : ApiDataRemoteController<
             long,

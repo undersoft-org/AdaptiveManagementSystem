@@ -8,7 +8,7 @@
 
 using Undersoft.SDK.Service.Server.Hosting;
 
-namespace Undersoft.AMS.Document.Service.Server.Inventory;
+namespace Undersoft.AMS.Document.Service.Server.Productional;
 
 /// <summary>
 /// The program.
@@ -33,17 +33,17 @@ public class Program
     {
         try
         {
-            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Document.Service.Server.Inventory ....");
+            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Document.Service.Server.Productional ....");
 
             StartServer();
         }
         catch (Exception exception)
         {
-            Log.Error<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Inventory terminated unexpectedly ....", exception);
+            Log.Error<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Productional terminated unexpectedly ....", exception);
         }
         finally
         {
-            Log.Info<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Inventory shutted down ....");
+            Log.Info<Runlog>(null, "Undersoft.AMS.Document.Service.Server.Productional shutted down ....");
         }
     }
     /// <summary>
@@ -51,7 +51,7 @@ public class Program
     /// </summary>
     public static void Restart()
     {
-        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Document.Service.Server.Inventory ....");
+        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Document.Service.Server.Productional ....");
 
         Shutdown();
         Launch();
@@ -62,7 +62,7 @@ public class Program
     /// </summary>
     public static void Shutdown()
     {
-        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Document.Service.Server.Inventory ....");
+        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Document.Service.Server.Productional ....");
 
         server?.Host.StopAsync(TimeSpan.FromSeconds(5)).Wait();
     }

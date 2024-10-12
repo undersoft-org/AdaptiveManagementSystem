@@ -30,6 +30,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Application.GUI\Undersoft.SDK.Service.Application.GUI.csproj" />
     <ProjectReference Include="..\AMS.Catalog.Service.Application\Undersoft.AMS.Catalog.Service.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Compound\" />
   </ItemGroup> 
 
 </Project>

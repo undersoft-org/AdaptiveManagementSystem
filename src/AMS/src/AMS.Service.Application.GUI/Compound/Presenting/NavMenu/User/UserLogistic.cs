@@ -18,23 +18,19 @@ namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User
 /// </summary>
 public class UserLogistic : DataObject
 {
-    [MenuItem]
-    [Extended]    
-    [DisplayRubric("Inventory")]
+    [MenuGroup]
+    [Extended]
     public string Inventory { get; set; } = "/presenting/user/logistic/inventory";
-    public Icon InventoryIcon = new Icons.Regular.Size20.Box();
+    public Icon InventoryIcon = new Icons.Regular.Size20.BoxMultiple();
 
-    [MenuItem]
+    [MenuGroup]
     [Extended]
-    [DisplayRubric("Requests")]
-    public string Requests { get; set; } = "/presenting/user/inventory/requests";
-    public Icon RequestsIcon = new Icons.Regular.Size20.BoxArrowUp();
+    public string Deliveries { get; set; } = "/presenting/user/inventory/deliveries";
+    public Icon DeliveriesIcon = new Icons.Regular.Size20.BoxMultipleArrowLeft();
 
-    [MenuItem]
+    [MenuGroup]
     [Extended]
-    [IconRubric("TrafficsIcon")]
-    [DisplayRubric("Traffics")]
-    public string Traffics { get; set; } = "/presenting/user/inventory/traffics";
-    public Icon TrafficsIcon = new Icons.Regular.Size20.CubeSync();
+    public string Shipments { get; set; } = "/presenting/user/inventory/shipments";
+    public Icon ShipmentsIcon = new Icons.Regular.Size20.BoxMultipleArrowRight();
 }
 

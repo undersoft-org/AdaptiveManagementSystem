@@ -17,7 +17,7 @@
 
 using Undersoft.SDK.Service.Data.Store;
 
-namespace Undersoft.AMS.Ctalog.Service.Clients.Abstractions
+namespace Undersoft.AMS.Catalog.Service.Clients.Abstractions
 {
     /// <summary>
     /// The service client.

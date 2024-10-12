@@ -23,8 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Server\Undersoft.SDK.Service.Server.csproj" />
-    <ProjectReference Include="..\AMS.Logistic.Service.Infrastructure\Undersoft.AMS.Logistic.Service.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\AMS\src\AMS.Service.Infrastructure\Undersoft.AMS.Service.Infrastructure.csproj" />
   </ItemGroup>
   
   <ItemGroup>
@@ -44,6 +43,11 @@
     <Using Include="Undersoft.SDK.Proxies" />
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
 
 </Project>

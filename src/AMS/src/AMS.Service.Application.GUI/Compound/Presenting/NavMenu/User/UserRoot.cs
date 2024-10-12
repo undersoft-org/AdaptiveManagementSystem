@@ -26,7 +26,7 @@ public class UserRoot : DataObject
 
     [MenuGroup]
     [Extended]    
-    public Market Market { get; set; } = new Market();
+    public UserMarket Market { get; set; } = new UserMarket();
     public Icon MarketIcon = new Icons.Regular.Size24.Syringe();
 
     [MenuGroup]

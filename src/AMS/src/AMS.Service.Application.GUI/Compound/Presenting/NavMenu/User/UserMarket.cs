@@ -7,7 +7,8 @@
 // ********************************************************
 
 using Microsoft.FluentUI.AspNetCore.Components;
-using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Market;
+using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Logistics;
+using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Markets;
 using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
@@ -18,27 +19,27 @@ public class UserMarket : DataObject
 {
     [MenuGroup]
     [Extended]
-    public UserMarketSales Stocks { get; set; } = new UserMarketSales();
-    public Icon StocksIcon = new Icons.Regular.Size20.CalendarClock();
+    public UserMarketStocks Stocks { get; set; } = new();
+    public Icon StocksIcon = new Icons.Regular.Size20.ReceiptCube();
 
     [MenuGroup]
     [Extended]
-    public UserMarketSales Sales { get; set; } = new UserMarketSales();
-    public Icon SalesIcon = new Icons.Regular.Size20.CalendarClock();
+    public UserMarketSales Sales { get; set; } = new();
+    public Icon SalesIcon = new Icons.Regular.Size20.ReceiptMoney();
 
     [MenuGroup]
     [Extended]
-    public UserMarketSales Purchases { get; set; } = new UserMarketSales();
-    public Icon PurchasesIcon = new Icons.Regular.Size20.CalendarClock();
+    public UserMarketPurchases Purchases { get; set; } = new();
+    public Icon PurchasesIcon = new Icons.Regular.Size20.ReceiptBag();
 
     [MenuGroup]
     [Extended]
-    public UserMarketSales Produces { get; set; } = new UserMarketSales();
-    public Icon ProducesIcon = new Icons.Regular.Size20.CalendarClock();
+    public UserMarketProduces Produces { get; set; } = new();
+    public Icon ProducesIcon = new Icons.Regular.Size20.ReceiptSparkles();
 
     [MenuGroup]
     [Extended]
-    public UserMarketSales Consumes { get; set; } = new UserMarketSales();
-    public Icon ConsumesIcon = new Icons.Regular.Size20.CalendarClock();
+    public UserMarketConsumes Consumes { get; set; } = new();
+    public Icon ConsumesIcon = new Icons.Regular.Size20.ReceiptPlay();
 }
 

@@ -15,13 +15,14 @@ namespace Undersoft.AMS.Market.Service.Clients
     /// <summary>
     /// The service client.
     /// </summary>
-    public class MarketPurchasesClient : DataClient<IMarketPurchasesStore>
+    public class MarketProducesClient : DataClient<IMarketProducesStore>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MarketServiceClient"/> class.
+        /// Initializes a new instance of the <see cref="MarketServiceClient"/>
+        /// class.
         /// </summary>
         /// <param name="serviceUri">The service uri.</param>
-        public MarketPurchasesClient(Uri serviceUri) : base(serviceUri) { }
+        public MarketProducesClient(Uri serviceUri) : base(serviceUri) { }
 
         /// <summary>
         /// On model creating.

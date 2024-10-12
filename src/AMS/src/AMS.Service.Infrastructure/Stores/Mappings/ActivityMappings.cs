@@ -12,7 +12,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
 {
     using Undersoft.AMS.Domain.Entities;
-    using Undersoft.AMS.Service.Contracts;
     using Undersoft.SDK.Service.Data.Store;
     using Undersoft.SDK.Service.Infrastructure.Database;
     using Undersoft.SDK.Service.Infrastructure.Database.Relation;

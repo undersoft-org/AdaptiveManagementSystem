@@ -11,8 +11,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
 {
-    using Undersoft.AMS.Domain.Entities;
-    using Undersoft.AMS.Service.Contracts;
+    using Undersoft.AMS.Domain.Entities;    
     using Undersoft.SDK.Service.Data.Store;
     using Undersoft.SDK.Service.Infrastructure.Database;
     using Undersoft.SDK.Service.Infrastructure.Database.Relation;
@@ -51,7 +50,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
                     ExpandSite.OnRight,
                     true
                 ).RelateOneToOne<Subject, Location>(
-                    l => l.Activity,
+                    l => l.Subject,
                     r => r.Location,
                     ExpandSite.OnRight,
                     true

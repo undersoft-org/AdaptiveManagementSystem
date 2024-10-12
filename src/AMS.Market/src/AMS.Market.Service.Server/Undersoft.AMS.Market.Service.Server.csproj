@@ -28,7 +28,6 @@
   
   <ItemGroup>
     <Using Include="Undersoft.SDK.Service.Data.Identifier" />
-    <Using Include="Undersoft.AMS.Market.Service.Server.Controllers" />
     <Using Include="Undersoft.SDK.Service.Server.Controller" />
     <Using Include="Undersoft.SDK.Service.Data.Event" />
     <Using Include="Undersoft.SDK.Service.Infrastructure.Database" />
@@ -44,6 +43,11 @@
     <Using Include="Undersoft.SDK.Proxies" />
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
 
 </Project>

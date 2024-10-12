@@ -8,7 +8,7 @@
 
 using Undersoft.SDK.Service.Server.Hosting;
 
-namespace Undersoft.AMS.Catalog.Service.Server.Catalogs;
+namespace Undersoft.AMS.Catalog.Service.Server.Participants;
 
 /// <summary>
 /// The program.
@@ -33,17 +33,17 @@ public class Program
     {
         try
         {
-            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Catalog.Service.Server.Catalogs ....");
+            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Catalog.Service.Server.Participants ....");
 
             StartServer();
         }
         catch (Exception exception)
         {
-            Log.Error<Runlog>(null, "Undersoft.AMS.Catalog.Service.Server.Catalogs terminated unexpectedly ....", exception);
+            Log.Error<Runlog>(null, "Undersoft.AMS.Catalog.Service.Server.Participants terminated unexpectedly ....", exception);
         }
         finally
         {
-            Log.Info<Runlog>(null, "Undersoft.AMS.Catalog.Service.Server.Catalogs shutted down ....");
+            Log.Info<Runlog>(null, "Undersoft.AMS.Catalog.Service.Server.Participants shutted down ....");
         }
     }
     /// <summary>
@@ -51,7 +51,7 @@ public class Program
     /// </summary>
     public static void Restart()
     {
-        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Catalog.Service.Server.Catalogs ....");
+        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Catalog.Service.Server.Participants ....");
 
         Shutdown();
         Launch();
@@ -62,7 +62,7 @@ public class Program
     /// </summary>
     public static void Shutdown()
     {
-        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Catalog.Service.Server.Catalogs ....");
+        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Catalog.Service.Server.Participants ....");
 
         server?.Host.StopAsync(TimeSpan.FromSeconds(5)).Wait();
     }

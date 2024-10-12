@@ -3,88 +3,32 @@
 //   Licensed under the MIT License.
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   server: Undersoft.AMS.Logistic.Service.Server
+//   server: Undersoft.AMS.Market.Service.Server
 // ********************************************************
 
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server;
-using Undersoft.SDK.Service.Server.Accounts;
 using Undersoft.SDK.Service.Server.Hosting;
 
 namespace Undersoft.AMS.Logistic.Service.Server;
 
-using Undersoft.AMS.Logistic.Service.Clients;
-using Undersoft.AMS.Logistic.Service.Contracts;
-using Undersoft.AMS.Logistic.Service.Contracts.Accounts;
-using Undersoft.AMS.Logistic.Service.Contracts.Catalogs;
-using Undersoft.AMS.Logistic.Service.Contracts.Inventory;
-using Undersoft.AMS.Logistic.Service.Contracts.Vaccination;
-using Undersoft.AMS.Logistic.Service.Infrastructure.Stores;
+using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
 
-/// <summary>
-/// The setup.
-/// </summary>
 public class Setup
 {
-    /// <summary>
-    /// Configures the services.
-    /// </summary>
-    /// <param name="srvc">The srvc.</param>
     public void ConfigureServices(IServiceCollection srvc)
     {
         srvc.AddServerSetup()
-            .ConfigureServer(
-                true,
-                [typeof(AccountStore), typeof(EventStore), typeof(EntryStore), typeof(ReportStore)],
-                [typeof(ApplicationClient)]
-            )
-            .AddAccessServer<AccountStore, Account>()
-            .AddDataServer<IEntityStore>(
-                DataServerTypes.Rest | DataServerTypes.OData,
-                builder =>
-                    builder
-                        .AddInvocations<Appointment>()
-                        .AddInvocations<Campaign>()
-                        .AddInvocations<Certificate>()
-                        .AddInvocations<Manufacturer>()
-                        .AddInvocations<Office>()
-                        .AddInvocations<PostSymptom>()
-                        .AddInvocations<Procedure>()
-                        .AddInvocations<Request>()
-                        .AddInvocations<Stock>()
-                        .AddInvocations<Traffic>()
-                        .AddInvocations<Vaccine>()
-                        .AddInvocations<Supplier>()
-            )
-            .AddDataServer<IEventStore>(
-                DataServerTypes.All,
-                builder => builder.AddInvocations<EventInfo>()
-            )
-            .AddDataServer<IAccountStore>(
-                DataServerTypes.All,
-                builder =>
-                    builder
-                        .AddInvocations<Account>()
-                        .AddInvocations<AccountAddress>()
-                        .AddInvocations<AccountPersonal>()
-                        .AddInvocations<AccountProfessional>()
-                        .AddInvocations<AccountOrganization>()
-                        .AddInvocations<AccountSubscription>()
-                        .AddInvocations<AccountConsent>()
-                        .AddInvocations<AccountTenant>()
-                        .AddInvocations<AccountPayment>()
-            );
+            .ConfigureServer()
+            .AddDataServer<ILogisticCenterStore>()
+            .AddDataServer<IEventStore>()
+            .AddDataServer<IAccountStore>();
     }
 
-    /// <summary>
-    /// Configures the specified application.
-    /// </summary>
-    /// <param name="app">The application.</param>
-    /// <param name="env">The env.</param>
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer(["v1"])
+            .UseServiceServer()
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

@@ -6,7 +6,7 @@
 //   library: Undersoft.AMS.Market.Service
 // *************************************************
 
-namespace Undersoft.AMS.Ctalog.Service.Clients.Abstractions
+namespace Undersoft.AMS.Catalog.Service.Clients.Abstractions
 {
 
     public interface ICatalogCenterStore : ICatalogResourcesStore, ICatalogParticipantsStore, ICatalogSubjectsStore

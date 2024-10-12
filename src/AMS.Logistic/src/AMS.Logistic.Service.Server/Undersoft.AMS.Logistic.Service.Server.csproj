@@ -23,13 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Server\Undersoft.SDK.Service.Server.csproj" />
-    <ProjectReference Include="..\AMS.Logistic.Service.Infrastructure\Undersoft.AMS.Logistic.Service.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\AMS\src\AMS.Service.Infrastructure\Undersoft.AMS.Service.Infrastructure.csproj" />
   </ItemGroup>
   
   <ItemGroup>
     <Using Include="Undersoft.SDK.Service.Data.Identifier" />
-    <Using Include="Undersoft.AMS.Logistic.Service.Server.Controllers" />
     <Using Include="Undersoft.SDK.Service.Server.Controller" />
     <Using Include="Undersoft.SDK.Service.Data.Event" />
     <Using Include="Undersoft.SDK.Service.Infrastructure.Database" />

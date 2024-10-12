@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Undersoft.AMS.Domain.Entities;
-using Undersoft.AMS.Service.Contracts;
 using Undersoft.AMS.Service.Infrastructure.Stores.Mappings;
 
 // ********************************************************

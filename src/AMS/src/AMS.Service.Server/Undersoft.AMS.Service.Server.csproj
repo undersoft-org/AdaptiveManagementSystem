@@ -45,10 +45,5 @@
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Validators\" />
-  </ItemGroup>
 
 </Project>

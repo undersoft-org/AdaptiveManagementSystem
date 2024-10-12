@@ -14,7 +14,6 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
     using Undersoft.SDK.Service.Data.Store;
     using Undersoft.SDK.Service.Infrastructure.Database;
     using Undersoft.AMS.Domain.Entities;
-    using Undersoft.AMS.Service.Contracts;
 
     public class AddressMappings : EntityTypeMapping<Address>
     {

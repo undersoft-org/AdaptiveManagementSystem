@@ -3,68 +3,30 @@
 //   Licensed under the MIT License.
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   server: Undersoft.AMS.Document.Service.Server
+//   server: Undersoft.AMS.Market.Service.Server
 // ********************************************************
 
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server;
 using Undersoft.SDK.Service.Server.Hosting;
 
-namespace Undersoft.AMS.Document.Service.Server.Inventory;
+namespace Undersoft.AMS.Document.Service.Server.Commercial;
 
-using Undersoft.AMS.Document.Service.Clients;
-using Undersoft.AMS.Document.Service.Contracts;
-using Undersoft.AMS.Document.Service.Contracts.Inventory;
-using Undersoft.AMS.Document.Service.Infrastructure.Stores;
-
-/// <summary>
-/// The setup.
-/// </summary>
 public class Setup
 {
-    /// <summary>
-    /// Configures the services.
-    /// </summary>
-    /// <param name="srvc">The srvc.</param>
     public void ConfigureServices(IServiceCollection srvc)
     {
         srvc.AddServerSetup()
-            .ConfigureServer(
-                true,
-                new[] { typeof(EventStore), typeof(EntryStore), typeof(ReportStore) },
-                new[]
-                {
-                    typeof(ApplicationClient),
-                    typeof(AccessClient)
-                }
-            )
-            .AddDataServer<IEntityStore>(
-                DataServerTypes.Rest | DataServerTypes.OData,
-                builder =>
-                    builder
-                        .AddInvocations<Request>()
-                        .AddInvocations<Stock>()
-                        .AddInvocations<Traffic>()
-            )
-            .AddDataServer<IEventStore>(
-                DataServerTypes.All,
-                builder => builder.AddInvocations<EventInfo>()
-            )
-            .AddDataServer<IAccountStore>(
-                DataServerTypes.All,
-                builder => builder.AddInvocations<Account>()
-            );
+            .ConfigureServer()
+            .AddDataServer<IEntityStore>()
+            .AddDataServer<IEventStore>()
+            .AddDataServer<IAccountStore>();
     }
 
-    /// <summary>
-    /// Configures the specified application.
-    /// </summary>
-    /// <param name="app">The application.</param>
-    /// <param name="env">The env.</param>
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer(new string[] { "v1" })
+            .UseServiceServer()
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

@@ -33,9 +33,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Compound\Presenting\NavMenu\User\Catalog\" />
-    <Folder Include="Compound\Presenting\NavMenu\User\Document\" />
-    <Folder Include="Compound\Presenting\NavMenu\User\Logistic\" />
+    <Folder Include="Compound\Presenting\NavMenu\Logistics\" />
+    <Folder Include="Compound\Presenting\NavMenu\User\Documents\" />
   </ItemGroup> 
 
 </Project>
