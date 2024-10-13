@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Document.Legal
 {
-    public class LegalEvent : Event
+    public class LegalEvent : DocumentEvent
     {
 
     }

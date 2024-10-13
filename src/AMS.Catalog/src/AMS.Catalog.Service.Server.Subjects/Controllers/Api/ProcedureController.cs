@@ -12,7 +12,7 @@ using Undersoft.SDK.Service.Data.Store;
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers.Api
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Subjects;
+    using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Server.Controller.Api;
 
     [Route($"api/data/catalog/subjects/Procedure")]

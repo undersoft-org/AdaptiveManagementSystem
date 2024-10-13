@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Logistic.Shipments
 {
-    public class ShipmentEvent : Event
+    public class ShipmentEvent : LogisticEvent
     {
 
     }

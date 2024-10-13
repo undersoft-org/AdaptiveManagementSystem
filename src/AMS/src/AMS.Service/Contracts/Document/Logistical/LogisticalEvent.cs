@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Document.Transportal
 {
-    public class LogisticalEvent : Event
+    public class LogisticalEvent : DocumentEvent
     {
 
     }

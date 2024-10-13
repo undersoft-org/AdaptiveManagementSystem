@@ -13,7 +13,7 @@ using Undersoft.SDK.Service.Server.Controller.Api;
 namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers.Api
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Resources;
+    using Undersoft.AMS.Service.Contracts.Catalog.Resources;
 
 
     [Route($"api/data/catalog/resources/Report")]

@@ -13,6 +13,7 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers.Open
 {
+    using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Server.Controller.Open;
 
     public class ElementController
@@ -21,7 +22,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers.Open
             IEntryStore,
             IReportStore,
             Subject,
-            AMS.Service.Contracts.Subjects.Element,
+            Element,
             ServiceManager
         >
     {

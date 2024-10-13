@@ -12,7 +12,7 @@ using Undersoft.SDK.Service.Data.Store;
 namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers.Api
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Resources;
+    using Undersoft.AMS.Service.Contracts.Catalog.Resources;
     using Undersoft.SDK.Service.Server.Controller.Api;
 
     [Route($"api/data/catalog/resources/Image")]

@@ -11,7 +11,7 @@ using Undersoft.SDK.Service.Operation.Command.Validator;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Validators
 {
-    using Undersoft.AMS.Service.Contracts.Subjects;
+    using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
 
     public class CategoriesValidator : CommandSetValidator<Category>
     {

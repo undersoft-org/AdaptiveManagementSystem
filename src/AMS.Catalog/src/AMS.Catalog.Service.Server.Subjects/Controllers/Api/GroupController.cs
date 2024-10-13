@@ -13,7 +13,7 @@ using Undersoft.SDK.Service.Server.Controller.Api;
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers.Api
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Subjects;
+    using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
 
     [Route($"api/data/catalog/subjects/Group")]
     public class GroupController

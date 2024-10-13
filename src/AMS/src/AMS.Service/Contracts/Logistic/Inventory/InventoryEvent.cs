@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Logistic.Inventory
 {
-    public class InventoryEvent : Event
+    public class InventoryEvent : LogisticEvent
     {
 
     }

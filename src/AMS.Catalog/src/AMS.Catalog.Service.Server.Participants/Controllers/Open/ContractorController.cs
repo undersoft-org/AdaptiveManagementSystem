@@ -6,12 +6,12 @@
 //   server: Undersoft.SVC.Service.Server
 // ********************************************************
 
-using Undersoft.AMS.Service.Contracts.Participants;
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Data.Query;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Open
 {
+    using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Server.Controller.Open;
 
     public class ContractorController

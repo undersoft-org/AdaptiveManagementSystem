@@ -11,7 +11,7 @@ using Undersoft.SDK.Service.Operation.Command.Validator;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Validators
 {
-    using Undersoft.AMS.Service.Contracts.Participants;
+    using Undersoft.AMS.Service.Contracts.Catalog.Participants;
 
 
     public class MembersValidator : CommandSetValidator<Member>

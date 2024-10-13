@@ -13,6 +13,7 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers.Open
 {
+    using Undersoft.AMS.Service.Contracts.Catalog.Resources;
     using Undersoft.SDK.Service.Server.Controller.Open;
 
     public class ArchiveController
@@ -21,7 +22,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers.Open
             IEntryStore,
             IReportStore,
             Resource,
-            AMS.Service.Contracts.Resources.Archive,
+            Archive,
             ServiceManager
         >
     {

@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Market.Produces
 {
-    public class ProduceEvent : Event
+    public class ProduceEvent : MarketEvent
     {
 
     }

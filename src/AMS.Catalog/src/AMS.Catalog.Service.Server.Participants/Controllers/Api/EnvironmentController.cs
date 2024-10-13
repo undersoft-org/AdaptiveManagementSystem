@@ -8,7 +8,7 @@
 
 using Undersoft.SDK.Service.Data.Query;
 using Undersoft.SDK.Service.Data.Store;
-using Environment = Undersoft.AMS.Service.Contracts.Participants.Environment;
+using Environment = Undersoft.AMS.Service.Contracts.Catalog.Participants.Environment;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Api
 {

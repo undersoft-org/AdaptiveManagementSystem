@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Document.Productional
 {
-    public class ProductionalEvent : Event
+    public class ProductionalEvent : DocumentEvent
     {
 
     }

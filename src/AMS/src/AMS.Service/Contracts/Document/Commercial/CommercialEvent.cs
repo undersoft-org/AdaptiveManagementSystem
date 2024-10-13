@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Document.Commercial
 {
-    public class CommercialEvent : Event
+    public class CommercialEvent : DocumentEvent
     {
 
     }

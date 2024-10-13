@@ -8,7 +8,7 @@
 
 namespace Undersoft.AMS.Service.Contracts.Document.Financial
 {
-    public class FinancialEvent : Event
+    public class FinancialEvent : DocumentEvent
     {
 
     }

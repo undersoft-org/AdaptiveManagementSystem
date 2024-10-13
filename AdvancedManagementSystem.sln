@@ -111,6 +111,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undersoft.AMS.Document.Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undersoft.AMS.Catalog.Service", "src\AMS.Catalog\src\AMS.Catalog.Service\Undersoft.AMS.Catalog.Service.csproj", "{13BDF037-5FF4-4736-83E6-786C7EC9B423}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undersoft.AMS.Document.Service.Server.Logistical", "src\AMS.Document\src\AMS.Document.Service.Server.Logistical\Undersoft.AMS.Document.Service.Server.Logistical.csproj", "{D145A9F2-81CC-4B85-8287-C03F4F2DB2EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -307,6 +309,10 @@ Global
 		{13BDF037-5FF4-4736-83E6-786C7EC9B423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13BDF037-5FF4-4736-83E6-786C7EC9B423}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13BDF037-5FF4-4736-83E6-786C7EC9B423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D145A9F2-81CC-4B85-8287-C03F4F2DB2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D145A9F2-81CC-4B85-8287-C03F4F2DB2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D145A9F2-81CC-4B85-8287-C03F4F2DB2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D145A9F2-81CC-4B85-8287-C03F4F2DB2EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -364,6 +370,7 @@ Global
 		{0A93113C-4584-4483-BFEC-5AB0E34EF6F7} = {9E777F39-D2C5-45A5-9383-4DB6897A10E9}
 		{2DFFACF2-F06B-4F9E-B941-F69EC88C0072} = {FB3EBF40-09BF-47DE-8978-3B832EA730A5}
 		{13BDF037-5FF4-4736-83E6-786C7EC9B423} = {B79E800B-0B3F-46DE-A839-80A2FDE87770}
+		{D145A9F2-81CC-4B85-8287-C03F4F2DB2EE} = {FB3EBF40-09BF-47DE-8978-3B832EA730A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E090E10-82B1-4D2B-A41C-50A34A8B1FB7}

@@ -21,8 +21,7 @@ public class Setup
         srvc.AddServerSetup()
             .ConfigureServer()
             .AddDataServer<ICatalogCenterStore>()
-            .AddDataServer<IEventStore>()
-            .AddDataServer<IAccountStore>();
+            .AddDataServer<IEventStore>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

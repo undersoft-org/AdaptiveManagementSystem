@@ -13,6 +13,7 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Open
 {
+    using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Server.Controller.Open;
 
     public class MemberController
@@ -21,7 +22,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Open
             IEntryStore,
             IReportStore,
             Participant,
-            AMS.Service.Contracts.Participants.Member,
+            Member,
             ServiceManager
         >
     {

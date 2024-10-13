@@ -11,7 +11,7 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers.Open
 {
-    using Undersoft.AMS.Service.Contracts.Subjects;
+    using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Server.Controller.Open;
 
     public class ProcedureController

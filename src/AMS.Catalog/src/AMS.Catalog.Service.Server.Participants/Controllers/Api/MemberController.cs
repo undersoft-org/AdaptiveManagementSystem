@@ -14,6 +14,7 @@ using Undersoft.SDK.Service.Data.Store;
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Api
 {
     using Microsoft.AspNetCore.Mvc;
+    using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Server.Controller.Api;
 
     [Route($"api/data/catalog/participants/Member")]
@@ -23,7 +24,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers.Api
             IEntryStore,
             IReportStore,
             Participant,
-            AMS.Service.Contracts.Participants.Member,
+            Member,
             ServiceManager
         >
     {

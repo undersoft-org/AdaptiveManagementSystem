@@ -9,7 +9,7 @@
 namespace Undersoft.AMS.Document.Service.Clients.Abstractions
 {
 
-    public interface IDocumentCenterStore : IDocumentFinancialStore, IDocumentCommercialStore, IDocumentLegalStore, IDocumentProductionalStore
+    public interface IDocumentCenterStore : IDocumentFinancialStore, IDocumentCommercialStore, IDocumentLegalStore, IDocumentProductionalStore, IDocumentLogisticalStore
     {
     }
 }
