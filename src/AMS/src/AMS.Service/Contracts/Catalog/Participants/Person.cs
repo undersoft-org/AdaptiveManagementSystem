@@ -10,6 +10,6 @@ namespace Undersoft.AMS.Service.Contracts.Catalog.Participants
 {
     public class Person : Participant
     {
-        public Person() { Type |= Enums.ParticipantType.Person; }
+        public Person() { Type |= Domain.Entities.Enums.ParticipantType.Person; }
     }
 }

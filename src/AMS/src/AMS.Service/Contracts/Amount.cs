@@ -35,6 +35,6 @@ namespace Undersoft.AMS.Service.Contracts
 
         public virtual long? SubjectId { get; set; }      
 
-        public virtual EntitySet<Date>? Dates { get; set; }
+        public virtual Listing<Date>? Dates { get; set; }
     }
 }

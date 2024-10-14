@@ -33,7 +33,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
                     nameof(Subject),
                     ExpandSite.OnRight
                 )
-                .RelateSetToSet<Subject, Resource>(
+                .RalateSetToSetExplicitly<Subject, Resource>(
                     r => r.Subjects,
                     r => r.Resources,
                     ExpandSite.OnRight

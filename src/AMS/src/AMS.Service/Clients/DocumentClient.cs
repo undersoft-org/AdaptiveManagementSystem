@@ -1,9 +1,11 @@
 ﻿using Microsoft.OData.Edm;
 using Undersoft.AMS.Service.Clients.Abstractions;
+using Undersoft.AMS.Service.Contracts;
+using Undersoft.SDK.Service.Data.Remote;
 
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
-//   Licensed under the MIT License. 
+//   Licensed under the MIT License.
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
 //   library: Undersoft.AMS.Service
@@ -11,24 +13,17 @@ using Undersoft.AMS.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients
 {
-    /// <summary>
-    /// The service client.
-    /// </summary>
     public class DocumentClient : DataClient<IDocumentStore>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceClient"/> class.
-        /// </summary>
-        /// <param name="serviceUri">The service uri.</param>
-        public DocumentClient(Uri serviceUri) : base(serviceUri) { }
+        public DocumentClient(Uri serviceUri)
+            : base(serviceUri) { }
 
-        /// <summary>
-        /// On model creating.
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <returns>An <see cref="IEdmModel"/></returns>
         protected override IEdmModel OnModelCreating(IEdmModel builder)
         {
+            this.RemoteSetToSet<Activity, Resource>(rl => rl.RightEntityId, k => k.Id)
+                .RemoteSetToSet<Activity, Participant>(rl => rl.RightEntityId, k => k.Id)
+                .RemoteOneToOne<Item, Participant>(o => o.ParticipantId, t => t.Id)
+                .RemoteOneToOne<Item, Subject>(o => o.SubjectId, t => t.Id);
 
             return base.OnModelCreating(builder);
         }

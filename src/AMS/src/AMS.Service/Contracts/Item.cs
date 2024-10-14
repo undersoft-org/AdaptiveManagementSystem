@@ -6,8 +6,10 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
+using Undersoft.AMS.Domain.Entities;
 using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Data.Contract;
+using Undersoft.SDK.Service.Data.Remote.Repository;
 
 namespace Undersoft.AMS.Service.Contracts
 {
@@ -17,10 +19,13 @@ namespace Undersoft.AMS.Service.Contracts
 
         public virtual long? ActivityId { get; set; }  
 
+        [Remote]
+        public virtual Participant? Participant { get; set; }
         public virtual long? ParticipantId { get; set; }
 
-        public virtual long? SubjectId { get; set; }
+        [Remote] 
         public virtual Subject? Subject { get; set; }
+        public virtual long? SubjectId { get; set; }
 
         public virtual string? Name { get; set; }
 
@@ -28,9 +33,9 @@ namespace Undersoft.AMS.Service.Contracts
 
         public virtual string? Description { get; set; }
 
-        public virtual EntitySet<Amount>? Amounts { get; set; }
+        public virtual Listing<Amount>? Amounts { get; set; }
 
-        public virtual EntitySet<Date>? Dates { get; set; }
+        public virtual Listing<Date>? Dates { get; set; }
 
         public virtual long? LocationId { get; set; }
         public virtual Location? Location { get; set; }

@@ -10,6 +10,6 @@ namespace Undersoft.AMS.Service.Contracts.Catalog.Participants
 {
     public class Environment : Participant
     {
-        public Environment() { Type |= Enums.ParticipantType.Environment; }
+        public Environment() { Type |= Domain.Entities.Enums.ParticipantType.Environment; }
     }
 }

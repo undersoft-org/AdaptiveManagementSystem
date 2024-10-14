@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
+namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Entries
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -66,7 +66,7 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     Index = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Label = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    ParticipantType = table.Column<long>(type: "bigint", nullable: false),
+                    Type = table.Column<long>(type: "bigint", nullable: false),
                     Nickname = table.Column<string>(type: "text", nullable: true),
                     FirstName = table.Column<string>(type: "text", nullable: true),
                     LastName = table.Column<string>(type: "text", nullable: true),
@@ -231,8 +231,8 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     Index = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Label = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    RightEntityId = table.Column<long>(type: "bigint", nullable: true),
-                    LeftEntityId = table.Column<long>(type: "bigint", nullable: true)
+                    LeftEntityId = table.Column<long>(type: "bigint", nullable: false),
+                    RightEntityId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -448,8 +448,8 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     Index = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Label = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    RightEntityId = table.Column<long>(type: "bigint", nullable: true),
-                    LeftEntityId = table.Column<long>(type: "bigint", nullable: true)
+                    LeftEntityId = table.Column<long>(type: "bigint", nullable: false),
+                    RightEntityId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -487,8 +487,8 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     Index = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Label = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    RightEntityId = table.Column<long>(type: "bigint", nullable: true),
-                    LeftEntityId = table.Column<long>(type: "bigint", nullable: true)
+                    LeftEntityId = table.Column<long>(type: "bigint", nullable: false),
+                    RightEntityId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -528,12 +528,12 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     Label = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     Type = table.Column<long>(type: "bigint", nullable: false),
                     ActivityId = table.Column<long>(type: "bigint", nullable: true),
-                    ParticipantId = table.Column<long>(type: "bigint", nullable: true),
-                    SubjectId = table.Column<long>(type: "bigint", nullable: true),
                     Name = table.Column<string>(type: "text", nullable: true),
                     FullName = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true),
-                    LocationId = table.Column<long>(type: "bigint", nullable: true)
+                    LocationId = table.Column<long>(type: "bigint", nullable: true),
+                    ParticipantId = table.Column<long>(type: "bigint", nullable: true),
+                    SubjectId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -610,8 +610,8 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Migrations.Reports
                     Index = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Label = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    RightEntityId = table.Column<long>(type: "bigint", nullable: true),
-                    LeftEntityId = table.Column<long>(type: "bigint", nullable: true)
+                    LeftEntityId = table.Column<long>(type: "bigint", nullable: false),
+                    RightEntityId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {

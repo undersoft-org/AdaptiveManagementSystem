@@ -33,16 +33,15 @@ namespace Undersoft.AMS.Service.Infrastructure.Stores.Mappings
                     nameof(Participant),
                     ExpandSite.OnRight
                 )
-                .RelateSetToSet<Participant, Resource>(
+                .RalateSetToSetExplicitly<Participant, Resource>(
                     r => r.Participants,
                     r => r.Resources,
-                    ExpandSite.OnRight,
-                    true
+                    ExpandSite.OnRight                   
                 )
                 .RelateOneToSet<Participant, Item>(
                     r => r.Participant,
                     r => r.Items,
-                    ExpandSite.OnRight,
+                    ExpandSite.OnLeft,
                     true
                 )
                 .RelateOneToSet<Participant, Email>(

@@ -9,6 +9,8 @@
 using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Access.Identity;
 using Undersoft.SDK.Service.Data.Identifier;
+using Undersoft.SDK.Service.Data.Remote.Repository;
+using Undersoft.SDK.Service.Data.Remote;
 
 namespace Undersoft.AMS.Domain.Entities
 {
@@ -18,15 +20,9 @@ namespace Undersoft.AMS.Domain.Entities
 
         public virtual IdentifierSet<Participant>? Identifiers { get; set; }
 
-        public virtual EntitySet<Participant>? RelatedFrom { get; set; }
+        public virtual Listing<Participant>? RelatedFrom { get; set; }
 
-        public virtual EntitySet<Participant>? RelatedTo { get; set; }      
-
-        public virtual EntitySet<Resource>? Resources { get; set; }
-
-        public virtual EntitySet<Activity>? Activities { get; set; }
-
-        public virtual EntitySet<Item>? Items { get; set; }
+        public virtual Listing<Participant>? RelatedTo { get; set; }           
 
         public virtual string? Nickname { get; set; }
 
@@ -38,15 +34,15 @@ namespace Undersoft.AMS.Domain.Entities
 
         public virtual string? FullName { get; set; }
 
-        public virtual EntitySet<Email>? Emails { get; set; }
+        public virtual Listing<Email>? Emails { get; set; }
 
-        public virtual EntitySet<Phone>? Phones { get; set; }
+        public virtual Listing<Phone>? Phones { get; set; }
 
-        public virtual EntitySet<Address>? Addresses { get; set; }
+        public virtual Listing<Address>? Addresses { get; set; }
 
-        public virtual EntitySet<Date>? Dates { get; set; }
+        public virtual Listing<Date>? Dates { get; set; }
 
-        public virtual EntitySet<Amount>? Amounts { get; set; }
+        public virtual Listing<Amount>? Amounts { get; set; }
 
         public virtual long? LocationId { get; set; }
         public virtual Location? Location { get; set; }
@@ -56,5 +52,15 @@ namespace Undersoft.AMS.Domain.Entities
         public virtual string? Websites { get; set; }
 
         public virtual Gender Gender { get; set; }
+        
+        public virtual Listing<Item>? Items { get; set; }
+        
+        public virtual Listing<Activity>? Activities { get; set; }
+
+        public virtual Listing<RemoteLink<Activity, Participant>>? ActivitiesToParticipants { get; set; }
+        
+        public virtual Listing<Resource>? Resources { get; set; }
+
+        public virtual Listing<RemoteLink<Participant, Resource>>? ParticipantsToResources { get; set; }
     }
 }

@@ -10,9 +10,9 @@ namespace Undersoft.AMS.Service.Contracts
 {
     public class Location : SDK.Service.Access.Identity.Location, IEntity
     {
-        public virtual EntitySet<Place>? Places { get; set; }
+        public virtual Listing<Place>? Places { get; set; }
 
-        public virtual EntitySet<Endpoint>? Endpoints { get; set; }
+        public virtual Listing<Endpoint>? Endpoints { get; set; }
 
         public virtual long? ActivityId { get; set; }
 

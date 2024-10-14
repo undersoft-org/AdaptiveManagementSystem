@@ -7,6 +7,8 @@
 // *************************************************
 
 using Undersoft.AMS.Domain.Entities.Enums;
+using Undersoft.SDK.Service.Data.Remote.Repository;
+using Undersoft.SDK.Service.Data.Remote;
 
 namespace Undersoft.AMS.Domain.Entities
 {
@@ -22,13 +24,21 @@ namespace Undersoft.AMS.Domain.Entities
 
         public virtual byte[]? MemberData { get; set; }
 
-        public virtual EntitySet<Activity>? Activities { get; set; }
-
-        public virtual EntitySet<Participant>? Participants { get; set; }
-
-        public virtual EntitySet<Subject>? Subjects { get; set; }
-
         public virtual long? LocationId { get; set; }
         public virtual Location? Location { get; set; }
+        
+        public virtual Listing<Activity>? Activities { get; set; }
+
+        public virtual Listing<RemoteLink<Activity, Resource>>? ActivitiesToResources { get; set; }
+        
+        public virtual Listing<Participant>? Participants { get; set; }
+
+        public virtual Listing<RemoteLink<Participant, Resource>>? ParticipantsToResources { get; set; }
+        
+        public virtual Listing<Subject>? Subjects { get; set; }
+
+        public virtual Listing<RemoteLink<Subject, Resource>>? SubjectsToResources { get; set; }
+
+
     }
 }

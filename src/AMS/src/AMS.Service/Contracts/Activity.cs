@@ -9,6 +9,8 @@
 using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Data.Contract;
 using Undersoft.SDK.Service.Data.Identifier;
+using Undersoft.SDK.Service.Data.Remote.Repository;
+using Undersoft.SDK.Service.Data.Remote;
 
 namespace Undersoft.AMS.Service.Contracts
 {
@@ -24,21 +26,25 @@ namespace Undersoft.AMS.Service.Contracts
 
         public virtual IdentifierSet<Activity>? Identifiers { get; set; }
 
-        public virtual EntitySet<Activity>? RelatedFrom { get; set; }
+        public virtual Listing<Activity>? RelatedFrom { get; set; }
 
-        public virtual EntitySet<Activity>? RelatedTo { get; set; }
+        public virtual Listing<Activity>? RelatedTo { get; set; }
 
-        public virtual EntitySet<Participant>? Participants { get; set; }
+        public virtual Listing<Item>? Items { get; set; }
 
-        public virtual EntitySet<Resource>? Resources { get; set; }
+        public virtual Listing<Date>? Dates { get; set; }
 
-        public virtual EntitySet<Item>? Items { get; set; }
-
-        public virtual EntitySet<Date>? Dates { get; set; }
-
-        public virtual EntitySet<Amount>? Amounts { get; set; }
+        public virtual Listing<Amount>? Amounts { get; set; }
 
         public virtual long? LocationId { get; set; }
         public virtual Location? Location { get; set; }
+
+        [Remote]
+        public virtual Listing<Participant>? Participants { get; set; }
+        public virtual Listing<RemoteLink<Activity, Participant>>? ActivitiesToParticipants { get; set; }
+
+        [Remote]
+        public virtual Listing<Resource>? Resources { get; set; }
+        public virtual Listing<RemoteLink<Activity, Resource>>? ActivitiesToResources { get; set; }
     }
 }

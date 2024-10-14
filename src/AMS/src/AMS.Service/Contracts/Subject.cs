@@ -9,6 +9,8 @@
 using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Data.Contract;
 using Undersoft.SDK.Service.Data.Identifier;
+using Undersoft.SDK.Service.Data.Remote.Repository;
+using Undersoft.SDK.Service.Data.Remote;
 
 namespace Undersoft.AMS.Service.Contracts
 {
@@ -18,11 +20,9 @@ namespace Undersoft.AMS.Service.Contracts
 
         public virtual IdentifierSet<Subject>? Identifiers { get; set; }
 
-        public virtual EntitySet<Subject>? RelatedFrom { get; set; }
+        public virtual Listing<Subject>? RelatedFrom { get; set; }
 
-        public virtual EntitySet<Subject>? RelatedTo { get; set; }
-
-        public virtual EntitySet<Resource>? Resources { get; set; }
+        public virtual Listing<Subject>? RelatedTo { get; set; }        
 
         public virtual string? Name { get; set; }
 
@@ -32,9 +32,13 @@ namespace Undersoft.AMS.Service.Contracts
 
         public virtual bool IsVariant { get; set; }
 
-        public virtual EntitySet<Amount>? Amounts { get; set; }
+        public virtual Listing<Amount>? Amounts { get; set; }
 
         public virtual long? LocationId { get; set; }
         public virtual Location? Location { get; set; }
+
+        [Remote]
+        public virtual RemoteSet<Resource>? Resources { get; set; }
+        public virtual Listing<RemoteLink<Subject, Resource>>? SubjectsToResources { get; set; }
     }
 }

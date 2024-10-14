@@ -8,6 +8,8 @@
 
 using Undersoft.AMS.Domain.Entities.Enums;
 using Undersoft.SDK.Service.Data.Identifier;
+using Undersoft.SDK.Service.Data.Remote.Repository;
+using Undersoft.SDK.Service.Data.Remote;
 
 namespace Undersoft.AMS.Domain.Entities
 {
@@ -17,14 +19,10 @@ namespace Undersoft.AMS.Domain.Entities
 
         public virtual IdentifierSet<Subject>? Identifiers { get; set; }
 
-        public virtual EntitySet<Subject>? RelatedFrom { get; set; }
+        public virtual Listing<Subject>? RelatedFrom { get; set; }
 
-        public virtual EntitySet<Subject>? RelatedTo { get; set; }
-
-        public virtual EntitySet<Resource>? Resources { get; set; }
-
-        public virtual EntitySet<Item>? Items { get; set; }
-
+        public virtual Listing<Subject>? RelatedTo { get; set; }
+        
         public virtual string? Name { get; set; }
 
         public virtual string? FullName { get; set; }
@@ -33,9 +31,16 @@ namespace Undersoft.AMS.Domain.Entities
 
         public virtual bool IsVariant { get; set; } 
 
-        public virtual EntitySet<Amount>? Amounts { get; set; }
+        public virtual Listing<Amount>? Amounts { get; set; }
 
         public virtual long? LocationId { get; set; }
+
         public virtual Location? Location { get; set; }
+        
+        public virtual RemoteSet<Item>? Items { get; set; }
+        
+        public virtual Listing<Resource>? Resources { get; set; }
+
+        public virtual Listing<RemoteLink<Subject, Resource>>? SubjectsToResources { get; set; }
     }
 }
