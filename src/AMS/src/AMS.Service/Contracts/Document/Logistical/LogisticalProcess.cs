@@ -6,7 +6,7 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-namespace Undersoft.AMS.Service.Contracts.Document.Transportal
+namespace Undersoft.AMS.Service.Contracts.Document.Logistical
 {
     public class LogisticalProcess : Activity
     {

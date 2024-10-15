@@ -8,7 +8,7 @@
 
 using Undersoft.AMS.Service.Contracts.Activities;
 
-namespace Undersoft.AMS.Service.Contracts.Document.Transportal
+namespace Undersoft.AMS.Service.Contracts.Document.Logistical
 {
     public class LogisticalOrder : Order
     {

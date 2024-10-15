@@ -24,6 +24,14 @@ namespace Undersoft.AMS.Domain.Entities.Enums
         Stock = 0b_0010_0000_0000,
         Inventory = 0b_0100_0000_0000,
         Delivery = 0b_1000_0000_0000,
-        Shipment = 0b_0001_0000_0000_0000
+        Shipment = 0b_0001_0000_0000_0000,
+        Productional = 0b_0010_0000_0000_0000,
+        Commercial = 0b_0100_0000_0000_0000,
+        Financial = 0b_1000_0000_0000_0000,
+        Legal = 0b_0001_0000_0000_0000_0000,
+        Logistical = 0b_0010_0000_0000_0000_0000,
+        Record = 0b_0100_0000_0000_0000_0000,
+        Transfer = 0b_1000_0000_0000_0000_0000,
+        Invoice = 0b_0001_0000_0000_0000_0000_0000
     }
 }
