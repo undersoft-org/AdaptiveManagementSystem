@@ -8,7 +8,7 @@
 
 using Undersoft.AMS.Service.Contracts.Activities;
 
-namespace Undersoft.AMS.Service.Contracts.Logistic.Deliveries
+namespace Undersoft.AMS.Service.Contracts.Logistic.Receptions
 {
     public class ReceptionProcess : Process
     {

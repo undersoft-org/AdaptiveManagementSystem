@@ -23,7 +23,7 @@ namespace Undersoft.AMS.Domain.Entities.Enums
         Consume = 0b_0001_0000_0000,
         Stock = 0b_0010_0000_0000,
         Inventory = 0b_0100_0000_0000,
-        Delivery = 0b_1000_0000_0000,
+        Reception = 0b_1000_0000_0000,
         Shipment = 0b_0001_0000_0000_0000,
         Productional = 0b_0010_0000_0000_0000,
         Commercial = 0b_0100_0000_0000_0000,

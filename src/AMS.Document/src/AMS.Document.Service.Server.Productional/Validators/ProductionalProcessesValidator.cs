@@ -9,7 +9,7 @@
 using Undersoft.SDK;
 using Undersoft.SDK.Service.Operation.Command.Validator;
 
-namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Validators
+namespace Undersoft.AMS.Document.Service.Server.Productional.Validators
 {
     using Undersoft.AMS.Service.Contracts.Document.Productional;
 

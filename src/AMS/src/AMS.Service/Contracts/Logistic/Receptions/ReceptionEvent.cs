@@ -6,7 +6,7 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-namespace Undersoft.AMS.Service.Contracts.Logistic.Deliveries
+namespace Undersoft.AMS.Service.Contracts.Logistic.Receptions
 {
     public class ReceptionEvent : LogisticEvent
     {
