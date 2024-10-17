@@ -22,7 +22,7 @@ namespace Undersoft.AMS.Logistic.Service.Clients.Abstractions
     /// <summary>
     /// The service client.
     /// </summary>
-    public interface ILogisticDeliveriesStore : IDataStore
+    public interface ILogisticReceptionsStore : IDataStore
     {
     }
 }

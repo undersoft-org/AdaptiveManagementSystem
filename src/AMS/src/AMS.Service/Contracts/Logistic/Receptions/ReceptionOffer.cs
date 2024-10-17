@@ -10,7 +10,7 @@ using Undersoft.AMS.Service.Contracts.Activities;
 
 namespace Undersoft.AMS.Service.Contracts.Logistic.Deliveries
 {
-    public class DeliveryOffer : Offer
+    public class ReceptionOffer : Offer
     {
 
     }

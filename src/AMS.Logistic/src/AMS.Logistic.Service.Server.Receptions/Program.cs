@@ -8,7 +8,7 @@
 
 using Undersoft.SDK.Service.Server.Hosting;
 
-namespace Undersoft.AMS.Logistic.Service.Server.Deliveries;
+namespace Undersoft.AMS.Logistic.Service.Server.Receptions;
 
 /// <summary>
 /// The program.
@@ -33,17 +33,17 @@ public class Program
     {
         try
         {
-            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Logistic.Service.Server.Deliveries ....");
+            Log.Info<Runlog>(null, "Starting Undersoft.AMS.Logistic.Service.Server.Receptions ....");
 
             StartServer();
         }
         catch (Exception exception)
         {
-            Log.Error<Runlog>(null, "Undersoft.AMS.Logistic.Service.Server.Deliveries terminated unexpectedly ....", exception);
+            Log.Error<Runlog>(null, "Undersoft.AMS.Logistic.Service.Server.Receptions terminated unexpectedly ....", exception);
         }
         finally
         {
-            Log.Info<Runlog>(null, "Undersoft.AMS.Logistic.Service.Server.Deliveries shutted down ....");
+            Log.Info<Runlog>(null, "Undersoft.AMS.Logistic.Service.Server.Receptions shutted down ....");
         }
     }
     /// <summary>
@@ -51,7 +51,7 @@ public class Program
     /// </summary>
     public static void Restart()
     {
-        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Logistic.Service.Server.Deliveries ....");
+        Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Logistic.Service.Server.Receptions ....");
 
         Shutdown();
         Launch();
@@ -62,7 +62,7 @@ public class Program
     /// </summary>
     public static void Shutdown()
     {
-        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Logistic.Service.Server.Deliveries ....");
+        Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Logistic.Service.Server.Receptions ....");
 
         server?.Host.StopAsync(TimeSpan.FromSeconds(5)).Wait();
     }

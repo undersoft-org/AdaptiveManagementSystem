@@ -13,9 +13,9 @@ using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Logistic.Service.Clients
 {
-    public class LogisticDeliveriesClient : DataClient<ILogisticDeliveriesStore>
+    public class LogisticReceptionsClient : DataClient<ILogisticReceptionsStore>
     {
-        public LogisticDeliveriesClient(Uri serviceUri) : base(serviceUri) { }
+        public LogisticReceptionsClient(Uri serviceUri) : base(serviceUri) { }
 
         protected override IEdmModel OnModelCreating(IEdmModel builder)
         {

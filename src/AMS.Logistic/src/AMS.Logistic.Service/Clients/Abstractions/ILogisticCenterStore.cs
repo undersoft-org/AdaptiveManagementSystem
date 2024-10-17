@@ -9,7 +9,7 @@
 namespace Undersoft.AMS.Logistic.Service.Clients.Abstractions
 {
 
-    public interface ILogisticCenterStore : ILogisticInventoryStore, ILogisticDeliveriesStore, ILogisticShipmentsStore
+    public interface ILogisticCenterStore : ILogisticInventoryStore, ILogisticReceptionsStore, ILogisticShipmentsStore
     {
     }
 }

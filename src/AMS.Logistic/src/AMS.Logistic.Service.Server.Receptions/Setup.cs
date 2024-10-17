@@ -10,7 +10,7 @@ using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server;
 using Undersoft.SDK.Service.Server.Hosting;
 
-namespace Undersoft.AMS.Logistic.Service.Server.Deliveries;
+namespace Undersoft.AMS.Logistic.Service.Server.Receptions;
 
 public class Setup
 {
@@ -19,8 +19,7 @@ public class Setup
         srvc.AddServerSetup()
             .ConfigureServer()
             .AddDataServer<IEntityStore>()
-            .AddDataServer<IEventStore>()
-            .AddDataServer<IAccountStore>(); 
+            .AddDataServer<IEventStore>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

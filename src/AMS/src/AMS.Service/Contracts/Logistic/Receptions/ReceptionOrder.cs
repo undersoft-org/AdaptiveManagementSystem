@@ -6,9 +6,11 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
+using Undersoft.AMS.Service.Contracts.Activities;
+
 namespace Undersoft.AMS.Service.Contracts.Logistic.Deliveries
 {
-    public class DeliveryEvent : LogisticEvent
+    public class ReceptionOrder : Order
     {
 
     }
