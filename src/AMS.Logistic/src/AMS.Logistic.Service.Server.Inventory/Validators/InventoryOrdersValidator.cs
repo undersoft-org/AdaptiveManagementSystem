@@ -18,7 +18,7 @@ namespace Undersoft.AMS.Logistic.Service.Server.Inventory.Validators
         public InventoryOrdersValidator(IServicer servicer) : base(servicer)
         {
             ValidationScope(
-                OperationType.Any,
+                OperationKind.Any,
                 () =>
                 {
                     ValidateRequired(p => p.Contract.Name);

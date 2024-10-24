@@ -38,12 +38,7 @@
     <Using Include="Undersoft.SDK.Proxies" />
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Validators\" />
-  </ItemGroup>
+  </ItemGroup> 
   
   <ItemGroup>
     <ProjectReference Include="..\..\..\AMS\src\AMS.Service.Infrastructure\Undersoft.AMS.Service.Infrastructure.csproj" />

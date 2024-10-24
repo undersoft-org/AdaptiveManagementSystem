@@ -26,7 +26,7 @@ public class AccountValidator : ViewValidator<Account>
     public AccountValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {
                 ValidateEmail(p => p.Model.Personal!.Email);

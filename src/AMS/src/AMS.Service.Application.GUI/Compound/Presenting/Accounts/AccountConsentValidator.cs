@@ -26,7 +26,7 @@ public class AccountConsentValidator : ViewValidator<AccountConsent>
     public AccountConsentValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {                
                 ValidateRequired(p => p.Model.TermsConsent);

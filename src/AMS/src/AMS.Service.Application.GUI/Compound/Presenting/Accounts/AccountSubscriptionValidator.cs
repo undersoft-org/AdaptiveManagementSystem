@@ -26,7 +26,7 @@ public class AccountSubscriptionValidator : ViewValidator<AccountSubscription>
     public AccountSubscriptionValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {                     
             }

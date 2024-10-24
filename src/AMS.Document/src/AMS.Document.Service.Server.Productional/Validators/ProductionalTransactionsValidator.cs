@@ -18,7 +18,7 @@ namespace Undersoft.AMS.Document.Service.Server.Productional.Validators
         public ProductionalTransactionsValidator(IServicer servicer) : base(servicer)
         {
             ValidationScope(
-                OperationType.Any,
+                OperationKind.Any,
                 () =>
                 {
                     ValidateRequired(p => p.Contract.Name);

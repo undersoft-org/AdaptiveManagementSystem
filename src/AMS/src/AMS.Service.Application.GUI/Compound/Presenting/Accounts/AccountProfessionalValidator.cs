@@ -26,7 +26,7 @@ public class AccountProfessionalValidator : ViewValidator<AccountProfessional>
     public AccountProfessionalValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {
                 ValidateEmail(p => p.Model.ProfessionalEmail);          

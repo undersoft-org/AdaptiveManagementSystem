@@ -27,7 +27,7 @@ public class AccountPanel
         if (panel.Content != null)
             data = panel.Content;
         else
-            data = new ViewData<Account>(new Account(), OperationType.Any);
+            data = new ViewData<Account>(new Account(), OperationKind.Any);
 
         data.EntryMode = EntryMode.Tabs;
         data.Width = "390px";

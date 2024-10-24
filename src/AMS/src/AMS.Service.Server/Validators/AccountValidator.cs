@@ -25,7 +25,7 @@ public class AccountValidator : CommandValidator<Account>
     public AccountValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {
                 ValidateEmail(p => p.Contract.Credentials.Email);
@@ -33,7 +33,7 @@ public class AccountValidator : CommandValidator<Account>
         );
 
         ValidationScope(
-            OperationType.Create | OperationType.Upsert,
+            OperationKind.Create | OperationKind.Upsert,
             () =>
             {
                 ValidateRequired(p => p.Contract.Credentials.UserName);
@@ -42,7 +42,7 @@ public class AccountValidator : CommandValidator<Account>
             }
         );
         ValidationScope(
-            OperationType.Create,
+            OperationKind.Create,
             () =>
             {
                 ValidateNotExist<IReportStore, Account>(
@@ -56,7 +56,7 @@ public class AccountValidator : CommandValidator<Account>
             }
         );
         ValidationScope(
-            OperationType.Update | OperationType.Change | OperationType.Delete,
+            OperationKind.Update | OperationKind.Change | OperationKind.Delete,
             () =>
             {
                 ValidateRequired(p => p.Contract.Credentials.SessionToken);

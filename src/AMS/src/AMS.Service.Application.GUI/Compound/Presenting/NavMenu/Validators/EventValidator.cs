@@ -17,7 +17,7 @@ public class EventValidator : ViewValidator<EventInfo>
     public EventValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {
                 ValidateRequired(p => p.Model.EventType);

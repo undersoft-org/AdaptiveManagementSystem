@@ -18,7 +18,7 @@ namespace Undersoft.AMS.Market.Service.Server.Consumes.Validators
         public ConsumeTransactionsValidator(IServicer servicer) : base(servicer)
         {
             ValidationScope(
-                OperationType.Any,
+                OperationKind.Any,
                 () =>
                 {
                     ValidateRequired(p => p.Contract.Name);

@@ -18,7 +18,7 @@ namespace Undersoft.AMS.Logistic.Service.Server.Shipments.Validators
         public ShipmentOffersValidator(IServicer servicer) : base(servicer)
         {
             ValidationScope(
-                OperationType.Any,
+                OperationKind.Any,
                 () =>
                 {
                     ValidateRequired(p => p.Contract.Name);

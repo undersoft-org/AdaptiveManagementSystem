@@ -26,7 +26,7 @@ public class AccountTenantValidator : ViewValidator<AccountTenant>
     public AccountTenantValidator(IServicer servicer) : base(servicer)
     {
         ValidationScope(
-            OperationType.Any,
+            OperationKind.Any,
             () =>
             {                        
             }

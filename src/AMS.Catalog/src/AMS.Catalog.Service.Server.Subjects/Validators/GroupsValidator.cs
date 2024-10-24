@@ -18,7 +18,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Validators
         public GroupsValidator(IServicer servicer) : base(servicer)
         {
             ValidationScope(
-                OperationType.Any,
+                OperationKind.Any,
                 () =>
                 {
                     ValidateRequired(p => p.Contract.Name);

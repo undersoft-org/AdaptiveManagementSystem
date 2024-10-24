@@ -9,13 +9,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server.Accounts;
-using Undersoft.SDK.Service.Server.Controller.Api;
-using Undersoft.SDK.Service.Server.Controller.Open;
+using Undersoft.SDK.Service.Server.Controller;
 
-namespace Undersoft.AMS.Service.Server.Controllers.Open
+namespace Undersoft.AMS.Service.Server.Controllers
 {
+    [Area("Auth")]
     public class AccountController
-        : OpenDataController<
+        : DataController<
             long,
             IAccountStore,
             Account,
@@ -23,23 +23,6 @@ namespace Undersoft.AMS.Service.Server.Controllers.Open
             AccountService<Contracts.Account>
         >
     {
-        public AccountController(IServicer servicer) : base(servicer, EventPublishMode.None) { }
-    }
-}
-
-
-namespace Undersoft.AMS.Service.Server.Controllers.Api
-{
-    [Route($"api/auth/Account")]
-    public class AccountsController
-        : ApiDataController<
-            long,
-            IAccountStore,
-            Account,
-            Contracts.Account,
-            AccountService<Contracts.Account>
-        >
-    {
-        public AccountsController(IServicer servicer) : base(servicer, EventPublishMode.None) { }
+        public AccountController(IServicer servicer) : base(servicer, PublishMode.None) { }
     }
 }
