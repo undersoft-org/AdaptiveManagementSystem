@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Logistic.Service.Server.Shipments.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Logistic.Shipments;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Logistic/Shipments")]
     public class ShipmentProcessController
           : CqrsController<
             long,

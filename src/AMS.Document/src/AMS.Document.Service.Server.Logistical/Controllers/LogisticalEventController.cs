@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Document.Service.Server.Logistical.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Logistical;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class LogisticalEventController
         : BusController<
             long,

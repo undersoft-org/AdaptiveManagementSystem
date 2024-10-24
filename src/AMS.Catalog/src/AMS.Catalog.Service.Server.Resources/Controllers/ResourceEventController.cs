@@ -16,6 +16,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Resources;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class ResourceEventController
         : BusController<
             long,

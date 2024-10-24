@@ -8,10 +8,12 @@
 
 namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Document.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Document.Productional;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Document")]
     public class ProductionalOfferController
         : RemoteDataController<
             long,

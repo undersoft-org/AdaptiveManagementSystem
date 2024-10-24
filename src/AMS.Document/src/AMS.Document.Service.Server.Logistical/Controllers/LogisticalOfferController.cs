@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Document.Service.Server.Logistical.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Logistical;
     using Undersoft.SDK.Service.Server.Controller;
-
+    
+    [Area("Data/Document/Logistical")]
     public class LogisticalOfferController
         : CqrsController<
             long,

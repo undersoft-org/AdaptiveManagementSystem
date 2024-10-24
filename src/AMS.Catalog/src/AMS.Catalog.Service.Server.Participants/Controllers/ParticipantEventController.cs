@@ -16,6 +16,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class ParticipantEventController
         : BusController<
             long,

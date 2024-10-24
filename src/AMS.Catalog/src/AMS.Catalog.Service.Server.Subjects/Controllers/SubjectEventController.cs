@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class SubjectEventController
         : BusController<
             long,

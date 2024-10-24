@@ -12,8 +12,10 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Document.Service.Server.Productional.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Productional;
 
+    [Area("Data/Document/Productional")]
     public class ProductionalTransactionController
         : CqrsController<
             long,

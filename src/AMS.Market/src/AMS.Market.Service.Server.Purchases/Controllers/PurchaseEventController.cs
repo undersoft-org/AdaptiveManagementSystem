@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Market.Service.Server.Purchases.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Market.Purchases;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class PurchaseEventController
         : BusController<
             long,

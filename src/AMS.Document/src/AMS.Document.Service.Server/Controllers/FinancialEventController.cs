@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Financial;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class FinancialEventController
         : RemoteBusController<
             long,

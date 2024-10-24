@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Document.Service.Server.Legal.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Legal;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Document/Legal")]
     public class LegalProcessController
           : CqrsController<
             long,

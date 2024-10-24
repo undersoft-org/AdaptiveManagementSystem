@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
 
+    [Area("Data/Catalog")]
     public class GroupController
         : RemoteDataController<
             long,

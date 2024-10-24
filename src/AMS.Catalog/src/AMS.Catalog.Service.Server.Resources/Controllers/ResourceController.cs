@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Catalog/Resources")]
     public class ResourceController
         : CqrsController<
             long,

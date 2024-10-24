@@ -13,7 +13,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Resources;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Resources")]
+    [Area("Data/Catalog")]
     public class ArchiveController
         : RemoteDataController<
             long,

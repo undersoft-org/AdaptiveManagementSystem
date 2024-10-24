@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Document.Service.Server.Financial.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Financial;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Document/Financial")]
     public class FinancialOfferController
         : CqrsController<
             long,

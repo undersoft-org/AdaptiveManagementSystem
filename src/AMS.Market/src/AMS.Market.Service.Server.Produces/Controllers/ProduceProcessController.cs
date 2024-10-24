@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Market.Service.Server.Produces.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Market.Produces;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Market/Produces")]
     public class ProduceProcessController
           : CqrsController<
             long,

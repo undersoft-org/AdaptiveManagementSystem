@@ -12,8 +12,10 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Document.Service.Server.Commercial.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Commercial;
 
+    [Area("Data/Document/Commercial")]
     public class CommercialTransactionController
         : CqrsController<
             long,

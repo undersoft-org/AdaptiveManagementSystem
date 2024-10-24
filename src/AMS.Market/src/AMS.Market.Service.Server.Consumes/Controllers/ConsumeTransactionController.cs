@@ -12,8 +12,10 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Market.Service.Server.Consumes.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Market.Consumes;
 
+    [Area("Data/Market/Consumes")]
     public class ConsumeTransactionController
         : CqrsController<
             long,

@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Logistic.Service.Server.Inventory.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Logistic.Inventory;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Logistic/Inventory")]
     public class InventoryOfferController
         : CqrsController<
             long,

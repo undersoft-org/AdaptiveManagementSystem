@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Catalog.Resources;
 
-    [Area("Data/Catalog/Resources")]
+    [Area("Data/Catalog")]
     public class ReportController
         : RemoteDataController<
             long,

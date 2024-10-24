@@ -12,8 +12,10 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Market.Service.Server.Stocks.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Market.Stocks;
 
+    [Area("Data/Market/Stocks")]
     public class StockOrderController
         : CqrsController<
             long,

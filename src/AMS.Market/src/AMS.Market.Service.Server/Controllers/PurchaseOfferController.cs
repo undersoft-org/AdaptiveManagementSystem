@@ -8,10 +8,12 @@
 
 namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Market.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Market.Purchases;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Market")]
     public class PurchaseOfferController
         : RemoteDataController<
             long,

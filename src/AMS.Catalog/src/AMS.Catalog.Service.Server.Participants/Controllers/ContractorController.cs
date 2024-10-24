@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Query;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Catalog/Participants")]
     public class ContractorController
         : CqrsController<
             long,

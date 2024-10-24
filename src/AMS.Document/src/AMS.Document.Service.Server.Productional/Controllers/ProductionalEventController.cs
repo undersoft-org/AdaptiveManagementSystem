@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Document.Service.Server.Productional.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Document.Productional;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class ProductionalEventController
         : BusController<
             long,

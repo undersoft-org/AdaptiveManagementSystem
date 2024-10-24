@@ -6,7 +6,6 @@
 //   server: Undersoft.SVC.Service.Server
 // ********************************************************
 
-using Undersoft.SDK.Service.Data.Query;
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server.Controller;
 
@@ -15,6 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts;
 
+    [Area("Data/Catalog/Subjects")]
     public class SubjectController
         : CqrsController<
             long,

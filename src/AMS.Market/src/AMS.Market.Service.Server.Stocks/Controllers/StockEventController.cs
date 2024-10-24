@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Market.Service.Server.Stocks.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Market.Stocks;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class StockEventController
         : BusController<
             long,

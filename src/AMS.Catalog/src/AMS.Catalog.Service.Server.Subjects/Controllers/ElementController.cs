@@ -13,9 +13,11 @@ using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Catalog/Subjects")]
     public class ElementController
         : CqrsController<
             long,

@@ -12,8 +12,10 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Logistic.Service.Server.Receptions.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Logistic.Receptions;
 
+    [Area("Data/Logistic/Receptions")]
     public class ReceptionTransactionController
         : CqrsController<
             long,

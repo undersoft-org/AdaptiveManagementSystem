@@ -13,7 +13,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Participants")]
+    [Area("Data/Catalog")]
     public class ContractorController
         : RemoteDataController<
             long,

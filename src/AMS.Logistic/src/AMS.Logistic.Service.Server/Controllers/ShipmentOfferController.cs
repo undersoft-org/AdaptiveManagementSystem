@@ -8,10 +8,12 @@
 
 namespace Undersoft.AMS.Logistic.Service.Server.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Logistic.Shipments;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Logistic")]
     public class ShipmentOfferController
         : RemoteDataController<
             long,

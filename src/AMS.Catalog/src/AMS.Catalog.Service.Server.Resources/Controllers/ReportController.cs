@@ -11,9 +11,11 @@ using Undersoft.SDK.Service.Data.Query;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Catalog.Resources;
     using Undersoft.SDK.Service.Server.Controller;
 
+    [Area("Data/Catalog/Resources")]
     public class ReportController
         : CqrsController<
             long,

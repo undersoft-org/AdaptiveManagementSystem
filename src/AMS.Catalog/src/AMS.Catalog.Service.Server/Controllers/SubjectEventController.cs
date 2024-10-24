@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Data.Store;
 
-    [Area("Bus/Catalog/Subjects")]
+    [Area("Bus/Catalog")]
     public class SubjectEventController
         : RemoteBusController<long, IEventStore, Event, SubjectEvent, ServiceManager>
     {

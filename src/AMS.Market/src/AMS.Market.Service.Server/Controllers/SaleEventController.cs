@@ -10,9 +10,11 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
 {
+    using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts.Market.Sales;
     using Undersoft.SDK.Service.Data.Store;
 
+    [Area("Bus")]
     public class SaleEventController
         : RemoteBusController<
             long,
