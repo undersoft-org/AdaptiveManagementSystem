@@ -17,20 +17,17 @@ using Undersoft.SDK.Service.Application.Access;
 
 using Undersoft.SDK.Service.Application.GUI;
 using Undersoft.SDK.Service.Application.GUI.Models;
-using Undersoft.SDK.Service.Application.GUI.View.Access;
 using Undersoft.SDK.Service.Application.GUI.View.Abstraction;
+using Undersoft.SDK.Service.Application.GUI.View.Access;
 using Undersoft.SDK.Service.Data.Remote.Repository;
 using Undersoft.SDK.Service.Data.Store;
 
 namespace Undersoft.AMS.Service.Application.Hybrid;
 
-using Undersoft.SDK.Service.Data.Event;
 using Undersoft.AMS.Service.Application.GUI.Compound.Access;
 using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
 using Undersoft.AMS.Service.Clients;
 using Undersoft.AMS.Service.Contracts;
-using Undersoft.AMS.Service.Contracts.Accounts;
-using Undersoft.AMS.Service.Contracts.Activities;
 using EventInfo = SDK.Service.Data.Event.EventInfo;
 
 public static class MauiProgram

@@ -8,7 +8,7 @@
       },
       "dotnetRunMessages": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
-      "applicationUrl": "https://127.0.0.1:15015;http://127.0.0.1:10006"
+      "applicationUrl": "https://127.0.0.1:10005;http://127.0.0.1:10006"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -27,22 +27,14 @@
       "dotnetRunMessages": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
       "applicationUrl": "https://127.0.0.1:15015;http://127.0.0.1:10006"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "applicationUrl": "https://127.0.0.1:15015;http://127.0.0.1:10006",
-      "DockerfileRunArguments": "-p 127.0.0.1:15015:15015 -p 127.0.0.1:10006:10006",
-      "publishAllPorts": true,
-      "useSSL": true,
-      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}"
-    },
+    },    
     "Container (.NET SDK)": {
       "commandName": "SdkContainer",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "environmentVariables": {
-        "ASPNETCORE_HTTPS_PORTS": "8081",
-        "ASPNETCORE_HTTP_PORTS": "8080"
+        "ASPNETCORE_HTTPS_PORTS": "10005",
+        "ASPNETCORE_HTTP_PORTS": "10006"
       },
       "publishAllPorts": true,
       "useSSL": true

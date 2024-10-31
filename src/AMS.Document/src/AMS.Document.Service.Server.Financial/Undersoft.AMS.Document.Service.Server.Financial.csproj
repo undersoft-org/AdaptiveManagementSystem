@@ -12,6 +12,17 @@
     <Authors>Dariusz Hanc</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+    <ContainerImageTag>latest</ContainerImageTag>
+    <ContainerFamily>alpine</ContainerFamily>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0-alpine</ContainerBaseImage>
+    <IsPublishable>true</IsPublishable>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ContainerRegistry>registry.hub.docker.com</ContainerRegistry>
+    <ContainerRepository>uscr/amsdocumentserviceserverfinancial</ContainerRepository>
+    <WebPublishMethod>Container</WebPublishMethod>
   </PropertyGroup>
 
   <ItemGroup>
@@ -43,9 +54,10 @@
     <Using Include="Undersoft.SDK.Logging" />
     <Using Include="Undersoft.SDK.Uniques" />
   </ItemGroup>
-  
+
   <ItemGroup>
-    <Folder Include="Validators\" />
+    <ContainerPort Include="20226" Type="tcp" />
+    <ContainerPort Include="20225" Type="tcp" />
   </ItemGroup>
 
 </Project>

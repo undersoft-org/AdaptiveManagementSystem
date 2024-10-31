@@ -12,6 +12,17 @@
     <Authors>Dariusz Hanc</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+    <ContainerImageTag>latest</ContainerImageTag>
+    <ContainerFamily>alpine</ContainerFamily>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0-alpine</ContainerBaseImage>
+    <IsPublishable>true</IsPublishable>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ContainerRegistry>registry.hub.docker.com</ContainerRegistry>
+    <ContainerRepository>uscr/amslogisticserviceservershipments</ContainerRepository>
+    <WebPublishMethod>Container</WebPublishMethod>
   </PropertyGroup>
 
   <ItemGroup>
@@ -44,4 +55,9 @@
     <Using Include="Undersoft.SDK.Uniques" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ContainerPort Include="20136" Type="tcp" />
+    <ContainerPort Include="20135" Type="tcp" />
+  </ItemGroup>
+  
 </Project>

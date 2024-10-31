@@ -20,13 +20,6 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Docker": {
-      "commandName": "Docker",
-      "applicationUrl": "https://127.0.0.1:20005;http://127.0.0.1:20006",
-      "DockerfileRunArguments": "-p 127.0.0.1:20005:20005 -p 127.0.0.1:20006:20006",
-      "publishAllPorts": true,
-      "useSSL": true
-    },
     "WSL": {
       "commandName": "WSL2",
       "environmentVariables": {
@@ -34,6 +27,16 @@
         "ASPNETCORE_URLS": "https://127.0.0.1:20005;http://127.0.0.1:20006"
       },
       "distributionName": ""
+    },
+    "Container (.NET SDK)": {
+      "commandName": "SdkContainer",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "10005",
+        "ASPNETCORE_HTTP_PORTS": "10006"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
