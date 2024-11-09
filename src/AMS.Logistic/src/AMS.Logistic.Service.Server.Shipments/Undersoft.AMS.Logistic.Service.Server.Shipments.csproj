@@ -7,7 +7,7 @@
     <UserSecretsId>2e23f1cc-5ef2-44a4-83ae-0123d3ca2365</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    <DockerfileContext>..\..\..\..</DockerfileContext>
+    <DockerfileContext>..\..\..\..\..\..\..</DockerfileContext>
     <Company>Undersoft</Company>
     <Authors>Dariusz Hanc</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -15,8 +15,6 @@
     <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
     <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
     <ContainerImageTag>latest</ContainerImageTag>
-    <ContainerFamily>alpine</ContainerFamily>
-    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0-alpine</ContainerBaseImage>
     <IsPublishable>true</IsPublishable>
     <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
     <InvariantGlobalization>true</InvariantGlobalization>
@@ -58,6 +56,15 @@
   <ItemGroup>
     <ContainerPort Include="20136" Type="tcp" />
     <ContainerPort Include="20135" Type="tcp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\pem.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\pem.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   
 </Project>

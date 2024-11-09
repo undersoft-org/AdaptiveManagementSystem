@@ -14,21 +14,12 @@
     <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
     <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
     <ContainerImageTag>latest</ContainerImageTag>
-    <ContainerFamily>alpine</ContainerFamily>
-    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0-alpine</ContainerBaseImage>
     <IsPublishable>true</IsPublishable>
     <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
     <InvariantGlobalization>true</InvariantGlobalization>   
     <ContainerRegistry>registry.hub.docker.com</ContainerRegistry>
     <ContainerRepository>uscr/amsserviceappserver</ContainerRepository>
     <WebPublishMethod>Container</WebPublishMethod>
-    <PublishSingleFile>true</PublishSingleFile>
-    <PublishTrimmed>true</PublishTrimmed>
-    <SelfContained>true</SelfContained>
-    <Deterministic>false</Deterministic>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <FileVersion>1.0.*</FileVersion>
-    <AssemblyVersion>1.0.*</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -48,12 +39,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ContainerPort Include="10006" Type="tcp" />
-    <ContainerPort Include="10005" Type="tcp" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
+    <None Update="Properties\pem.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\pem.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/azure-deviceupdate-update-manifest-5.json" /></VisualStudio></ProjectExtensions>

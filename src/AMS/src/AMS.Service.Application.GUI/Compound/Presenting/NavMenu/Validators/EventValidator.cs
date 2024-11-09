@@ -12,7 +12,7 @@ using Undersoft.SDK.Service.Application.GUI.View;
 
 namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
 
-public class EventValidator : ViewValidator<EventInfo>
+public class EventValidator : ViewValidator<Contracts.Event>
 {
     public EventValidator(IServicer servicer) : base(servicer)
     {

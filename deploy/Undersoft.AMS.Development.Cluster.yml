@@ -1,0 +1,177 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # This service is meant to be used by clients of the database. It exposes a ClusterIP that will
+  # automatically load balance connections to the different database pods.
+  name: data-server
+  labels:
+    app: data-server
+spec:
+  ports:
+  # The main port, served by gRPC, serves Postgres-flavor SQL, internode
+  # traffic and the cli.
+  - port: 5432
+    targetPort: 5432
+    name: grpc
+  # The secondary port serves the UI as well as health and debug endpoints.
+  selector:
+    app: data-server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # This service only exists to create DNS entries for each pod in the stateful
+  # set such that they can resolve each other's IP addresses. It does not
+  # create a load-balanced ClusterIP and should not be used directly by clients
+  # in most circumstances.
+  name: data-server-private
+  labels:
+    app: data-server
+spec:
+  ports:
+  - port: 5432
+    targetPort: 5432
+    name: grpc
+  # We want all pods in the StatefulSet to have their addresses published for
+  # the sake of the other pods even before they're ready, since they
+  # have to be able to talk to each other in order to become ready.
+  publishNotReadyAddresses: true
+  clusterIP: None
+  selector:
+    app: data-server
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: data-server
+spec:
+  selector:
+    matchLabels:
+      app: data-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: data-server
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 50
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - data-server
+              topologyKey: kubernetes.io/hostname
+      containers:
+      - name: data-server
+        image: uscr/amsdataserver:latest
+        ports:
+        - containerPort: 5432
+          name: grpc
+        volumeMounts:
+         - name: storage
+           mountPath: /data
+  volumeClaimTemplates:
+   - metadata:
+       name: storage
+     spec:
+       accessModes:
+         - "ReadWriteOnce"
+       storageClassName: local-storage
+       resources:
+          requests:
+              storage: 10G
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-server
+spec:
+  selector:
+    matchLabels:
+      name: service-server
+  template:
+    metadata:
+      labels:
+        name: service-server
+    spec:
+      containers:
+      - name: service-server
+        image: uscr/amsserviceserver:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-server
+spec:
+  selector:
+    name: service-server
+  ports:
+  - port: 20005
+    targetPort: 20005
+    name: private-https
+  - port: 20006
+    targetPort: 20006
+    name: private-http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-application-server
+spec:
+  selector:
+    matchLabels:
+      name: service-application-server
+  template:
+    metadata:
+      labels:
+        name: service-application-server
+    spec:
+      containers:
+      - name: service-application-server
+        image: uscr/amsserviceapplicationserver:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-application-server
+spec:
+  selector:
+    name: service-application-server
+  ports:
+  - port: 443
+    targetPort: 10005
+    name: public-https
+  - port: 80
+    targetPort: 10006
+    name: public-http
+  - port: 10005
+    targetPort: 10005
+    name: private-https
+  - port: 10006
+    targetPort: 10006
+    name: private-http
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: service-gateway
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: dev.ams.undersoft.pl
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-application-server
+            port: 
+              number: 80

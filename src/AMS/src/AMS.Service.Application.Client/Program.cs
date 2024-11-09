@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
+
 // ********************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License.
@@ -27,7 +28,6 @@ using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validato
 using Undersoft.AMS.Service.Contracts;
 using Undersoft.AMS.Service.Contracts.Accounts;
 using Undersoft.SDK.Service.Application.GUI;
-using Undersoft.SDK.Service.Data.Event;
 
 /// <summary>
 /// The program.
@@ -61,8 +61,8 @@ public class Program
                         RemoteRepository<IAccountStore, Account>
                     >()
                     .AddScoped<
-                        IRemoteRepository<IEventStore, EventInfo>,
-                        RemoteRepository<IEventStore, EventInfo>
+                        IRemoteRepository<IEventStore, Event>,
+                        RemoteRepository<IEventStore,Event>
                     >()
                     .AddSingleton<AppearanceState>()
                     .AddScoped<AccessProvider<Account>>()
@@ -70,6 +70,9 @@ public class Program
                         sp.GetRequiredService<AccessProvider<Account>>()
                     )
                     .AddScoped<IAccess, AccessProvider<Account>>(sp =>
+                        sp.GetRequiredService<AccessProvider<Account>>()
+                    )
+                    .AddScoped<IAccessContext, AccessProvider<Account>>(sp =>
                         sp.GetRequiredService<AccessProvider<Account>>()
                     )
                     .AddScoped<IAccessProvider<Account>, AccessProvider<Account>>(sp =>
@@ -82,7 +85,7 @@ public class Program
                     .AddScoped<IValidator<IViewData<Account>>, AccountValidator>()
                     .AddScoped<IValidator<IViewData<AccountAddress>>, AccountAddressValidator>()
                     .AddScoped<IValidator<IViewData<AccountPersonal>>, AccountPersonalValidator>()
-                    .AddScoped<IValidator<IViewData<EventInfo>>, EventValidator>()
+                    .AddScoped<IValidator<IViewData<Event>>, EventValidator>()
                     ;
                 reg.MergeServices(services, true);
             }

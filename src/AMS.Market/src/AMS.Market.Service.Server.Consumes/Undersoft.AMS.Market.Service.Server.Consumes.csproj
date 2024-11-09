@@ -15,8 +15,6 @@
     <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
     <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
     <ContainerImageTag>latest</ContainerImageTag>
-    <ContainerFamily>alpine</ContainerFamily>
-    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0-alpine</ContainerBaseImage>
     <IsPublishable>true</IsPublishable>
     <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
     <InvariantGlobalization>true</InvariantGlobalization>
@@ -58,6 +56,15 @@
   <ItemGroup>
     <ContainerPort Include="20416" Type="tcp" />
     <ContainerPort Include="20415" Type="tcp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\pem.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\pem.key">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

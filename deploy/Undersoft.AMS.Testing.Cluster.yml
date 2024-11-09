@@ -3,9 +3,9 @@ kind: Service
 metadata:
   # This service is meant to be used by clients of the database. It exposes a ClusterIP that will
   # automatically load balance connections to the different database pods.
-  name: undersoft-ams-data-server
+  name: data-server
   labels:
-    app: undersoft-ams-data-server
+    app: data-server
 spec:
   ports:
   # The main port, served by gRPC, serves Postgres-flavor SQL, internode
@@ -15,7 +15,7 @@ spec:
     name: grpc
   # The secondary port serves the UI as well as health and debug endpoints.
   selector:
-    app: undersoft-ams-data-server
+    app: data-server
 ---
 apiVersion: v1
 kind: Service
@@ -24,9 +24,9 @@ metadata:
   # set such that they can resolve each other's IP addresses. It does not
   # create a load-balanced ClusterIP and should not be used directly by clients
   # in most circumstances.
-  name: undersoft-ams-data-server-private
+  name: data-server-private
   labels:
-    app: undersoft-ams-data-server
+    app: data-server
 spec:
   ports:
   - port: 5432
@@ -38,21 +38,21 @@ spec:
   publishNotReadyAddresses: true
   clusterIP: None
   selector:
-    app: undersoft-ams-data-server
+    app: data-server
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: undersoft-ams-data-server
+  name: data-server
 spec:
   selector:
     matchLabels:
-      app: undersoft-ams-data-server
-  replicas: 2
+      app: data-server
+  replicas: 1
   template:
     metadata:
       labels:
-        app: undersoft-ams-data-server
+        app: data-server
     spec:
       affinity:
         podAntiAffinity:
@@ -64,83 +64,84 @@ spec:
                 - key: app
                   operator: In
                   values:
-                  - undersoft-ams-data-server
+                  - data-server
               topologyKey: kubernetes.io/hostname
       containers:
-      - name: undersoft-ams-data-server
+      - name: data-server
         image: uscr/amsdataserver:latest
         ports:
         - containerPort: 5432
           name: grpc
         volumeMounts:
-         - name: undersoft-ams-data-storage
+         - name: storage
            mountPath: /data
   volumeClaimTemplates:
    - metadata:
-       name: undersoft-ams-data-storage
+       name: storage
      spec:
        accessModes:
          - "ReadWriteOnce"
+       storageClassName: local-storage
        resources:
           requests:
-              storage: 25Gi
+              storage: 10G
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: undersoft-ams-service-server
+  name: service-server
 spec:
   selector:
     matchLabels:
-      name: undersoft-ams-service-server
+      name: service-server
   template:
     metadata:
       labels:
-        name: undersoft-ams-service-server
+        name: service-server
     spec:
       containers:
-      - name: undersoft-ams-service-server
+      - name: service-server
         image: uscr/amsserviceserver:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: undersoft-ams-service-server
+  name: service-server
 spec:
   selector:
-    name: undersoft-ams-service-server
+    name: service-server
   ports:
-  - port: 25025
-    targetPort: 25025
+  - port: 20005
+    targetPort: 20005
     name: private-https
-  - port: 26026
-    targetPort: 26026
+  - port: 20006
+    targetPort: 20006
     name: private-http
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: undersoft-ams-service-application-server
+  name: service-application-server
 spec:
   selector:
     matchLabels:
-      name: undersoft-ams-service-application-server
+      name: service-application-server
   template:
     metadata:
       labels:
-        name: undersoft-ams-service-application-server
+        name: service-application-server
     spec:
       containers:
-      - name: undersoft-ams-service-application-server
+      - name: service-application-server
         image: uscr/amsserviceappserver:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: undersoft-ams-service-application-server
+  name: service-application-server
 spec:
   selector:
-    name: undersoft-ams-service-application-server
+    name: service-application-server
   ports:
   - port: 443
     targetPort: 10005
@@ -158,45 +159,19 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: undersoft-ams-ingress-server
+  name: service-gateway
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
-  ingressClassName: public-iks-k8s-nginx
+  ingressClassName: nginx
   rules:
-  - host: undersoft.eu-de.containers.appdomain.cloud
+  - host: test.ams.undersoft.pl
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: undersoft-ams-service-application-server
+            name: service-application-server
             port: 
               number: 80
----              
-apiVersion: api.kubemod.io/v1beta1
-kind: ModRule
-metadata:
-  name: statefulset-pod-node-affinity
-spec:
-  type: Patch
-
-  match:
-    # Select pods named myapp-xxx.
-    - select: '$.kind'
-      matchValue: Pod
-    - select: '$.metadata.name'
-      matchRegex: .*-data-server
-
-  patch:
-    # Patch the selected pods such that their node affinity matches nodes that contain a label with the name of the pod.
-    - op: add
-      path: /spec/affinity/nodeAffinity/requiredDuringSchedulingIgnoredDuringExecution
-      value: |-
-        nodeSelectorTerms:
-          - matchExpressions:
-            - key: disktype
-              operator: In
-              values:
-                - ssd

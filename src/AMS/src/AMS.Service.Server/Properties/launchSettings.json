@@ -32,8 +32,18 @@
       "commandName": "SdkContainer",
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
-        "ASPNETCORE_HTTPS_PORTS": "10005",
-        "ASPNETCORE_HTTP_PORTS": "10006"
+        "ASPNETCORE_HTTPS_PORTS": "20005",
+        "ASPNETCORE_HTTP_PORTS": "20006"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_HTTP_PORTS": "20006",
+        "ASPNETCORE_HTTPS_PORTS": "20005"
       },
       "publishAllPorts": true,
       "useSSL": true

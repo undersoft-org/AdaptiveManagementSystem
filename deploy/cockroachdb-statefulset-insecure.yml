@@ -1,11 +1,3 @@
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: ssd
-provisioner: kubernetes.io/gce-pd
-parameters:
-  type: pd-ssd
----
 apiVersion: v1
 kind: Service
 metadata:
@@ -64,18 +56,6 @@ spec:
   selector:
     app: data-server
 ---
-apiVersion: policy/v1beta1
-kind: PodDisruptionBudget
-metadata:
-  name: data-server-budget
-  labels:
-    app: data-server
-spec:
-  selector:
-    matchLabels:
-      app: data-server
-  maxUnavailable: 1
----
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -95,7 +75,7 @@ spec:
       # the host machines' IP address and hostname, and that nothing else on
       # the machines will be able to use the same ports. This means that only 1
       # CockroachDB pod will ever be schedulable on the same machine, because
-      # otherwise their ports would conflict.      
+      # otherwise their ports would conflict.
       # hostNetwork: true
       # dnsPolicy: ClusterFirstWithHostNet
       affinity:
@@ -132,13 +112,6 @@ spec:
           name: grpc
         - containerPort: 8080
           name: http
-# We recommend that you do not configure a liveness probe on a production environment, as this can impact the availability of production databases.
-#       livenessProbe:
-#         httpGet:
-#           path: "/health"
-#           port: http
-#         initialDelaySeconds: 30
-#         periodSeconds: 5
         readinessProbe:
           httpGet:
             path: "/health?ready=1"
@@ -195,105 +168,4 @@ spec:
           # size and the IOPS provisioned to the disk. Change this as necessary
           # to suit your needs, but be aware that smaller disks will typically
           # mean worse performance.
-          storage: 50Gi
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: service-server
-spec:
-  selector:
-    matchLabels:
-      name: service-server
-  template:
-    metadata:
-      labels:
-        name: service-server
-    spec:
-      containers:
-      - name: service-server
-        image: uscr/amsserviceserver:latest
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: service-server
-spec:
-  selector:
-    name: service-server
-  ports:
-  - port: 20005
-    targetPort: 20005
-    name: private-https
-  - port: 20006
-    targetPort: 20006
-    name: private-http
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: service-application-server
-spec:
-  selector:
-    matchLabels:
-      name: service-application-server
-  template:
-    metadata:
-      labels:
-        name: service-application-server
-    spec:
-      containers:
-      - name: service-application-server
-        image: uscr/amsserviceapplicationserver:latest
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: service-application-server
-spec:
-  selector:
-    name: service-application-server
-  ports:
-  - port: 443
-    targetPort: 10005
-    name: public-https
-  - port: 80
-    targetPort: 10006
-    name: public-http
-  - port: 10005
-    targetPort: 10005
-    name: private-https
-  - port: 10006
-    targetPort: 10006
-    name: private-http
----
-apiVersion: networking.k8s.io/v1
-kind: IngressClass
-metadata:
-  labels:
-    app.kubernetes.io/component: controller
-  name: web-loadbalancer
-  annotations:
-    ingressclass.kubernetes.io/is-default-class: "true"
-spec:
-  controller: k8s.io/ingress-nginx
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: web-gateway
-  annotations:
-    nginx.ingress.kubernetes.io/use-regex: "true"
-spec:
-  ingressClassName: web-loadbalancer
-  rules:
-  - host: ams.undersoft.pl
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: service-application-server
-            port: 
-              number: 80
+          storage: 10Gi

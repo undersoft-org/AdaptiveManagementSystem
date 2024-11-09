@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service\Undersoft.SDK.Service.csproj" />
     <ProjectReference Include="..\..\..\AMS.Catalog\src\AMS.Catalog.Service\Undersoft.AMS.Catalog.Service.csproj" />
     <ProjectReference Include="..\..\..\AMS.Document\src\AMS.Document.Service\Undersoft.AMS.Document.Service.csproj" />
     <ProjectReference Include="..\..\..\AMS.Logistic\src\AMS.Logistic.Service\Undersoft.AMS.Logistic.Service.csproj" />
