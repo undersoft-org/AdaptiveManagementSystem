@@ -29,7 +29,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Application.GUI\Undersoft.SDK.Service.Application.GUI.csproj" />
-    <ProjectReference Include="..\AMS.Service.Application\Undersoft.AMS.Service.Application.csproj" />
+    <ProjectReference Include="..\..\..\AMS.Catalog\src\AMS.Catalog.Service.Application.GUI\Undersoft.AMS.Catalog.Service.Application.GUI.csproj" />
+    <ProjectReference Include="..\..\..\AMS.Document\src\AMS.Document.Service.Application.GUI\Undersoft.AMS.Document.Service.Application.GUI.csproj" />
+    <ProjectReference Include="..\..\..\AMS.Logistic\src\AMS.Logistic.Service.Application.GUI\Undersoft.AMS.Logistic.Service.Application.GUI.csproj" />
+    <ProjectReference Include="..\..\..\AMS.Market\src\AMS.Market.Service.Application.GUI\Undersoft.AMS.Market.Service.Application.GUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -28,6 +28,7 @@ using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validato
 using Undersoft.AMS.Service.Contracts;
 using Undersoft.AMS.Service.Contracts.Accounts;
 using Undersoft.SDK.Service.Application.GUI;
+using Undersoft.SDK.Service.Application.GUI.View.Accounts;
 
 /// <summary>
 /// The program.
@@ -82,9 +83,9 @@ public class Program
                         sp.GetRequiredService<AccessProvider<Account>>()
                     )
                     .AddScoped<IValidator<IViewData<Credentials>>, AccessValidator>()
-                    .AddScoped<IValidator<IViewData<Account>>, AccountValidator>()
-                    .AddScoped<IValidator<IViewData<AccountAddress>>, AccountAddressValidator>()
-                    .AddScoped<IValidator<IViewData<AccountPersonal>>, AccountPersonalValidator>()
+                    .AddScoped<IValidator<IViewData<Account>>, AccountValidator<Account>>()
+                    .AddScoped<IValidator<IViewData<AccountAddress>>, AccountAddressValidator<AccountAddress>>()
+                    .AddScoped<IValidator<IViewData<AccountPersonal>>, AccountPersonalValidator<AccountPersonal>>()
                     .AddScoped<IValidator<IViewData<Event>>, EventValidator>()
                     ;
                 reg.MergeServices(services, true);

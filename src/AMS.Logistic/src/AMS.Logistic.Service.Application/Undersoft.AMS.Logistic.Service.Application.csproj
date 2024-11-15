@@ -15,10 +15,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Application\Undersoft.SDK.Service.Application.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Using Include="Undersoft.SDK.Service.Data.Identifier" />
     <Using Include="Undersoft.SDK.Service.Data.Object" />
     <Using Include="Undersoft.SDK.Service.Data.Event" />
@@ -38,6 +34,10 @@
 
   <ItemGroup>
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AMS\src\AMS.Service.Application\Undersoft.AMS.Service.Application.csproj" />
   </ItemGroup>
 
 </Project>

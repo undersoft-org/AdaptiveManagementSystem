@@ -8,17 +8,19 @@ using Undersoft.SDK.Service.Operation;
 
 namespace Undersoft.AMS.Service.Contracts
 {
+    using System.ComponentModel.DataAnnotations;
     using System.Runtime.InteropServices;
+    using Undersoft.AMS.Service.Contracts.Accounts;
     using Undersoft.SDK.Service.Access;
     using Undersoft.SDK.Service.Access.Identity;
-    using Undersoft.AMS.Service.Contracts.Accounts;
 
-    [Validator("AccountValidator")]
+    [Validator("AccountValidator", typeof(Account))]
     [ViewSize("380px", "650px")]
     [StructLayout(LayoutKind.Sequential)]
     public class Account : Authorization, IContract
     {
         private string? _name;
+
         public Account() { }
 
         public Account(string email)
@@ -81,46 +83,56 @@ namespace Undersoft.AMS.Service.Contracts
             get => Personal?.ImageData;
             set => (Personal ??= new AccountPersonal()).ImageData = value!;
         }
+
         public long? UserId { get; set; }
+
         public virtual AccountUser? User { get; set; }
 
         [AutoExpand]
         public Listing<Role>? Roles { get; set; }
+
         public Listing<Claim>? Claims { get; set; }
+
         public long? PersonalId { get; set; }
 
         [AutoExpand]
         [Extended]
         public virtual AccountPersonal? Personal { get; set; }
+
         public long? AddressId { get; set; }
 
         [AutoExpand]
         [Extended]
         public virtual AccountAddress? Address { get; set; }
+
         public long? ProfessionalId { get; set; }
 
         [AutoExpand]
         [Extended]
         public virtual AccountProfessional? Professional { get; set; }
+
         public long? OrganizationId { get; set; }
 
         [AutoExpand]
         [Extended]
         public virtual AccountOrganization? Organization { get; set; }
+
         public long? ConsentId { get; set; }
 
         [AutoExpand]
         [Extended]
         public virtual AccountConsent? Consent { get; set; }
+
         public long? SubscriptionId { get; set; }
 
         [AutoExpand]
         [Extended]
         public virtual AccountSubscription? Subscription { get; set; }
-        
+
         public long? PaymentId { get; set; }
+
         public virtual AccountPayment? Payment { get; set; }
-        
+
         public long? TenantId { get; set; }
 
         [AutoExpand]

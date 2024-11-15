@@ -3,7 +3,7 @@
 //   Licensed under the MIT License. 
 //   author: Dariusz Hanc
 //   email: dh@undersoft.pl
-//   library: Undersoft.AMS.Service
+//   library: Undersoft.SVC.Service
 // *************************************************
 
 using System.Runtime.Serialization;
