@@ -18,26 +18,31 @@ public class Market : DataObject
 {
     [MenuGroup]
     [Extended]
+    [IconRubric("StocksIcon")]
     public MarketStocks Stocks { get; set; } = new();
     public Icon StocksIcon = new Icons.Regular.Size20.ReceiptCube();
 
     [MenuGroup]
     [Extended]
+    [IconRubric("SalesIcon")]
     public MarketSales Sales { get; set; } = new();
     public Icon SalesIcon = new Icons.Regular.Size20.ReceiptMoney();
 
     [MenuGroup]
     [Extended]
+    [IconRubric("PurchasesIcon")]
     public MarketPurchases Purchases { get; set; } = new();
     public Icon PurchasesIcon = new Icons.Regular.Size20.ReceiptBag();
 
     [MenuGroup]
     [Extended]
+    [IconRubric("ProducesIcon")]
     public MarketProduces Produces { get; set; } = new();
     public Icon ProducesIcon = new Icons.Regular.Size20.ReceiptSparkles();
 
     [MenuGroup]
     [Extended]
+    [IconRubric("ConsumesIcon")]
     public MarketConsumes Consumes { get; set; } = new();
     public Icon ConsumesIcon = new Icons.Regular.Size20.ReceiptPlay();
 }

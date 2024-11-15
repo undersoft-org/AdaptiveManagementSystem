@@ -38,11 +38,18 @@ body {
     align-items: stretch !important;
 }
 
+.navmenu {
+    background-color: var(--neutral-fill-layer-rest);
+    border-right-style: solid;
+    border-right-color: var(--accent-fill-rest);
+    border-right-width: 1px;
+    height: calc(100dvh - 80px);
+}
+
 nav.sitenav {
-    background-color: var(--neutral-layer-1);
-    height: calc(100dvh - 90px);
-    width: 18rem;
+    max-height: calc(100dvh - 100px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 nav h2 {

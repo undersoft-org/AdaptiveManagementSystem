@@ -104,7 +104,7 @@ public static class MauiProgram
                     )
                     .AddScoped<IValidator<IViewData<Credentials>>, AccessValidator>()
                     .AddScoped<IValidator<IViewData<Account>>, AccountValidator>()
-                    .AddScoped<IValidator<IViewData<EventInfo>>, EventValidator>()
+                    .AddScoped<IValidator<IViewData<Event>>, EventValidator>()
                     ;
                 reg.MergeServices(services, true);
             }

@@ -47,7 +47,9 @@ body {
 }
 
 nav.sitenav {
-    height: auto;
+    max-height: calc(100dvh - 100px);    
+    overflow-y:auto;
+    overflow-x:hidden;
 }
 
 nav h2 {
@@ -250,6 +252,10 @@ code {
         }
 
     .navmenu {
+    }
+
+    .undersoft-footer-logo {
+        display: none;
     }
 
     #navmenu-toggle {
