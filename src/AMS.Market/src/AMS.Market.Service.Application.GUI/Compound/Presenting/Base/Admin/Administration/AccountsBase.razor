@@ -1,12 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Authorization
 
-@namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.Admin.Administration
+@namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.Base.Admin.Administration
 
 @attribute [Authorize]
 
 <GenericDataGrid TStore="IAccountStore"
-                 TDto="Contracts.Account"
-                 TModel="Contracts.Account"
+                 TDto="Account"
+                 TModel="Account"
                  Resizable="true"
                  ShowHover="true"
                  Expandable="true"

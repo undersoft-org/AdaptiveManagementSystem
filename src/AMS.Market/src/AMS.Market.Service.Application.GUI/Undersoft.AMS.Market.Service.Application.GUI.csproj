@@ -39,16 +39,16 @@
     <Content Update="Compound\Presenting\Base\Admin\Administration\EventsBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\Admin\DashboardBase.razor">
+    <Content Update="Compound\Presenting\Base\Admin\PanelBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
     <Content Update="Compound\Presenting\Base\Admin\_Imports.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\DashboardBase.razor">
+    <Content Update="Compound\Presenting\Base\PanelBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\User\DashboardBase.razor">
+    <Content Update="Compound\Presenting\Base\User\PanelBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
     <Content Update="Compound\Presenting\Base\User\_Imports.razor">

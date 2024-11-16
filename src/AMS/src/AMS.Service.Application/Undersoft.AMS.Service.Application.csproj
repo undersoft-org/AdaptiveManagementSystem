@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\SDK\src\Undersoft.SDK.Service.Application\Undersoft.SDK.Service.Application.csproj" />
     <ProjectReference Include="..\AMS.Service\Undersoft.AMS.Service.csproj" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.*-*" />
   </ItemGroup>
 
   <ItemGroup>

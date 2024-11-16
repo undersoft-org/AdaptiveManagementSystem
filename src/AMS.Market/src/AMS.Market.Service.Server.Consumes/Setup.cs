@@ -17,7 +17,7 @@ public class Setup
     public void ConfigureServices(IServiceCollection srvc)
     {
         srvc.AddServerSetup()
-            .ConfigureServer()
+            .ConfigureServer(true)
             .AddDataServer<IEntityStore>()
             .AddDataServer<IEventStore>();
     }
@@ -25,7 +25,7 @@ public class Setup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer()
+            .UseServiceServer(true, ["v1"])
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

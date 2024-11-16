@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu;
 /// <summary>
 /// The contacts.
 /// </summary>
-public class Panel : DataObject
+public class MarketPanel : DataObject
 {
 }
 

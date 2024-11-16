@@ -11,44 +11,44 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Markets;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu.User;
 
-public class UserMarketSales : DataObject
+public class UserMarketPurchases : DataObject
 {
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Offers")]
-    public string Offers { get; set; } = "/presenting/user/market/sales/offers";
+    public string Offers { get; set; } = "/presenting/user/market/purchases/offers";
     public Icon OffersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Orders")]
-    public string Orders { get; set; } = "/presenting/user/market/sales/orders";
+    public string Orders { get; set; } = "/presenting/user/market/purchases/orders";
     public Icon OrdersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Processes")]
-    public string Processes { get; set; } = "/presenting/user/market/sales/processes";
+    public string Processes { get; set; } = "/presenting/user/market/purchases/processes";
     public Icon ProcessesIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Transactions")]
-    public string Transactions { get; set; } = "/presenting/user/market/sales/transactions";
+    public string Transactions { get; set; } = "/presenting/user/market/purchases/transactions";
     public Icon TransactionsIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Events")]
-    public string Events { get; set; } = "/presenting/user/market/sales/events";
+    public string Events { get; set; } = "/presenting/user/market/purchases/events";
     public Icon EventsIcon = new Icons.Regular.Size20.CalendarClock();
 }
 

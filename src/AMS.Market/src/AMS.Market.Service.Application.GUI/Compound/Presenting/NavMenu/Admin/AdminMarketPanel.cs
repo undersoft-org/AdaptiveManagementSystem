@@ -8,12 +8,12 @@
 
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Admin;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu.Admin;
 
 /// <summary>
 /// The contacts.
 /// </summary>
-public class AdminPanel : DataObject
+public class AdminMarketPanel : DataObject
 {
 }
 

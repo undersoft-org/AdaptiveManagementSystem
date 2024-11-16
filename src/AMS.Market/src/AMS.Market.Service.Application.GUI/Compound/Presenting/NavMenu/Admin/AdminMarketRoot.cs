@@ -12,46 +12,44 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu.Admin;
 
-using Markets;
-
-public class UserRoot : DataObject
+public class AdminMarketRoot : DataObject
 {
     [MenuGroup]
-    [Extended]   
-    [Link("/presenting/user/panel")]
-    public UserPanel Panel { get; set; } = new UserPanel();
+    [Extended]
+    [Link("/presenting/admin/panel")]
+    public AdminMarketPanel Panel { get; set; } = new AdminMarketPanel();
     public Icon PanelIcon = new Icons.Regular.Size24.ChartMultiple();
 
     [MenuGroup]
     [Extended]
     [IconRubric("StocksIcon")]
-    public UserMarketStocks Stocks { get; set; } = new();
+    public AdminMarketStocks Stocks { get; set; } = new();
     public Icon StocksIcon = new Icons.Regular.Size20.ReceiptCube();
 
     [MenuGroup]
     [Extended]
     [IconRubric("SalesIcon")]
-    public UserMarketSales Sales { get; set; } = new();
+    public AdminMarketSales Sales { get; set; } = new();
     public Icon SalesIcon = new Icons.Regular.Size20.ReceiptMoney();
 
     [MenuGroup]
     [Extended]
     [IconRubric("PurchasesIcon")]
-    public UserMarketPurchases Purchases { get; set; } = new();
+    public AdminMarketPurchases Purchases { get; set; } = new();
     public Icon PurchasesIcon = new Icons.Regular.Size20.ReceiptBag();
 
     [MenuGroup]
     [Extended]
     [IconRubric("ProducesIcon")]
-    public UserMarketProduces Produces { get; set; } = new();
+    public AdminMarketProduces Produces { get; set; } = new();
     public Icon ProducesIcon = new Icons.Regular.Size20.ReceiptSparkles();
 
     [MenuGroup]
     [Extended]
     [IconRubric("ConsumesIcon")]
-    public UserMarketConsumes Consumes { get; set; } = new();
+    public AdminMarketConsumes Consumes { get; set; } = new();
     public Icon ConsumesIcon = new Icons.Regular.Size20.ReceiptPlay();
 }
 

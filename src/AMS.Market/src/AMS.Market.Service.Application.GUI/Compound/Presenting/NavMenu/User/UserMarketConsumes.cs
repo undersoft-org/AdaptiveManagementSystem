@@ -11,44 +11,44 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Markets;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu.User;
 
-public class UserMarketPurchases : DataObject
+public class UserMarketConsumes : DataObject
 {
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Offers")]
-    public string Offers { get; set; } = "/presenting/user/market/purchases/offers";
+    public string Offers { get; set; } = "/presenting/user/market/consumes/offers";
     public Icon OffersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Orders")]
-    public string Orders { get; set; } = "/presenting/user/market/purchases/orders";
+    public string Orders { get; set; } = "/presenting/user/market/consumes/orders";
     public Icon OrdersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Processes")]
-    public string Processes { get; set; } = "/presenting/user/market/purchases/processes";
+    public string Processes { get; set; } = "/presenting/user/market/consumes/processes";
     public Icon ProcessesIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Transactions")]
-    public string Transactions { get; set; } = "/presenting/user/market/purchases/transactions";
+    public string Transactions { get; set; } = "/presenting/user/market/consumes/transactions";
     public Icon TransactionsIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Events")]
-    public string Events { get; set; } = "/presenting/user/market/purchases/events";
+    public string Events { get; set; } = "/presenting/user/market/consumes/events";
     public Icon EventsIcon = new Icons.Regular.Size20.CalendarClock();
 }
 

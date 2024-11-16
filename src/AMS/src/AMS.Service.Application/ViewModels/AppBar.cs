@@ -6,28 +6,40 @@
 //   library: Undersoft.SCC
 // *************************************************
 
+using Microsoft.FluentUI.AspNetCore.Components;
+using Undersoft.SDK.Rubrics.Attributes;
+
 namespace Undersoft.AMS.Service.Application.ViewModels;
 
 public class AppBar : DataObject, IViewModel
 {
+    [Link]
+    [Extended]
+    [DisplayRubric("Offers")]
+    public string Offers { get; set; } = "/presenting/market/consumes/offers";
+    public Icon OffersIcon = new Icons.Regular.Size20.CalendarClock();
 
-    public string? ProfessionalImage { get; set; }
+    [Link]
+    [Extended]
+    [DisplayRubric("Orders")]
+    public string Orders { get; set; } = "/presenting/market/consumes/orders";
+    public Icon OrdersIcon = new Icons.Regular.Size20.CalendarClock();
 
-    public string? ProfessionalManager { get; set; }
+    [Link]
+    [Extended]
+    [DisplayRubric("Processes")]
+    public string Processes { get; set; } = "/presenting/market/consumes/processes";
+    public Icon ProcessesIcon = new Icons.Regular.Size20.CalendarClock();
 
-    public string? ProfessionalName { get; set; }
+    [Link]
+    [Extended]
+    [DisplayRubric("Transactions")]
+    public string Transactions { get; set; } = "/presenting/market/consumes/transactions";
+    public Icon TransactionsIcon = new Icons.Regular.Size20.CalendarClock();
 
-    public string? ProfessionalPosition { get; set; }
-
-    public string? ProfessionalEmail { get; set; }
-
-    public string? ProfessionalPhoneNumber { get; set; }
-
-    public string? ProfessionalWebsites { get; set; }
-
-    public float? ProfessionalExperience { get; set; }
-
-    public byte[]? ProfessionalImageData { get; set; }
-
-    public long? SupplierId { get; set; }
+    [Link]
+    [Extended]
+    [DisplayRubric("Events")]
+    public string Events { get; set; } = "/presenting/market/consumes/events";
+    public Icon EventsIcon = new Icons.Regular.Size20.CalendarClock();
 }

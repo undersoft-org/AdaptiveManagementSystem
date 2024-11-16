@@ -19,16 +19,15 @@ public class Setup
     public void ConfigureServices(IServiceCollection srvc)
     {
         srvc.AddServerSetup()
-            .ConfigureServer()            
+            .ConfigureServer(true)            
             .AddDataServer<IMarketCenterStore>()
-            .AddDataServer<IEventStore>()
-            .AddDataServer<IAccountStore>();
+            .AddDataServer<IEventStore>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer()
+            .UseServiceServer(true, ["v1"])
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

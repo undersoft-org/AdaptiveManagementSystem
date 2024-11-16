@@ -1,12 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Authorization
 
-@namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.Base.Admin.Administration
+@namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.Base.Admin.Administration
 
 @attribute [Authorize]
 
 <GenericDataGrid TStore="IEventStore"
-                 TDto="Contracts.Event"
-                 TModel="Contracts.Event"
+                 TDto="AMS.Service.Contracts.Event"
+                 TModel="AMS.Service.Contracts.Event"
                  Resizable="true"
                  ShowHover="true"
                  Expandable="false"

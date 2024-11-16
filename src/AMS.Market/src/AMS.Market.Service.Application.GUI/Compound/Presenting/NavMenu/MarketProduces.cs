@@ -11,51 +11,44 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Markets;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu;
 
-public class UserMarketStocks : DataObject
+public class MarketProduces : DataObject
 {
 
     [Link]
     [MenuItem]
     [Extended]
-    [DisplayRubric("Items")]
-    public string Items { get; set; } = "/presenting/user/market/stocks/items";
-    public Icon ItemsIcon = new Icons.Regular.Size20.CalendarClock();
-
-    [Link]
-    [MenuItem]
-    [Extended]
     [DisplayRubric("Offers")]
-    public string Offers { get; set; } = "/presenting/user/market/stocks/offers";
+    public string Offers { get; set; } = "/presenting/market/produces/offers";
     public Icon OffersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Orders")]
-    public string Orders { get; set; } = "/presenting/user/market/stocks/orders";
+    public string Orders { get; set; } = "/presenting/market/produces/orders";
     public Icon OrdersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Processes")]
-    public string Processes { get; set; } = "/presenting/user/market/stocks/processes";
+    public string Processes { get; set; } = "/presenting/market/produces/processes";
     public Icon ProcessesIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Transactions")]
-    public string Transactions { get; set; } = "/presenting/user/market/stocks/transactions";
+    public string Transactions { get; set; } = "/presenting/market/produces/transactions";
     public Icon TransactionsIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Events")]
-    public string Events { get; set; } = "/presenting/user/market/stocks/events";
+    public string Events { get; set; } = "/presenting/market/produces/events";
     public Icon EventsIcon = new Icons.Regular.Size20.CalendarClock();
 }
 

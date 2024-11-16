@@ -11,44 +11,44 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Markets;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu.User;
 
-public class MarketConsumes : DataObject
+public class UserMarketProduces : DataObject
 {
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Offers")]
-    public string Offers { get; set; } = "/presenting/market/consumes/offers";
+    public string Offers { get; set; } = "/presenting/user/market/produces/offers";
     public Icon OffersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Orders")]
-    public string Orders { get; set; } = "/presenting/market/consumes/orders";
+    public string Orders { get; set; } = "/presenting/user/market/produces/orders";
     public Icon OrdersIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Processes")]
-    public string Processes { get; set; } = "/presenting/market/consumes/processes";
+    public string Processes { get; set; } = "/presenting/user/market/produces/processes";
     public Icon ProcessesIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Transactions")]
-    public string Transactions { get; set; } = "/presenting/market/consumes/transactions";
+    public string Transactions { get; set; } = "/presenting/user/market/produces/transactions";
     public Icon TransactionsIcon = new Icons.Regular.Size20.CalendarClock();
 
     [Link]
     [MenuItem]
     [Extended]
     [DisplayRubric("Events")]
-    public string Events { get; set; } = "/presenting/market/consumes/events";
+    public string Events { get; set; } = "/presenting/user/market/produces/events";
     public Icon EventsIcon = new Icons.Regular.Size20.CalendarClock();
 }
 

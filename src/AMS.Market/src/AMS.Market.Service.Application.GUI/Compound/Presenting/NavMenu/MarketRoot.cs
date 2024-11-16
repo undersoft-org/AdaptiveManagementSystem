@@ -16,13 +16,13 @@ namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu;
 
 using Markets;
 
-public class Root : DataObject
+public class MarketRoot : DataObject
 {
     [MenuGroup]
     [Extended]
     [IconRubric("PanelIcon")]
     [Link("/presenting/panel")]
-    public Panel Panel { get; set; } = new Panel();
+    public MarketPanel Panel { get; set; } = new MarketPanel();
     public Icon PanelIcon = new Icons.Regular.Size24.ChartMultiple();
 
     [MenuGroup]
