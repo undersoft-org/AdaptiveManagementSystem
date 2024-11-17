@@ -8,25 +8,25 @@
 
 using Undersoft.SDK.Service.Data.Query;
 using Undersoft.SDK.Service.Data.Store;
+using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Market.Service.Server.Produces.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Market.Produces;
-    using Undersoft.SDK.Service.Server.Controller;
+    using Undersoft.AMS.Service.Contracts.Activities;
 
-    [Area("Data/Market/Produces")]
-    public class ProduceOfferController
+    [Area("Data/Market/Produces/Order")]
+    public class OrderController
         : CqrsController<
             long,
             IEntryStore,
             IReportStore,
             Domain.Entities.Activity,
-            ProduceOffer,
+            Order,
             ServiceManager
         >
     {
-        public ProduceOfferController(IServicer servicer)
+        public OrderController(IServicer servicer)
             : base(
                 servicer,
                 PublishMode.Propagate,
@@ -36,7 +36,7 @@ namespace Undersoft.AMS.Market.Service.Server.Produces.Controllers
                         (
                             p.Type
                             & (
-                                Domain.Entities.Enums.ActivityType.Offer
+                                Domain.Entities.Enums.ActivityType.Order
                                 | Domain.Entities.Enums.ActivityType.Produce
                             )
                         ) > 0,

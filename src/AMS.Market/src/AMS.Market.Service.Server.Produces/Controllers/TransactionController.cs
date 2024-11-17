@@ -13,20 +13,20 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Market.Service.Server.Produces.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Market.Produces;
+    using Undersoft.AMS.Service.Contracts.Activities;
 
-    [Area("Data/Market/Produces")]
-    public class ProduceTransactionController
+    [Area("Data/Market/Produces/Transaction")]
+    public class TransactionController
         : CqrsController<
             long,
             IEntryStore,
             IReportStore,
             Domain.Entities.Activity,
-            ProduceTransaction,
+            Transaction,
             ServiceManager
         >
     {
-        public ProduceTransactionController(IServicer servicer)
+        public TransactionController(IServicer servicer)
              : base(
                 servicer,
                 PublishMode.Propagate,

@@ -6,6 +6,7 @@
 //   server: Undersoft.AMS.Market.Service.Server
 // ********************************************************
 
+using Undersoft.AMS.Market.Service.Clients.Abstractions;
 using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server;
 using Undersoft.SDK.Service.Server.Hosting;
@@ -18,7 +19,7 @@ public class Setup
     {
         srvc.AddServerSetup()
             .ConfigureServer(true)
-            .AddDataServer<IEntityStore>()
+            .AddDataServer<IMarketConsumesStore>()
             .AddDataServer<IEventStore>();
     }
 

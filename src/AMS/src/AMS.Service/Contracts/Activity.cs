@@ -6,45 +6,25 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-using Undersoft.AMS.Domain.Entities.Enums;
-using Undersoft.SDK.Service.Data.Contract;
 using Undersoft.SDK.Service.Data.Identifier;
 using Undersoft.SDK.Service.Data.Remote.Repository;
-using Undersoft.SDK.Service.Data.Remote;
 
 namespace Undersoft.AMS.Service.Contracts
 {
-    public class Activity : DataObject, IContract
+    public class Activity : ActivityBase
     {
-        public virtual ActivityType Type { get; set; }
+        public virtual IdentifierSet<ActivityBase>? Identifiers { get; set; }
 
-        public virtual string? Name { get; set; }
+        public virtual Listing<ActivityBase>? RelatedFrom { get; set; }
 
-        public virtual string? FullName { get; set; }
-
-        public virtual string? Description { get; set; }
-
-        public virtual IdentifierSet<Activity>? Identifiers { get; set; }
-
-        public virtual Listing<Activity>? RelatedFrom { get; set; }
-
-        public virtual Listing<Activity>? RelatedTo { get; set; }
+        public virtual Listing<ActivityBase>? RelatedTo { get; set; }
 
         public virtual Listing<Item>? Items { get; set; }
 
-        public virtual Listing<Date>? Dates { get; set; }
-
-        public virtual Listing<Amount>? Amounts { get; set; }
-
-        public virtual long? LocationId { get; set; }
-        public virtual Location? Location { get; set; }
-
         [Remote]
-        public virtual Listing<Participant>? Participants { get; set; }
-        public virtual Listing<RemoteLink<Activity, Participant>>? ActivitiesToParticipants { get; set; }
+        public virtual Listing<ParticipantBase>? Participants { get; set; }
 
         [Remote]
         public virtual Listing<Resource>? Resources { get; set; }
-        public virtual Listing<RemoteLink<Activity, Resource>>? ActivitiesToResources { get; set; }
     }
 }

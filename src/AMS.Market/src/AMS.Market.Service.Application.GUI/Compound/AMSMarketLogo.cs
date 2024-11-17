@@ -8,7 +8,7 @@ using Microsoft.FluentUI.AspNetCore.Components;
 //   library: Undersoft.SVC.Service.Application.GUI
 // ********************************************************
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound;
 
 /// <summary>
 /// The logo SCC.

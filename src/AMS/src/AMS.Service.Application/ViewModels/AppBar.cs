@@ -15,31 +15,31 @@ public class AppBar : DataObject, IViewModel
 {
     [Link]
     [Extended]
-    [DisplayRubric("Offers")]
-    public string Offers { get; set; } = "/presenting/market/consumes/offers";
-    public Icon OffersIcon = new Icons.Regular.Size20.CalendarClock();
+    [IconRubric("SystemIcon")]
+    public string System { get; set; } = "/presenting/system/panel";
+    public Icon SystemIcon = new Icons.Regular.Size20.System();
 
     [Link]
     [Extended]
-    [DisplayRubric("Orders")]
-    public string Orders { get; set; } = "/presenting/market/consumes/orders";
-    public Icon OrdersIcon = new Icons.Regular.Size20.CalendarClock();
+    [IconRubric("MarketIcon")]
+    public string Market { get; set; } = "/presenting/market/panel";
+    public Icon MarketIcon = new Icons.Regular.Size20.BuildingRetailMoney();
 
     [Link]
     [Extended]
-    [DisplayRubric("Processes")]
-    public string Processes { get; set; } = "/presenting/market/consumes/processes";
-    public Icon ProcessesIcon = new Icons.Regular.Size20.CalendarClock();
+    [IconRubric("LogisticIcon")]
+    public string Logistic { get; set; } = "/presenting/logistic/panel";
+    public Icon LogisticIcon = new Icons.Regular.Size20.CubeSync();
 
     [Link]
     [Extended]
-    [DisplayRubric("Transactions")]
-    public string Transactions { get; set; } = "/presenting/market/consumes/transactions";
-    public Icon TransactionsIcon = new Icons.Regular.Size20.CalendarClock();
+    [IconRubric("DocumentIcon")]
+    public string Document { get; set; } = "/presenting/document/panel";
+    public Icon DocumentIcon = new Icons.Regular.Size20.DocumentFolder();
 
     [Link]
     [Extended]
-    [DisplayRubric("Events")]
-    public string Events { get; set; } = "/presenting/market/consumes/events";
-    public Icon EventsIcon = new Icons.Regular.Size20.CalendarClock();
+    [IconRubric("CatalogIcon")]
+    public string Catalog { get; set; } = "/presenting/catalog/panel";
+    public Icon CatalogIcon = new Icons.Regular.Size20.AppsListDetail();
 }

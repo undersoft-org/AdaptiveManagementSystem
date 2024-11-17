@@ -12,21 +12,21 @@ using Undersoft.SDK.Service.Data.Store;
 namespace Undersoft.AMS.Market.Service.Server.Produces.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Market.Produces;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Market/Produces")]
-    public class ProduceProcessController
+    [Area("Data/Market/Produces/Process")]
+    public class ProcessController
           : CqrsController<
             long,
             IEntryStore,
             IReportStore,
             Domain.Entities.Activity,
-            ProduceProcess,
+            Process,
             ServiceManager
         >
     {
-        public ProduceProcessController(IServicer servicer)
+        public ProcessController(IServicer servicer)
             : base(
                 servicer,
                 PublishMode.Propagate,

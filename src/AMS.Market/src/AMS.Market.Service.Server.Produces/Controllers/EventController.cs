@@ -11,19 +11,18 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Market.Service.Server.Produces.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Market.Produces;
-    using Undersoft.SDK.Service.Data.Store;
+    using Undersoft.AMS.Market.Service.Clients.Abstractions;
 
-    [Area("Bus")]
-    public class ProduceEventController
+    [Area("Bus/Market/Produces/Event")]
+    public class EventController
         : BusController<
             long,
-            IEventStore,
+            IMarketProducesEventStore,
             Event,
-            ProduceEvent,
+            Event,
             ServiceManager
-        >
+            >
     {
-        public ProduceEventController(IServicer servicer) : base(servicer) { }
+        public EventController(IServicer servicer) : base(servicer) { }
     }
 }
