@@ -10,20 +10,13 @@ namespace Undersoft.AMS.Logistic.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts;
     using Undersoft.AMS.Service.Contracts.Logistic.Inventory;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Logistic")]
-    public class InventoryItemController
-        : RemoteDataController<
-            long,
-            ILogisticInventoryStore,
-            InventoryItem,
-            InventoryItem,
-            ServiceManager
-        >
-    {
-        public InventoryItemController(IServicer servicer)
-            : base(servicer) { }
-    }
+    [Area("Data/Logistic/InventoryItem")]
+    public class InventoryItemController(IServicer servicer)
+        : RemoteDataController<long, ILogisticInventoryStore, Item, InventoryItem, ServiceManager>(
+            servicer
+        ) { }
 }

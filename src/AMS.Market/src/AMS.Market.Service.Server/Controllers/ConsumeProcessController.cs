@@ -6,19 +6,20 @@
 //   server: Undersoft.SVC.Service.Server
 // ********************************************************
 
-namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
+namespace Undersoft.AMS.Market.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Market.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Market.Consumes;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Market")]
+    [Area("Data/Market/ConsumeProcess")]
     public class ConsumeProcessController
         : RemoteDataController<
             long,
             IMarketConsumesStore,
-            ConsumeProcess,
+            Process,
             ConsumeProcess,
             ServiceManager
         >

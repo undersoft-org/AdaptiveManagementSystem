@@ -11,6 +11,7 @@ using Undersoft.SDK.Service.Operation.Command.Validator;
 
 namespace Undersoft.AMS.Market.Service.Server.Validators
 {
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Market.Consumes;
 
     public class ConsumeTransactionsValidator : CommandSetValidator<ConsumeTransaction>

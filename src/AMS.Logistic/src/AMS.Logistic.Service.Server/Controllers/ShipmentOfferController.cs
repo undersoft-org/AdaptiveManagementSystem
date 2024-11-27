@@ -10,15 +10,16 @@ namespace Undersoft.AMS.Logistic.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Logistic.Shipments;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Logistic")]
+    [Area("Data/Logistic/ShipmentOffer")]
     public class ShipmentOfferController
         : RemoteDataController<
             long,
             ILogisticShipmentsStore,
-            ShipmentOffer,
+            Offer,
             ShipmentOffer,
             ServiceManager
         >

@@ -12,14 +12,15 @@ namespace Undersoft.AMS.Logistic.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Logistic.Inventory;
 
-    [Area("Data/Logistic")]
+    [Area("Data/Logistic/InventoryTransaction")]
     public class InventoryTransactionController
         : RemoteDataController<
             long,
             ILogisticInventoryStore,
-            InventoryTransaction,
+            Transaction,
             InventoryTransaction,
             ServiceManager
         >

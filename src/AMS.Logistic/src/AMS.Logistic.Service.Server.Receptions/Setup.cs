@@ -6,7 +6,7 @@
 //   server: Undersoft.AMS.Market.Service.Server
 // ********************************************************
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
 using Undersoft.SDK.Service.Server;
 using Undersoft.SDK.Service.Server.Hosting;
 
@@ -18,8 +18,8 @@ public class Setup
     {
         srvc.AddServerSetup()
             .ConfigureServer()
-            .AddDataServer<IEntityStore>()
-            .AddDataServer<IEventStore>();
+            .AddDataServer<ILogisticReceptionsStore>()
+            .AddDataServer<ILogisticReceptionsEventStore>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

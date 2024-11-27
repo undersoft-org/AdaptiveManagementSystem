@@ -20,7 +20,7 @@ public class Setup
         srvc.AddServerSetup()
             .ConfigureServer(true)
             .AddDataServer<IMarketConsumesStore>()
-            .AddDataServer<IEventStore>();
+            .AddDataServer<IMarketConsumesEventStore>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

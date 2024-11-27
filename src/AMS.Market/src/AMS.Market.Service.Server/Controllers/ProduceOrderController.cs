@@ -8,18 +8,19 @@
 
 using Undersoft.SDK.Service.Server.Controller;
 
-namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
+namespace Undersoft.AMS.Market.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Market.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Market.Produces;
 
-    [Area("Data/Market")]
+    [Area("Data/Market/ProduceOrder")]
     public class ProduceOrderController
         : RemoteDataController<
             long,
             IMarketProducesStore,
-            ProduceOrder,
+            Order,
             ProduceOrder,
             ServiceManager
         >

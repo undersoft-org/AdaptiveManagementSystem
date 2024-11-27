@@ -8,17 +8,18 @@
 
 using Undersoft.SDK.Service.Server.Controller;
 
-namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
+namespace Undersoft.AMS.Market.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Undersoft.AMS.Market.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts;
     using Undersoft.AMS.Service.Contracts.Market.Sales;
-    using Undersoft.SDK.Service.Data.Store;
 
-    [Area("Bus")]
+    [Area("Bus/Market/SaleEvent")]
     public class SaleEventController
         : RemoteBusController<
             long,
-            IEventStore,
+            IMarketSalesEventStore,
             Event,
             SaleEvent,
             ServiceManager

@@ -8,15 +8,16 @@
 
 using Undersoft.SDK.Service.Server.Controller;
 
-namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
+namespace Undersoft.AMS.Market.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Market.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Market.Stocks;
 
-    [Area("Data/Market")]
+    [Area("Data/Market/StockOrder")]
     public class StockOrderController
-        : RemoteDataController<long, IMarketStocksStore, StockOrder, StockOrder, ServiceManager>
+        : RemoteDataController<long, IMarketStocksStore, Order, StockOrder, ServiceManager>
     {
         public StockOrderController(IServicer servicer)
             : base(servicer) { }

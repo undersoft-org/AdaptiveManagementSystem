@@ -8,18 +8,19 @@
 
 using Undersoft.SDK.Service.Server.Controller;
 
-namespace Undersoft.AMS.Market.Service.Server.Controllers.Open
+namespace Undersoft.AMS.Market.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Market.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Market.Purchases;
 
-    [Area("Data/Market")]
+    [Area("Data/Market/PurchaseTransaction")]
     public class PurchaseTransactionController
         : RemoteDataController<
             long,
             IMarketPurchasesStore,
-            PurchaseTransaction,
+            Transaction,
             PurchaseTransaction,
             ServiceManager
         >

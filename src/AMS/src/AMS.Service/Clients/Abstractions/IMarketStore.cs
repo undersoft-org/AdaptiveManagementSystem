@@ -6,11 +6,11 @@
 //   library: Undersoft.AMS.Service
 // *************************************************
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Market.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface IMarketStore : IDataStore
+    public interface IMarketStore : IMarketPurchasesStore, IMarketSalesStore, IMarketStocksStore, IMarketConsumesStore, IMarketProducesStore
     {
     }
 }

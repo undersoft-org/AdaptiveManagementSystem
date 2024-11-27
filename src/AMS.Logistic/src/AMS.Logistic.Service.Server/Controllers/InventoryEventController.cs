@@ -11,14 +11,16 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Logistic.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Logistic.Inventory;
-    using Undersoft.SDK.Service.Data.Store;
 
-    [Area("Bus")]
-    public class InventoryEventController
-        : RemoteBusController<long, IEventStore, InventoryEvent, InventoryEvent, ServiceManager>
-    {
-        public InventoryEventController(IServicer servicer)
-            : base(servicer) { }
-    }
+    [Area("Bus/Logistic/InventoryEvent")]
+    public class InventoryEventController(IServicer servicer)
+        : RemoteBusController<
+            long,
+            ILogisticInventoryEventStore,
+            Event,
+            InventoryEvent,
+            ServiceManager
+        >(servicer) { }
 }
