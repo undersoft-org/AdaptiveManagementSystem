@@ -8,7 +8,7 @@
 
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Admin;
+namespace Undersoft.AMS.Catalog.Service.Application.GUI.Compound.Presenting.NavMenu.Admin;
 
 /// <summary>
 /// The contacts.

@@ -17,7 +17,7 @@
 
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User;
+namespace Undersoft.AMS.Document.Service.Application.GUI.Compound.Presenting.NavMenu.User;
 
 /// <summary>
 /// The contacts.

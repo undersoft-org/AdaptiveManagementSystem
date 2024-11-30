@@ -7,6 +7,7 @@
 // *************************************************
 
 using Undersoft.AMS.Domain.Entities.Enums;
+using Undersoft.AMS.Service.Contracts.Base;
 using Undersoft.SDK.Service.Data.Identifier;
 using Undersoft.SDK.Service.Data.Remote;
 using Undersoft.SDK.Service.Data.Remote.Repository;

@@ -1,5 +1,6 @@
 ﻿using Microsoft.FluentUI.AspNetCore.Components;
-using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Catalogs;
+using Undersoft.AMS.Catalog.Service.Application.GUI.Compound.Presenting.NavMenu.Catalogs;
+
 
 
 // ********************************************************
@@ -14,7 +15,7 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu;
+namespace Undersoft.AMS.Catalog.Service.Application.GUI.Compound.Presenting.NavMenu;
 
 public class Root : DataObject
 {

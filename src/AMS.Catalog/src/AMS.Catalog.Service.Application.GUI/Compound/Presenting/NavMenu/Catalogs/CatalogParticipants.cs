@@ -11,7 +11,7 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Catalogs;
+namespace Undersoft.AMS.Catalog.Service.Application.GUI.Compound.Presenting.NavMenu.Catalogs;
 
 public class CatalogParticipants : DataObject
 {
@@ -34,6 +34,6 @@ public class CatalogParticipants : DataObject
     [Extended]
     [DisplayRubric("EnvironmentsIcon")]
     public string Environments { get; set; } = "/presenting/catalog/participants/environments";
-    public Icon EnvironmentsIcon = new Icons.Regular.Size20.CalendarClock();  
+    public Icon EnvironmentsIcon = new Icons.Regular.Size20.CalendarClock();
 }
 

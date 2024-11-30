@@ -8,6 +8,7 @@
 
 using Undersoft.AMS.Domain.Entities;
 using Undersoft.AMS.Domain.Entities.Enums;
+using Undersoft.AMS.Service.Contracts.Base;
 using Undersoft.SDK.Service.Data.Contract;
 using Undersoft.SDK.Service.Data.Remote.Repository;
 

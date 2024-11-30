@@ -6,6 +6,7 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
+using Undersoft.AMS.Service.Contracts.Base;
 using Undersoft.SDK.Service.Data.Identifier;
 using Undersoft.SDK.Service.Data.Remote.Repository;
 

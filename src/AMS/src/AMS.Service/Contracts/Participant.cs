@@ -12,6 +12,7 @@ using Undersoft.SDK.Service.Data.Contract;
 using Undersoft.SDK.Service.Data.Identifier;
 using Undersoft.SDK.Service.Data.Remote.Repository;
 using Undersoft.SDK.Service.Data.Remote;
+using Undersoft.AMS.Service.Contracts.Base;
 
 namespace Undersoft.AMS.Service.Contracts
 {

@@ -13,7 +13,7 @@ using Undersoft.SDK.Service.Data.Identifier;
 using Undersoft.SDK.Service.Data.Remote.Repository;
 using Undersoft.SDK.Service.Data.Remote;
 
-namespace Undersoft.AMS.Service.Contracts
+namespace Undersoft.AMS.Service.Contracts.Base
 {
     public class ParticipantBase : DataObject, IContract
     {
