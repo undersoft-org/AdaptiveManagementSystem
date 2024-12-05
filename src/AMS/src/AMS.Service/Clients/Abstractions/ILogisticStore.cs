@@ -6,11 +6,11 @@
 //   library: Undersoft.AMS.Service
 // *************************************************
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Logistic.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface ILogisticStore : IDataStore
+    public interface ILogisticStore : ILogisticInventoryStore, ILogisticReceptionsStore, ILogisticShipmentsStore
     {
     }
 }

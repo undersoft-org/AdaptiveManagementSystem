@@ -15,7 +15,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Participants")]
+    [Area("Data/Catalog/Participants/Environment")]
     public class EnvironmentController
         : CqrsController<
             long,

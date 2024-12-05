@@ -15,7 +15,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Participants;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Participants")]
+    [Area("Data/Catalog/Participants/Contractor")]
     public class ContractorController
         : CqrsController<
             long,

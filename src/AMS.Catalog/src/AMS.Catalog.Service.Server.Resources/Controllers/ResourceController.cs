@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers
     using Undersoft.AMS.Service.Contracts;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Resources")]
+    [Area("Data/Catalog/Resources/Resource")]
     public class ResourceController
         : CqrsController<
             long,

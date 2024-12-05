@@ -15,13 +15,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Project.Plans;
 
-    [Area("Data/Project/ConsumeOrder")]
+    [Area("Data/Project/PlanOrder")]
     public class ConsumeOrderController
         : RemoteDataController<
             long,
             IProjectPlansStore,
             Order,
-            ConsumeOrder,
+            PlanOrder,
             ServiceManager
         >
     {

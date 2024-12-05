@@ -6,8 +6,6 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-using Undersoft.AMS.Service.Contracts.Market;
-
 namespace Undersoft.AMS.Service.Contracts.Project.Progress
 {
     public class ProgressEvent : ProjectEvent

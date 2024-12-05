@@ -7,11 +7,11 @@
 // *************************************************
 
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Project.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface IProjectEventStore : IEventStore
+    public interface IProjectEventStore : IProjectPlansEventStore, IProjectProgressEventStore, IProjectRequestsEventStore
     {
     }
 }

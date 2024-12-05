@@ -11,15 +11,15 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Undersoft.AMS.Document.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Document.Commercial;
-    using Undersoft.SDK.Service.Data.Store;
 
-    [Area("Bus")]
+    [Area("Bus/Document/CommercialEvent")]
     public class CommercialEventController
         : RemoteBusController<
             long,
-            IEventStore,
-            CommercialEvent,
+            IDocumentCommercialEventStore,
+            Event,
             CommercialEvent,
             ServiceManager
         >

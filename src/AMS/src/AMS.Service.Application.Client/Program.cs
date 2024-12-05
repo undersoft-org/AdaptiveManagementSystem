@@ -24,6 +24,7 @@ using Undersoft.SDK.Service.Data.Store;
 namespace Undersoft.AMS.Service.Application.Client;
 
 using Undersoft.AMS.Document.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
+using Undersoft.AMS.Logistic.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
 using Undersoft.AMS.Service.Application.GUI.Compound.Access;
 using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
 using Undersoft.AMS.Service.Contracts;

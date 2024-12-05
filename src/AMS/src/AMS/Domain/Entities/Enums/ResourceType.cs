@@ -13,8 +13,8 @@ namespace Undersoft.AMS.Domain.Entities.Enums
     {
         None = 0b_0000_0000,
         Image = 0b_0000_0001,
-        Archive = 0b_0000_0010,
-        Assembly = 0b_0000_0100,
+        File = 0b_0000_0010,
+        Plugin = 0b_0000_0100,
         Document = 0b_0000_1000,
         Icon = 0b_0001_0000,
         Model = 0b_0010_0000,

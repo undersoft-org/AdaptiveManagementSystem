@@ -15,13 +15,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts;
     using Undersoft.AMS.Service.Contracts.Project.Plans;
 
-    [Area("Bus/Project/ConsumeEvent")]
+    [Area("Bus/Project/PlanEvent")]
     public class ConsumeEventController
         : RemoteBusController<
             long,
             IProjectPlansEventStore,
             Event,
-            ConsumeEvent,
+            PlanEvent,
             ServiceManager
         >
     {

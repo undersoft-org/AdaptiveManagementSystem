@@ -7,11 +7,11 @@
 // *************************************************
 
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Document.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface IDocumentStore : IDataStore
+    public interface IDocumentStore : IDocumentCommercialStore, IDocumentFinancialStore, IDocumentLegalStore, IDocumentLogisticalStore, IDocumentProductionalStore
     {
     }
 }

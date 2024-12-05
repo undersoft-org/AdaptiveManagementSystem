@@ -14,13 +14,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Project.Requests;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Project/PurchaseProcess")]
+    [Area("Data/Project/RequestProcess")]
     public class PurchaseProcessController
         : RemoteDataController<
             long,
             IProjectRequestsStore,
             Process,
-            PurchaseProcess,
+            RequestProcess,
             ServiceManager
         >
     {

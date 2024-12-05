@@ -14,13 +14,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Project.Plans;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Project/ConsumeOffer")]
+    [Area("Data/Project/PlanOffer")]
     public class ConsumeOfferController
         : RemoteDataController<
             long,
             IProjectPlansStore,
             Offer,
-            ConsumeOffer,
+            PlanOffer,
             ServiceManager
         >
     {

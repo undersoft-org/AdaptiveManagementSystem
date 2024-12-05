@@ -11,17 +11,17 @@ using Undersoft.SDK.Service.Data.Store;
 namespace Undersoft.AMS.Catalog.Service.Server.Participants.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Catalog.Participants;
+    using Undersoft.AMS.Service.Contracts;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Participants")]
+    [Area("Data/Catalog/Participants/Participant")]
     public class ParticipantController
         : CqrsController<
             long,
             IEntryStore,
             IReportStore,
             Domain.Entities.Participant,
-            Contractor,
+            Participant,
             ServiceManager
         >
     {

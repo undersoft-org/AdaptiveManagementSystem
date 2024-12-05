@@ -7,13 +7,12 @@
 // ********************************************************
 
 using Microsoft.FluentUI.AspNetCore.Components;
-using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Logistics;
-using Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User.Markets;
+using Undersoft.AMS.Logistic.Service.Application.GUI.Compound.Presenting.NavMenu.User.Markets;
 using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.User;
+namespace Undersoft.AMS.Logistic.Service.Application.GUI.Compound.Presenting.NavMenu.User;
 
 public class UserMarket : DataObject
 {

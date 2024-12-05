@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Service.Contracts;
 
-    [Area("Data/Catalog/Subjects")]
+    [Area("Data/Catalog/Subjects/Subject")]
     public class SubjectController
         : CqrsController<
             long,

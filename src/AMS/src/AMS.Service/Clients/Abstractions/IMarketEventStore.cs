@@ -7,11 +7,11 @@
 // *************************************************
 
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Market.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface IMarketEventStore : IEventStore
+    public interface IMarketEventStore : IMarketConsumesEventStore, IMarketProducesEventStore, IMarketPurchasesEventStore, IMarketStocksEventStore, IMarketSalesEventStore
     {
     }
 }

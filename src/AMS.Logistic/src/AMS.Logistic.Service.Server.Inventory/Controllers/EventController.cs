@@ -11,7 +11,6 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Logistic.Service.Server.Inventory.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.AMS.Service.Contracts.Logistic.Inventory;
     using Undersoft.SDK.Service.Data.Store;
 
     [Area("Bus/Logistic/Inventory/Event")]

@@ -10,9 +10,9 @@ using Undersoft.SDK;
 using Undersoft.SDK.Service;
 using Undersoft.SDK.Service.Application.GUI.View;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
+namespace Undersoft.AMS.Logistic.Service.Application.GUI.Compound.Presenting.NavMenu.Validators;
 
-public class EventValidator : ViewValidator<Contracts.Event>
+public class EventValidator : ViewValidator<AMS.Service.Contracts.Event>
 {
     public EventValidator(IServicer servicer) : base(servicer)
     {

@@ -8,7 +8,7 @@
 
 using Undersoft.AMS.Service.Contracts.Activities;
 
-namespace Undersoft.AMS.Service.Contracts.Market.Plans
+namespace Undersoft.AMS.Service.Contracts.Project.Plans
 {
     public class PlanProcess : Process
     {

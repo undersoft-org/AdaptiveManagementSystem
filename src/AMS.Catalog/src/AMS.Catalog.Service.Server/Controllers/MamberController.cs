@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Catalog.Participants;
 
-    [Area("Data/Catalog")]
+    [Area("Data/Catalog/Member")]
     public class MamberController
         : RemoteDataController<
             long,

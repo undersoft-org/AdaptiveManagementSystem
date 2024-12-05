@@ -15,7 +15,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Resources.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Resources;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Resources")]
+    [Area("Data/Catalog/Resources/Image")]
     public class ImageController
         : CqrsController<
             long,

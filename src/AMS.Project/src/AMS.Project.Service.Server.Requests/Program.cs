@@ -10,25 +10,15 @@ using Undersoft.SDK.Service.Server.Hosting;
 
 namespace Undersoft.AMS.Project.Service.Server.Requests;
 
-/// <summary>
-/// The program.
-/// </summary>
 public class Program
 {
     static IServerHost? server;
 
-    /// <summary>
-    /// Application entry method
-    /// </summary>
-    /// <param name="args">The args.</param>
     public static void Main(string[] args)
     {
         Launch();
     }
 
-    /// <summary>
-    /// Launch serwer host
-    /// </summary>
     public static void Launch()
     {
         try
@@ -46,9 +36,6 @@ public class Program
             Log.Info<Runlog>(null, "Undersoft.AMS.Project.Service.Server.Requests shutted down ....");
         }
     }
-    /// <summary>
-    /// Restarts this instance.
-    /// </summary>
     public static void Restart()
     {
         Log.Info<Runlog>(null, "Restarting Undersoft.AMS.Project.Service.Server.Requests ....");
@@ -57,9 +44,6 @@ public class Program
         Launch();
     }
 
-    /// <summary>
-    /// Shuts down this instance.
-    /// </summary>
     public static void Shutdown()
     {
         Log.Info<Runlog>(null, "Shutting down Undersoft.AMS.Project.Service.Server.Requests ....");

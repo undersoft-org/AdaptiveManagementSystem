@@ -12,14 +12,15 @@ namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Document.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Document.Financial;
 
-    [Area("Data/Document")]
+    [Area("Data/Document/FinancialOrder")]
     public class FinancialOrderController
         : RemoteDataController<
             long,
             IDocumentFinancialStore,
-            FinancialOrder,
+            Order,
             FinancialOrder,
             ServiceManager
         >

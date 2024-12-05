@@ -11,15 +11,16 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Undersoft.AMS.Document.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts;
     using Undersoft.AMS.Service.Contracts.Document.Logistical;
-    using Undersoft.SDK.Service.Data.Store;
 
-    [Area("Bus")]
+    [Area("Bus/Document/LogisticalEvent")]
     public class LogisticalEventController
         : RemoteBusController<
             long,
-            IEventStore,
-            LogisticalEvent,
+            IDocumentLogisticalEventStore,
+            Event,
             LogisticalEvent,
             ServiceManager
         >

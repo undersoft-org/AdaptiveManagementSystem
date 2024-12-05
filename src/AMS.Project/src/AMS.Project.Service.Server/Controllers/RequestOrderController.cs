@@ -15,13 +15,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Project.Requests;
 
-    [Area("Data/Project/PurchaseOrder")]
+    [Area("Data/Project/RequestOrder")]
     public class PurchaseOrderController
         : RemoteDataController<
             long,
             IProjectRequestsStore,
             Order,
-            PurchaseOrder,
+            RequestOrder,
             ServiceManager
         >
     {

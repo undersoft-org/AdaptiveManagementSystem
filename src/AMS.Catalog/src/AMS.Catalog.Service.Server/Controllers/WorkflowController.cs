@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
 
-    [Area("Data/Catalog")]
+    [Area("Data/Catalog/Workflow")]
     public class WorkflowController
         : RemoteDataController<
             long,

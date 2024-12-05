@@ -13,7 +13,7 @@ namespace Undersoft.AMS.Project.Service.Server.Validators
 {
     using Undersoft.AMS.Service.Contracts.Project.Requests;
 
-    public class PurchaseTransactionsValidator : CommandSetValidator<PurchaseTransaction>
+    public class PurchaseTransactionsValidator : CommandSetValidator<RequestTransaction>
     {
         public PurchaseTransactionsValidator(IServicer servicer) : base(servicer)
         {

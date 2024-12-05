@@ -10,15 +10,16 @@ namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Document.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Document.Legal;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Document")]
+    [Area("Data/Document/LegalProcess")]
     public class LegalProcessController
         : RemoteDataController<
             long,
             IDocumentLegalStore,
-            LegalProcess,
+            Process,
             LegalProcess,
             ServiceManager
         >

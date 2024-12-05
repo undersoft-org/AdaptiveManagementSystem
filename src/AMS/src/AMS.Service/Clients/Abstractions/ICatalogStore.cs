@@ -6,12 +6,11 @@
 //   library: Undersoft.AMS.Service
 // *************************************************
 
-
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface ICatalogStore : IDataStore
+    public interface ICatalogStore : ICatalogParticipantsStore, ICatalogResourcesStore, ICatalogSubjectsStore
     {
     }
 }

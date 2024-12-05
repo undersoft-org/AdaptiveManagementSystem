@@ -6,7 +6,7 @@
 //   library: Undersoft.AMS.Service.Application
 // *************************************************
 
-namespace Undersoft.AMS.Service.Contracts.Market
+namespace Undersoft.AMS.Service.Contracts.Project
 {
     public class ProjectEvent : Event
     {

@@ -15,13 +15,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts;
     using Undersoft.AMS.Service.Contracts.Project.Progress;
 
-    [Area("Bus/Project/ProduceEvent")]
+    [Area("Bus/Project/ProgressEvent")]
     public class ProduceEventController
         : RemoteBusController<
             long,
             IProjectProgressEventStore,
             Event,
-            ProduceEvent,
+            ProgressEvent,
             ServiceManager
         >
     {

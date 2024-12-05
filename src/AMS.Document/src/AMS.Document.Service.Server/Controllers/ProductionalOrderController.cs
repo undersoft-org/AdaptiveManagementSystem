@@ -12,14 +12,15 @@ namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Document.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Document.Productional;
 
-    [Area("Data/Document")]
+    [Area("Data/Document/ProductionalOrder")]
     public class ProductionalOrderController
         : RemoteDataController<
             long,
             IDocumentProductionalStore,
-            ProductionalOrder,
+            Order,
             ProductionalOrder,
             ServiceManager
         >

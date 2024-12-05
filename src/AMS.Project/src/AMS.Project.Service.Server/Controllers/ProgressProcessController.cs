@@ -14,13 +14,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Project.Progress;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Project/ProduceProcess")]
+    [Area("Data/Project/ProgressOffer")]
     public class ProduceProcessController
         : RemoteDataController<
             long,
             IProjectProgressStore,
             Process,
-            ProduceProcess,
+            ProgressProcess,
             ServiceManager
         >
     {

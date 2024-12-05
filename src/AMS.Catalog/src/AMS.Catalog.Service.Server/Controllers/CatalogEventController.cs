@@ -13,7 +13,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Controllers
     using Undersoft.SDK.Service.Data.Store;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Bus")]
+    [Area("Bus/Catalog/CatalogEvent")]
     public class CatalogEventController
         : BusController<
             long,

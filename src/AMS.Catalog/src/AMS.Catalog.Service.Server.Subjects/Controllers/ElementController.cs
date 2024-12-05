@@ -17,7 +17,7 @@ namespace Undersoft.AMS.Catalog.Service.Server.Subjects.Controllers
     using Undersoft.AMS.Service.Contracts.Catalog.Subjects;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Catalog/Subjects")]
+    [Area("Data/Catalog/Subjects/Element")]
     public class ElementController
         : CqrsController<
             long,

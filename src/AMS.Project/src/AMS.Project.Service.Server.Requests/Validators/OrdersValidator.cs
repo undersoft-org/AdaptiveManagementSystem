@@ -11,9 +11,9 @@ using Undersoft.SDK.Service.Operation.Command.Validator;
 
 namespace Undersoft.AMS.Project.Service.Server.Requests.Validators
 {
-    using Undersoft.AMS.Service.Contracts.Project.Requests;
+    using Undersoft.AMS.Service.Contracts.Activities;
 
-    public class OrdersValidator : CommandSetValidator<PurchaseOrder>
+    public class OrdersValidator : CommandSetValidator<Order>
     {
         public OrdersValidator(IServicer servicer) : base(servicer)
         {

@@ -13,7 +13,7 @@ namespace Undersoft.AMS.Project.Service.Server.Validators
 {
     using Undersoft.AMS.Service.Contracts.Project.Progress;
 
-    public class ProduceOrdersValidator : CommandSetValidator<ProduceOrder>
+    public class ProduceOrdersValidator : CommandSetValidator<ProgressOrder>
     {
         public ProduceOrdersValidator(IServicer servicer) : base(servicer)
         {

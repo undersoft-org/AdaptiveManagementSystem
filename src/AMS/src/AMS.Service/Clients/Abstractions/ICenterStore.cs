@@ -8,7 +8,6 @@
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-
     public interface ICenterStore : IMarketStore, ICatalogStore, ILogisticStore, IDocumentStore
     {
     }

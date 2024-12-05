@@ -8,9 +8,6 @@
 
 namespace Undersoft.AMS.Domain.Entities.Enums
 {
-    /// <summary>
-    /// The contact types.
-    /// </summary>
     public enum AmountType
     {
         None,

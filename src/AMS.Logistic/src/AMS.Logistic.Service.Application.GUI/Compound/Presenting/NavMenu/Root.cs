@@ -1,5 +1,8 @@
 ﻿using Microsoft.FluentUI.AspNetCore.Components;
 
+
+
+
 // ********************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License. 
@@ -12,7 +15,7 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Service.Application.GUI.Compound.Presenting.NavMenu;
+namespace Undersoft.AMS.Logistic.Service.Application.GUI.Compound.Presenting.NavMenu;
 
 public class Root : DataObject
 {

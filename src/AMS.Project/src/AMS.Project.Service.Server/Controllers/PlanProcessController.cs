@@ -14,13 +14,13 @@ namespace Undersoft.AMS.Project.Service.Server.Controllers
     using Undersoft.AMS.Service.Contracts.Project.Plans;
     using Undersoft.SDK.Service.Server.Controller;
 
-    [Area("Data/Project/ConsumeProcess")]
+    [Area("Data/Project/PlanProcess")]
     public class ConsumeProcessController
         : RemoteDataController<
             long,
             IProjectPlansStore,
             Process,
-            ConsumeProcess,
+            PlanProcess,
             ServiceManager
         >
     {

@@ -14,7 +14,7 @@ namespace Undersoft.AMS.Project.Service.Server.Validators
     using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Project.Plans;
 
-    public class ConsumeOffersValidator : CommandSetValidator<ConsumeOffer>
+    public class ConsumeOffersValidator : CommandSetValidator<PlanOffer>
     {
         public ConsumeOffersValidator(IServicer servicer) : base(servicer)
         {

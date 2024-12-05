@@ -12,11 +12,12 @@ namespace Undersoft.AMS.Document.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using Undersoft.AMS.Document.Service.Clients.Abstractions;
+    using Undersoft.AMS.Service.Contracts.Activities;
     using Undersoft.AMS.Service.Contracts.Document.Legal;
 
-    [Area("Data/Document")]
+    [Area("Data/Document/LegalOrder")]
     public class LegalOrderController
-        : RemoteDataController<long, IDocumentLegalStore, LegalOrder, LegalOrder, ServiceManager>
+        : RemoteDataController<long, IDocumentLegalStore, Order, LegalOrder, ServiceManager>
     {
         public LegalOrderController(IServicer servicer)
             : base(servicer) { }
