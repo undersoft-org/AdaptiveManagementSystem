@@ -7,11 +7,11 @@
 // *************************************************
 
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Document.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Service.Clients.Abstractions
 {
-    public interface IDocumentEventStore : IEventStore
+    public interface IDocumentEventStore : IDocumentCommercialEventStore, IDocumentFinancialEventStore, IDocumentLegalEventStore, IDocumentLogisticalEventStore, IDocumentProductionalEventStore
     {
     }
 }

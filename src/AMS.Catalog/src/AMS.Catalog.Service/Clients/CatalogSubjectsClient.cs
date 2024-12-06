@@ -1,7 +1,6 @@
 ﻿using Microsoft.OData.Edm;
 using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
 
-
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License. 
@@ -9,7 +8,6 @@ using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
 //   email: dh@undersoft.pl
 //   library: Undersoft.AMS.Market.Service
 // *************************************************
-
 
 namespace Undersoft.AMS.Catalog.Service.Clients
 {

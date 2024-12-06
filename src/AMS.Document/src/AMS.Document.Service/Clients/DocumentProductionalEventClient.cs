@@ -1,7 +1,6 @@
 ﻿using Microsoft.OData.Edm;
 using Undersoft.AMS.Document.Service.Clients.Abstractions;
 
-
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
 //   Licensed under the MIT License. 

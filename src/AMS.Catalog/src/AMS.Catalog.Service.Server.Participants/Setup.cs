@@ -6,7 +6,7 @@
 //   server: Undersoft.AMS.Market.Service.Server
 // ********************************************************
 
-using Undersoft.SDK.Service.Data.Store;
+using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
 using Undersoft.SDK.Service.Server;
 using Undersoft.SDK.Service.Server.Hosting;
 
@@ -17,15 +17,15 @@ public class Setup
     public void ConfigureServices(IServiceCollection srvc)
     {
         srvc.AddServerSetup()
-            .ConfigureServer()
-            .AddDataServer<IEntityStore>()
-            .AddDataServer<IEventStore>();
+            .ConfigureServer(true)
+            .AddDataServer<ICatalogParticipantsStore>()
+            .AddDataServer<ICatalogParticipantsEventStore>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer()
+            .UseServiceServer(true, ["v1"])
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

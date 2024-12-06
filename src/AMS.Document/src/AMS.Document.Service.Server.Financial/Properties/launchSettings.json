@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Undersoft.AMS.Document.Service.Server.Catalogs": {
+    "Undersoft.AMS.Document.Service.Server.Financial": {
       "commandName": "Project",
       "launchUrl": "swagger",
       "environmentVariables": {

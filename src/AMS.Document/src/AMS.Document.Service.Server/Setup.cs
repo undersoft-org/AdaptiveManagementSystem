@@ -6,29 +6,27 @@
 //   server: Undersoft.AMS.Market.Service.Server
 // ********************************************************
 
-using Undersoft.SDK.Service.Data.Store;
 using Undersoft.SDK.Service.Server;
 using Undersoft.SDK.Service.Server.Hosting;
 
 namespace Undersoft.AMS.Document.Service.Server;
 
-using Undersoft.AMS.Document.Service.Clients.Abstractions;
+using Undersoft.AMS.Service.Clients.Abstractions;
 
 public class Setup
 {
     public void ConfigureServices(IServiceCollection srvc)
     {
         srvc.AddServerSetup()
-            .ConfigureServer()
-            .AddDataServer<IDocumentCenterStore>()
-            .AddDataServer<IEventStore>()
-            .AddDataServer<IAccountStore>();
+            .ConfigureServer(true)
+            .AddDataServer<IDocumentStore>()
+            .AddDataServer<IDocumentEventStore>();            
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseServerSetup(env)
-            .UseServiceServer()
+            .UseServiceServer(true, ["v1"])
             .UseInternalProvider()
             .UseDataMigrations()
             .UseServiceClients();

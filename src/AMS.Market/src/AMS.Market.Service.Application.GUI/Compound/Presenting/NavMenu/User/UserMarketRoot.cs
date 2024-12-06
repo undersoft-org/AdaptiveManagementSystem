@@ -12,7 +12,7 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Project.Service.Application.GUI.Compound.Presenting.NavMenu.User;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu.User;
 
 public class UserMarketRoot : DataObject
 {

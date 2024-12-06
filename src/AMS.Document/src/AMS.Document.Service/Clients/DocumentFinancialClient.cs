@@ -13,7 +13,7 @@ using Undersoft.AMS.Document.Service.Clients.Abstractions;
 
 namespace Undersoft.AMS.Document.Service.Clients
 {
-    public class DocumentFinancialClient : DataClient<IDocumentCommercialStore>
+    public class DocumentFinancialClient : DataClient<IDocumentFinancialStore>
     {
         public DocumentFinancialClient(Uri serviceUri) : base(serviceUri) { }
 

@@ -11,12 +11,12 @@ using Undersoft.SDK.Service.Server.Controller;
 
 namespace Undersoft.AMS.Catalog.Service.Server.Controllers
 {
+    using Undersoft.AMS.Catalog.Service.Clients.Abstractions;
     using Undersoft.AMS.Service.Contracts.Catalog.Participants;
-    using Undersoft.SDK.Service.Data.Store;
 
     [Area("Bus/Catalog/ParticipantEvent")]
     public class ParticipantEventController
-        : RemoteBusController<long, IEventStore, Event, ParticipantEvent, ServiceManager>
+        : RemoteBusController<long, ICatalogParticipantsEventStore, Event, ParticipantEvent, ServiceManager>
     {
         public ParticipantEventController(IServicer servicer)
             : base(servicer) { }

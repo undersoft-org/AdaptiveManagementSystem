@@ -1,5 +1,5 @@
 ﻿using Microsoft.OData.Edm;
-
+using Undersoft.AMS.Document.Service.Clients.Abstractions;
 
 // *************************************************
 //   Copyright (c) Undersoft. All Rights Reserved.
@@ -9,11 +9,9 @@
 //   library: Undersoft.AMS.Market.Service
 // *************************************************
 
-using Undersoft.SDK.Service.Data.Store;
-
 namespace Undersoft.AMS.Document.Service.Clients
 {
-    public class DocumentLegalClient : DataClient<IEventStore>
+    public class DocumentLegalClient : DataClient<IDocumentLegalStore>
     {
         public DocumentLegalClient(Uri serviceUri) : base(serviceUri) { }
 

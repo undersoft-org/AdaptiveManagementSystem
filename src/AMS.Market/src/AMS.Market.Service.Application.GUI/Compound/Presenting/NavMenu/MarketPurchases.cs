@@ -11,7 +11,7 @@ using Undersoft.SDK.Rubrics.Attributes;
 using Undersoft.SDK.Service.Application.GUI.View.Attributes;
 using Undersoft.SDK.Service.Data.Object;
 
-namespace Undersoft.AMS.Project.Service.Application.GUI.Compound.Presenting.NavMenu;
+namespace Undersoft.AMS.Market.Service.Application.GUI.Compound.Presenting.NavMenu;
 
 public class MarketPurchases : DataObject
 {

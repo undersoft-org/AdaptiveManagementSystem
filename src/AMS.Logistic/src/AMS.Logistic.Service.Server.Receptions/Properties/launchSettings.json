@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Undersoft.AMS.Logistic.Service.Server.Reception": {
+    "Undersoft.AMS.Logistic.Service.Server.Receptions": {
       "commandName": "Project",
       "launchUrl": "swagger",
       "environmentVariables": {
