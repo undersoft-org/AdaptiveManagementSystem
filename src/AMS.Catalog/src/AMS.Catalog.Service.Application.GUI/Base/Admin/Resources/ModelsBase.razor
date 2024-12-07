@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Clients.Abstractions
+
+@namespace Undersoft.AMS.Catalog.Service.Application.GUI.Base.Admin.Resources
+
+@attribute [Authorize]
+
+<GenericDataGrid TStore="ICatalogStore"
+                 TDto="AMS.Service.Contracts.Catalog.Resources.Model"
+                 TModel="AMS.Service.Contracts.Catalog.Resources.Model"
+                 Resizable="true"
+                 ShowHover="true"
+                 Expandable="true"
+                 Multiselect="true"
+                 Editable="true"
+                 EditMode="EditMode.Dialog"
+                 EntryMode="EntryMode.Tabs" 
+                 Title="Models" />

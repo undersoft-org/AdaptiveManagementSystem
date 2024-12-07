@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Clients.Abstractions
+
+@namespace Undersoft.AMS.Catalog.Service.Application.GUI.Base.Admin.Subjects
+
+@attribute [Authorize]
+
+<GenericDataGrid TStore="ICatalogStore"
+                 TDto="AMS.Service.Contracts.Catalog.Subjects.Category"
+                 TModel="AMS.Service.Contracts.Catalog.Subjects.Category"
+                 Resizable="true"
+                 ShowHover="true"
+                 Expandable="true"
+                 Multiselect="true"
+                 Editable="true"
+                 EditMode="EditMode.Dialog"
+                 EntryMode="EntryMode.Tabs" 
+                 Title="Categories" />

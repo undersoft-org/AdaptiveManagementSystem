@@ -33,36 +33,32 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Compound\Presenting\NavMenu\User\Documents\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Compound\Presenting\Base\Admin\Administration\AccountsBase.razor">
+    <Content Update="Base\Admin\Administration\AccountsBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\Admin\Administration\EventsBase.razor">
+    <Content Update="Base\Admin\Administration\EventsBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\Admin\DashboardBase.razor">
+    <Content Update="Base\Admin\PanelBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\Admin\_Imports.razor">
+    <Content Update="Base\Admin\_Imports.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\DashboardBase.razor">
+    <Content Update="Base\PanelBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\User\DashboardBase.razor">
+    <Content Update="Base\User\PanelBase.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\User\_Imports.razor">
+    <Content Update="Base\User\_Imports.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Compound\Presenting\Base\_Imports.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Update="Compound\_Imports.razor">
+    <Content Update="Base\_Imports.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
   </ItemGroup> 

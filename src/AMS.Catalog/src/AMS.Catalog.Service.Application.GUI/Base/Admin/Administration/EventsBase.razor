@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Undersoft.AMS.Service.Clients.Abstractions
+
+@namespace Undersoft.AMS.Catalog.Service.Application.GUI.Base.Admin.Administration
+
+@attribute [Authorize]
+
+<GenericDataGrid TStore="ICatalogEventStore"
+                 TDto="AMS.Service.Contracts.Event"
+                 TModel="AMS.Service.Contracts.Event"
+                 Resizable="true"
+                 ShowHover="true"
+                 Expandable="false"
+                 Multiselect="true"
+                 Editable="true"
+                 EditMode="EditMode.Dialog"
+                 EntryMode="EntryMode.Form" Title="Events" />

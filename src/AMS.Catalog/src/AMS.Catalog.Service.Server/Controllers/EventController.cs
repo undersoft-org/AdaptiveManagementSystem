@@ -11,10 +11,10 @@ using Undersoft.SDK.Service.Server.Controller;
 namespace Undersoft.AMS.Catalog.Service.Server.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Undersoft.SDK.Service.Data.Store;
+    using Undersoft.AMS.Service.Clients.Abstractions;
 
     [Area("Bus/Catalog/Event")]
     public class EventController(IServicer servicer)
-        : BusController<long, IEventStore, Event, Event, ServiceManager>(servicer)
+        : BusController<long, ICatalogEventStore, Event, Event, ServiceManager>(servicer)
     { }
 }
